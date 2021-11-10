@@ -12,6 +12,6 @@ tags:
   - First Post
 --- 
 
-<p style="text-align:justify;">
+'''
 V2VsY29tZSB0byBteSB3b3JsZCE=
-</p>
+'''
