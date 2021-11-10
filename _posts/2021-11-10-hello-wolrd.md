@@ -12,6 +12,6 @@ tags:
   - First Post
 --- 
 
-```
-V2VsY29tZSB0byBteSB3b3JsZCE=
-```
+<p style="text-align:justify;">
+Hello, my Name is Nick Vourdas (a.k.a nickvourd). I am Cyber Security Consultant based in Greece. I studied at University of Western Macedonia (Kozani, Greece) as a Informatics Telecommunication Engineer. Moreover, I holds OSCP && OSWP certifactions. I love open source but one day Microsoft Active Directory stole my heart... Welcome to my blog... This is my World <3
+</P>
