@@ -84,14 +84,14 @@ naver_site_verification  :
 # Social Sharing
 twitter:
   username               : nickvourd
-  og_image               : #"/assets/images/minimal.png" 
+  og_image               : "/assets/images/avatar.jpg" 
 linkedin:
   username               : nickvourd
   app_id                 :
   publisher              :
-  og_image               : #"/assets/images/minimal.png" #/assets/images/minimal-dark-hacker-500x300.png # Open Graph/Twitter default site image
+  og_image               : "/assets/images/avatar.jpg"  #/assets/images/minimal-dark-hacker-500x300.png # Open Graph/Twitter default site image
 
-og_image                 : #"/assets/images/minimal.png"
+og_image                 : "/assets/images/minimal.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -111,7 +111,7 @@ analytics:
 author:
   name             : "Nick Vourdas"
   avatar           : "/assets/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Cyber Security Consultant" #"Im constantly seeking for knowledge in Cyber Security "
+  bio              : "Cyber Security Consultant\nOSCP && OSWP" #"Im constantly seeking for knowledge in Cyber Security "
   location         : "ATH, Greece"
   email            :
   links:
