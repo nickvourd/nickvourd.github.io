@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "neon" #"contrast"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "nickvourd.github.io"
+title                    : "NCV InfoSec Blog"
 title_separator          : "-"
 name                     : "nickvourd"
 description              : "InfoSec Blog"
