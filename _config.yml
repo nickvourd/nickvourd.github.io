@@ -110,7 +110,7 @@ analytics:
 # Site Author
 author:
   name             : "Nick Vourdas"
-  avatar           :  #"/assets/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/avatar.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Cyber Security Consultant" #"Im constantly seeking for knowledge in Cyber Security "
   location         : "ATH, Greece"
   email            :
