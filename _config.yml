@@ -111,7 +111,7 @@ analytics:
 author:
   name             : "Nick Vourdas"
   avatar           : "/assets/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Cyber Security Consultant\nOSCP | OSWP" #"Im constantly seeking for knowledge in Cyber Security "
+  bio              : "Cyber Security Consultant<br/><br/>OSCP | OSWP" #"Im constantly seeking for knowledge in Cyber Security "
   location         : "ATH, Greece"
   email            :
   links:
