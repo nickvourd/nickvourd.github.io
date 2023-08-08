@@ -57,10 +57,10 @@ links:
 
 # Projects in header index
 projects:
-  - name: [Responder-Parser (Python)](https://github.com/nickvourd/Responder-Parser){:target="_blank"}
-    url: https://github.com/nickvourd/Responder-Parser
-  - name: [COM-Hunter (C#)](https://github.com/nickvourd/COM-Hunter){:target="_blank"}
-    url: https://github.com/nickvourd/COM-Hunter
+    - name: Responder-Parser (Python)
+      url: https://github.com/nickvourd/Responder-Parser
+    - name: COM-Hunter (C#)
+      url: https://github.com/nickvourd/COM-Hunter
       
 # exclude node related stuff
 exclude: ['package.json', 'src', 'node_modules']
