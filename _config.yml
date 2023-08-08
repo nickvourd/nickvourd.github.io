@@ -55,5 +55,10 @@ links:
       url: ""
       key_trigger: s #WARNING: search only works with "s"
 
+# Projects in header index
+projects:
+    - name: COM-Hunter
+      url: https://github.com/nickvourd/COM-Hunter
+      
 # exclude node related stuff
 exclude: ['package.json', 'src', 'node_modules']
