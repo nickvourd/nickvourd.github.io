@@ -51,9 +51,9 @@ links:
       new_tab: true
       url: https://www.linkedin.com/in/nickvourd/
       key_trigger: l
-    - title: search
-      url: ""
-      key_trigger: s #WARNING: search only works with "s"
+#    - title: search
+#      url: ""
+#      key_trigger: s #WARNING: search only works with "s"
 
 # Projects in header index
 projects:
@@ -64,3 +64,7 @@ projects:
       
 # exclude node related stuff
 exclude: ['package.json', 'src', 'node_modules']
+
+# Extra plugins
+plugins:
+  - jekyll-target-blank
