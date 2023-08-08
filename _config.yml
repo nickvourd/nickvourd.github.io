@@ -8,7 +8,7 @@ username: nickvourd
 user_title: nickvourd - Just your friendly neighborhood APT
 twitter_username: nickvourd
 github_username:  nickvourd
-linkedin_public_url: 'www.linkedin.com/in/nickvourd'
+linkedin_public_url: nickvourd
 
 # Build settings
 markdown: kramdown
