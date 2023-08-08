@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
+<meta http-equiv="content-language" content="en" />
+    <style>
+        /*change the thinkness of the scrollbar here*/
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+            box-shadow: inset 0 0 0px rgba(0,0,0,0);
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+        /*add a shadow to the scrollbar here*/
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
+            box-shadow: inset 0 0 0px rgba(0,0,0,0);
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+        /*this is the little scrolly thingy ma jigger in the bar*/ 
+        ::-webkit-scrollbar-thumb {
+            background: #5d4d7a;
+            height: 3px;
+        }
+        /*nobody needs the dumb scrollbar corner*/  
+        ::-webkit-scrollbar-corner { display: none; height: 0px; width: 0px; }
+        /*scrollbar move and hover color changer*/
+        ::-webkit-scrollbar-thumb:hover { background: #ab67ab; }
+        ::-webkit-scrollbar-thumb:active { background: #ab67ab; }
+    </style>
+    {% include head.html %}
+    <body>
+        {% include svg-icons.html %}
+        {% include header-post.html %}
+        <section class="post" itemscope itemtype="https://schema.org/BlogPosting">
+            {% if page.date %}
+                <div class="time">
+                    <time itemprop="datePublished" datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+                </div>
+            {% endif %}
+            <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
+
+            <article role="article" id="scroll" class="post-content" itemprop="articleBody">
+                {{ content }}
+            </article>
+            {% include share.html %}
+            {% include scripts.html %}
+        </section>
+    </body>
+    <script>
+        var message = "Please check back soon... :)";
+        var original = document.title;
+        
+        window.onblur = function () { document.title = message; }
+        window.onfocus = function () { document.title = original; }
+      </script>
+</html>

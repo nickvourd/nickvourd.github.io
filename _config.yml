@@ -1,0 +1,53 @@
+# Site settings
+title: "@nickvourd - InfoSec Blog"
+description: "nickvourd's Official Site!"
+baseurl: "" 
+url: ""
+# User settings
+username: nickvourd
+user_title: nickvourd - Just your friendly neighborhood APT
+twitter_username: nickvourd
+github_username:  nickvourd
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+links:
+  section_1:
+    - title: home
+      url: /
+      key_trigger: 1
+    - title: about me
+      url: /about
+      key_trigger: 2
+    - title: my posts
+      url: /posts
+      key_trigger: 3
+    - title: tags
+      url: /tags
+      key_trigger: 4
+  section_2:
+    - title: github
+      url: https://www.github.com/nickvourd
+      new_tab: true
+      key_trigger: g
+    - title: twitter
+      new_tab: true
+      url: https://www.twitter.com/nickvourd
+      key_trigger: t
+    - title: search
+      url: ""
+      key_trigger: s #WARNING: search only works with "s"
+
+# exclude node related stuff
+exclude: ['package.json', 'src', 'node_modules']

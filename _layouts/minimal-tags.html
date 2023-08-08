@@ -1,0 +1,28 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
+<meta http-equiv="content-language" content="en" />
+    {% include head.html %}
+    <body>
+        {% include svg-icons.html %}
+        {% include header-post.html %}
+        <section class="post" itemscope itemtype="https://schema.org/WebPage">
+
+            <article role="article" id="scroll" class="post-content" role="main" itemprop="mainContentOfPage">
+                {{ content }}
+            </article>
+            {% include scripts.html %}
+        </section>
+    </body>
+    <script>
+        var message = "Please check back soon... :)";
+        var original = document.title;
+        
+        window.onblur = function () { document.title = message; }
+        window.onfocus = function () { document.title = original; }
+      </script>
+</html>

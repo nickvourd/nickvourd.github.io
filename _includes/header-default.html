@@ -1,0 +1,107 @@
+<header class="header-site" role="banner">
+    <div class="content">
+
+        <div class="df">
+            <img class="top" alt="Farbs Logo White-Purple" src="/assets/img/index-logo/farbs-logo-200x200.png">
+            <img class="bottom" alt="Farbs Logo Purple-White" src="/assets/img/index-logo/farbs-logo-200x200-purple-white.png">
+        </div>
+        <style>
+            .header-site .site-title {
+                color: white;
+                text-align: center;
+                font-weight: bold;
+                padding-left: 30px;
+            }
+        </style>
+        <div class="header-site">
+            <span class="site-title">[{{site.username}}]</span>
+        </div>
+
+        <div class="icons-home">
+            <a aria-label="Send email" title="Send me an e-mail" href="mailto:{{site.email}}">
+                <svg class="icon icon-email"><use xlink:href="#icon-email"></use></svg>
+            </a>
+
+            <a aria-label="My Twitter" title="Follow me on Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}">
+                <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+            </a>
+
+            <a aria-label="My Github" title="View my GitHub" target="_blank" href="https://github.com/{{site.github_username}}">
+                <svg class="icon icon-github-alt"><use xlink:href="#icon-github-alt"></use></svg>
+            </a>
+
+            <a aria-label="Use the RSS to get updated" title="Register for my RSS" target="_blank" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                <svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg>
+            </a>
+        </div>
+
+        <ul class="recent">
+            <p>Recent posts:</p>
+             {% for post in site.posts limit:3%}
+                <li>
+                    <a title="Wow, a recent post!" href="{{ post.url | prepend: site.baseurl }}">
+                        <h2 class="post-title" itemprop="name">{{ post.title }}</h2>
+                    </a>
+                </li>
+              {% endfor %}
+        </ul>
+
+        <ul class="recent">
+            <p>Feeling generous?</p>
+                <li>
+                    <a title="Buy me a coffee! ☕" href="https://www.buymeacoffee.com/farbs">
+                        <h2 class="post-title" itemprop="name">Buy me a coffee! ☕</h2>
+                    </a>
+                <!--<style>.bmc-button img {
+                            width: 27px !important;
+                            margin-bottom: 1px !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            vertical-align: middle !important;
+                        }
+                        
+                        .bmc-button {
+                            line-height: 36px !important;
+                            height: 37px !important;
+                            text-decoration: none !important;
+                            display: inline-flex !important;
+                            color: #5d4d7a !important;
+                            background-color: #FFFFFF !important;
+                            border-radius: 3px !important;
+                            border: 1px solid transparent !important;
+                            padding: 1px 9px !important;
+                            font-size: 22px !important;
+                            letter-spacing: 0.6px !important;
+                            /*box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+                            -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;*/
+                            margin: 0 auto !important;
+                            font-family: 'Cookie', cursive !important;
+                            -webkit-box-sizing: border-box !important;
+                            box-sizing: border-box !important;
+                            -o-transition: 0.3s all linear !important;
+                            -webkit-transition: 0.3s all linear !important;
+                            -moz-transition: 0.3s all linear !important;
+                            -ms-transition: 0.3s all linear !important;
+                            transition: 0.3s all linear !important;
+                        }
+                        
+                        .bmc-button:hover,
+                        .bmc-button:active,
+                        .bmc-button:focus {
+                            /*-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;*/
+                            text-decoration: none !important;
+                            /*box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;*/
+                            opacity: 0.85 !important;
+                            color: #403554 !important;
+                            background-color: #d9d9d9
+                        }
+                        
+                        </style> 
+                        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"> <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/farbs"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee!"><span style="margin-left:5px">Buy me a coffee!</span></a>
+                    -->
+                </li>
+        </ul>
+
+    </div>
+    {% include menu-search.html %}
+</header>

@@ -1,0 +1,75 @@
+---
+layout: minimal-tags
+title: "@defarbs - Tags"
+permalink: /tags/
+description: "Observe my beautiful tags."
+---
+<style>
+    /*change the thinkness of the scrollbar here*/
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+      box-shadow: inset 0 0 0px rgba(0,0,0,0);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+    /*add a shadow to the scrollbar here*/
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
+      box-shadow: inset 0 0 0px rgba(0,0,0,0);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+    /*this is the little scrolly thingy ma jigger in the bar*/ 
+    ::-webkit-scrollbar-thumb {
+      background: #5d4d7a;
+      height: 3px;
+    }
+    /*nobody needs the dumb scrollbar corner*/  
+    ::-webkit-scrollbar-corner { display: none; height: 0px; width: 0px; }
+
+    /*scrollbar move and hover color changer*/
+    ::-webkit-scrollbar-thumb:hover { background: #ab67ab; }
+    ::-webkit-scrollbar-thumb:active { background: #ab67ab; }
+
+    .header-site .site-title {
+      padding-top: 5px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      padding-left: 19px;
+    }
+</style>
+
+<h2>Tags</h2>
+
+<div class="tags">
+{% assign tags_list = site.tags %}
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %}
+        <a data-scroll href="#{{ tag | slugify }}">{{ tag }}</a>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %}
+        <a data-scroll href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
+</div>
+
+{% for tag in site.tags  %}
+    <span class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] }}</span>
+    <ul class="post-list">
+        {% assign pages_list = tag[1] %}
+        {% for post in pages_list reversed %}
+            {% if post.title != null %}
+            {% if group == null or group == post.group %}
+            <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
+            {% endif %}
+            {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+        {% assign group = nil %}
+    </ul>
+{% endfor %}
