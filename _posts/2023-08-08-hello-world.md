@@ -81,8 +81,8 @@ function topFunction() {
 
 <p>VGhpcyBpcyBvbmx5IHRoZSBiZWdpbm5pbmchISE=</p><br/>
 
-<!--<div align="center">
-<!-- add the button! 
-<applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://defarbs.com/htb-help"/>
-</div>-->
+<div align="center">
+<!-- add the button!-->
+<applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/hello-world"/>
+</div>
 
