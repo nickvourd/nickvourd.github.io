@@ -1,4 +1,4 @@
-# nickvourd's GitHub Site
+# nickvourd's GitHub blog
 <img alt="nickvourd's Logo" src="/assets/img/index-logo/fox-logo-200x200.png"> 
 
 My dedicated blog, where I share my research and my tools about offensive security.<br /><br />
