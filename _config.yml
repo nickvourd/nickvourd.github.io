@@ -51,10 +51,10 @@ links:
       new_tab: true
       url: https://www.linkedin.com/in/nickvourd/
       key_trigger: l
-    - title: buy me a coffee
+    - title: donate me
       new_tab: true
       url: https://www.buymeacoffee.com/nickvourd
-      key_trigger: b
+      key_trigger: d
 #    - title: search
 #      url: ""
 #      key_trigger: s #WARNING: search only works with "s"
