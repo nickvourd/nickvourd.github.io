@@ -51,7 +51,7 @@ links:
       new_tab: true
       url: https://www.linkedin.com/in/nickvourd/
       key_trigger: l
-    - title: donate me
+    - title: donate
       new_tab: true
       url: https://www.buymeacoffee.com/nickvourd
       key_trigger: d
