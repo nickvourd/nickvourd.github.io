@@ -61,7 +61,7 @@ links:
 
 # Projects in header index
 projects:
-    - name: Supernova (GO)
+    - name: Supernova (Go)
       url: https://github.com/nickvourd/Supernova
     - name: Responder-Parser (Python)
       url: https://github.com/nickvourd/Responder-Parser
