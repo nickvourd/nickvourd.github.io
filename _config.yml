@@ -61,6 +61,8 @@ links:
 
 # Projects in header index
 projects:
+    - name: RTI-Toolkit (PowerShell)
+      url: https://github.com/nickvourd/RTI-Toolkit
     - name: Supernova (Go)
       url: https://github.com/nickvourd/Supernova
     - name: Responder-Parser (Python)
