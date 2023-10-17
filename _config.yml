@@ -61,6 +61,8 @@ links:
 
 # Projects in header index
 projects:
+    - name: PS-Cisco-Downloader (PowerShell)
+      url: https://github.com/nickvourd/PS-Cisco-Downloader
     - name: RTI-Toolkit (PowerShell)
       url: https://github.com/nickvourd/RTI-Toolkit
     - name: Supernova (Go)
