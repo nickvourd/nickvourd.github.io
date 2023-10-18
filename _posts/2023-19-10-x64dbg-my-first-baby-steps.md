@@ -3,7 +3,7 @@
 layout: post
 title: "x64dbg (My first baby steps)"
 image: ""
-date: 2023-10-19 00:00:02
+date: 2023-19-10 00:00:02
 tags:
 
 - introduction
