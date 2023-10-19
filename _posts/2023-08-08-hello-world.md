@@ -4,12 +4,11 @@ title: "Hello World"
 image: ""
 date: 2023-08-08 00:06:02
 tags:
-  - introduction
-  - base64
+  - Base64
 
 description: ""
 categories:
-  - introduction
+  - Introduction
 ---
 
 <!-- add the button style & script -->
