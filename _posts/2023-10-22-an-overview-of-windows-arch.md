@@ -304,7 +304,7 @@ int main() {
 		<p>The CreateDirectoryW API calls the Native API named NtCreateDirectory, which is part of ntdll.dll.</p>
 	</li>
 	<li>
-		<p>Ntdll.dll executes an assembly sysenter (x86) or syscall (x64) instruction, transferring the execution to kernel land.</p>
+		<p>The ntdll.dll executes an assembly sysenter (x86) or syscall (x64) instruction, transferring the execution to kernel land.</p>
 	</li>
 	<li>
 		<p>Finally, the kernel employs NtCreateDirectory to invoke other modules and drivers in order to execute the task.</p>
