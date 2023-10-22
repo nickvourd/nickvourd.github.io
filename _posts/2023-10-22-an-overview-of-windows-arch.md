@@ -302,13 +302,13 @@ Referring to the earlier diagram, when the user executes this C program, <span s
 		<p>The kernel32.dll contains the CreateDirectoryW Windows API.</p>
 	</li>
 	<li>
-		<p>The CreateDirectoryW API calls the Native API named NtCreateDirectory, which is part of ntdll.dll.</p>
+		<p>The CreateDirectoryW API calls the Native API named ZwCreateDirectory, which is part of ntdll.dll.</p>
 	</li>
 	<li>
 		<p>The ntdll.dll executes an assembly sysenter (x86) or syscall (x64) instruction, transferring the execution to kernel land.</p>
 	</li>
 	<li>
-		<p>Finally, the kernel employs NtCreateDirectory to invoke other modules and drivers in order to execute the task.</p>
+		<p>Finally, the kernel employs ZwCreateDirectory to invoke other modules and drivers in order to execute the task.</p>
 	</li>
 </ol>
 
@@ -335,7 +335,7 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 
 <ol>
 	<li>
-		<p>Next, CreateDirectoryW calls its equivalent NTAPI function, NtCreateDirectory.</p>
+		<p>Next, CreateDirectoryW calls its equivalent NTAPI function, ZwCreateDirectory.</p>
 	</li>
 </ol>
 
@@ -343,7 +343,7 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 
 <ol>
 	<li>
-		<p>Last but not least, the NtCreateDirectory function uses a syscall assembly instruction to transition from user land to kernel land. The kernel will be the entity that creates the new directory.</p>
+		<p>Last but not least, the ZwCreateDirectory function uses a syscall assembly instruction to transition from user land to kernel land. The kernel will be the entity that creates the new directory.</p>
 	</li>
 </ol>
 
