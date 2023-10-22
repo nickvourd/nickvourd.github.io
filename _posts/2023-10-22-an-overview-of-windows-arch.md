@@ -349,6 +349,10 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 
 <img src="/assets/img/post-img/22-10-2023/x64dbg-Syscall.png" class="post-images" alt="x64dbg Syscall">
 
+<h3>Conclusion</h3>
+
+<p>In summary, Windows works through different layers like user apps, DLLs, and the kernel. The Windows API acts as a middleman, making it easy for users to interact, while the kernel handles crucial tasks using NTAPI functions. This understanding is crucial for anyone looking into Windows software and security.</p><br />
+
 <!-- add the button!-->
 <div>
 <applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/win-arch-intro"/>
