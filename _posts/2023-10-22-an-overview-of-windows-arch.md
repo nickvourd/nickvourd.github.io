@@ -331,7 +331,7 @@ Referring to the earlier diagram, when the user executes this C program, <span s
 We will compile the above example C code into Demo.exe and then analyze it in x64dbg.</p>
 <ul>
 	<li>
-		<p>The user application calls the CreateDirectoryW Windows API.</p>
+		<p>The user application calls the CreateFileW Windows API.</p>
 	</li>
 </ul>
 
@@ -339,7 +339,7 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 
 <ul>
 	<li>
-		<p>Next, CreateDirectoryW calls its equivalent NTAPI function, ZwCreateDirectory.</p>
+		<p>Next, CreateFileW calls its equivalent NTAPI function, NtCreateFile.</p>
 	</li>
 </ul>
 
@@ -347,7 +347,7 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 
 <ul>
 	<li>
-		<p>Last but not least, the ZwCreateDirectory function uses a syscall assembly instruction to transition from user land to kernel land. The kernel will be the entity that creates the new directory.</p>
+		<p>Last but not least, the NtCreateFile function uses a syscall assembly instruction to transition from user land to kernel land. The kernel will be the entity that creates the new file.</p>
 	</li>
 </ul>
 
