@@ -272,7 +272,7 @@ function topFunction() {
 </div>
 
 <p>Before proceeding with a practical example, I want to clarify a crucial point. I intend to provide more details about this function call flow to enhance familiarity with it.<br /><br />
-Let's consider a sample C application that utilizes the CreateDirectoryW Windows API, like the example below:</p>
+Let's consider a sample C application that utilizes the CreateDirectoryW Windows API, to create a new directory:</p>
 
 ```
 #include <stdio.h>
@@ -293,6 +293,24 @@ int main() {
 ```
 
 <p>Referring to the earlier diagram, when the user executes this C program:</p>
+
+<ul>
+	<il>
+		<p>The C program calls subsystem DLLs, such as kernel32.dll.</p>
+	</il>
+	<il>
+		<p>The kernel32.dll contains the CreateDirectoryW Windows API.</p>
+	</il>
+	<il>
+		<p>The CreateDirectoryW API calls the Native API named NtCreateDirectory, which is part of ntdll.dll.</p>
+	</il>
+	<il>
+		<p>Ntdll.dll executes an assembly sysenter (x86) or syscall (x64) instruction, transferring the execution to kernel land.</p>
+	</il>
+	<il>
+		<p>Finally, the kernel employs NtCreateDirectory to invoke other modules and drivers in order to execute the task.</p>
+	</il>
+</ul>
 
 <!-- add the button!-->
 <div>
