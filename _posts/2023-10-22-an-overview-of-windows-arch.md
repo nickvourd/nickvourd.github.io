@@ -228,7 +228,7 @@ function topFunction() {
 
 <h3>Kernel mode vs User mode</h3>
 
-<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> <a href="https://twitter.com/zodiacon">by Pavel Yosifovich</a>, there are two main access modes that a Windows processor uses: User mode (a.k.a. User Land) and Kernel mode (a.k.a. Kernel Land).</p>
+<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, there are two main access modes that a Windows processor uses: User mode (a.k.a. User Land) and Kernel mode (a.k.a. Kernel Land).</p>
 
 <div align="center">
 <!-- add the button!-->
