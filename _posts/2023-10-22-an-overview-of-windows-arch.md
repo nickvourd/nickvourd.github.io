@@ -8,6 +8,8 @@ tags:
   - Architecture
   - C Language
   - Assembly
+  - Debugger
+  - x64dbg
 
 description: ""
 categories:
