@@ -295,21 +295,21 @@ int main() {
 <p>Referring to the earlier diagram, when the user executes this C program:</p>
 
 <ul>
-	<il>
+	<li>
 		<p>The C program calls subsystem DLLs, such as kernel32.dll.</p>
-	</il>
-	<il>
+	</li>
+	<li>
 		<p>The kernel32.dll contains the CreateDirectoryW Windows API.</p>
-	</il>
-	<il>
+	</li>
+	<li>
 		<p>The CreateDirectoryW API calls the Native API named NtCreateDirectory, which is part of ntdll.dll.</p>
-	</il>
-	<il>
+	</li>
+	<li>
 		<p>Ntdll.dll executes an assembly sysenter (x86) or syscall (x64) instruction, transferring the execution to kernel land.</p>
-	</il>
-	<il>
+	</li>
+	<li>
 		<p>Finally, the kernel employs NtCreateDirectory to invoke other modules and drivers in order to execute the task.</p>
-	</il>
+	</li>
 </ul>
 
 <!-- add the button!-->
