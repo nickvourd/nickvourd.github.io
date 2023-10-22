@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An overview of Windows architecture"
+title: "An overview of Windows architecture (Part 1)"
 image: ""
 date: 2023-10-22 10:10:02
 tags:
@@ -355,7 +355,7 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 
 <h3>Conclusion</h3>
 
-<p>In summary, Windows works through different layers like user apps, DLLs, and the kernel. The Windows API acts as a middleman, making it easy for users to interact, while the kernel handles crucial tasks using NTAPI functions. This understanding is crucial for anyone looking into Windows software and security.</p><br />
+<p>In summary, Windows works through different layers like user apps, DLLs, and the kernel. The Windows API acts as a middleman, making it easy for users to interact, while the kernel handles crucial tasks using NTAPI functions. This understanding is crucial for anyone looking into Windows software and security. In my next post, I will explain various aspects of memory allocation on the Windows operating system.</p><br />
 
 <!-- add the button!-->
 <div>
