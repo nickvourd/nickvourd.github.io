@@ -324,7 +324,9 @@ Referring to the earlier diagram, when the user executes this C program, <span s
 
 <p>Alright, let's proceed with a practical example! 😛<br /><br />
 
-We will compile the above example C code into Demo.exe and then analyze it in x64dbg.</p>
+We will compile the above example C code into Demo.exe and then analyze it in x64dbg. Navigate to "Symbols" option on the toolbar and locate the DLLs used by Demo.exe. n this tab, you have the opportunity to search for specific Windows APIs.</p>
+
+<img src="/assets/img/post-img/22-10-2023/x64dbg-Symbols-Dlls.png" class="post-images" alt="x64dbg Symbols DLLs>
 
 <!-- add the button!-->
 <div>
