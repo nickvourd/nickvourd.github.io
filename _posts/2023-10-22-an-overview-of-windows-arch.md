@@ -339,7 +339,7 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 	</li>
 </ol>
 
-<img src="/assets/img/post-img/22-10-2023/x64dbg-NtDirectory-Call.png" class="post-images" alt="x64dbg Call instruction of NtDirectory">
+<img src="/assets/img/post-img/22-10-2023/x64dbg-NtDirectory-Call.png" class="post-images" alt="x64dbg Call instruction of ZwDirectory">
 
 <ol>
 	<li>
