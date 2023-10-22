@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "An overview of Windows architecture & memory management"
+title: "An overview of Windows architecture"
 image: ""
 date: 2023-10-22 10:10:02
 tags:
   - Windows Internals
   - Architecture
-  - Memory Management 
   - C Language
   - Assembly
 
@@ -311,6 +310,12 @@ int main() {
 		<p>Finally, the kernel employs NtCreateDirectory to invoke other modules and drivers in order to execute the task.</p>
 	</li>
 </ol>
+
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://giphy.com/embed/2599kjzl9M5anzPSbh" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+
+<p>OK! OK! Let's go for a practical example... 😝</p>
 
 <!-- add the button!-->
 <div>
