@@ -230,7 +230,7 @@ function topFunction() {
 
 <p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, there are two main access modes that a Windows processor uses: User mode (a.k.a. User Land) and Kernel mode (a.k.a. Kernel Land).</p>
 
-<p>The main reason for this distinction is to protect user applications from accessing and modifying critical Operating System data. User application code runs in user mode, while operating system componets, such as system services and device drivers, operates in kernel mode.</p>
+<p>The main reason for this distinction is to protect user applications from accessing and modifying critical Operating System data. User application code runs in User Land, while operating system componets, such as system services and device drivers, operates in Kernel Land.</p>
 
 <div align="center">
 <!-- add the button!-->
