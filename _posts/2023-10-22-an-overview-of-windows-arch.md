@@ -355,7 +355,7 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 
 <h3>Conclusion</h3>
 
-<p>In summary, Windows works through different layers like user apps, DLLs, and the kernel. The Windows API acts as a middleman, making it easy for users to interact, while the kernel handles crucial tasks using NTAPI functions. This understanding is crucial for anyone looking into Windows software and security. In my next post, I will explain various aspects of memory allocation on the Windows operating system.</p><br />
+<p>In summary, Windows works through different layers like user apps, DLLs, and the kernel. The Windows API acts as a middleman, making it easy for users to interact, while the kernel handles crucial tasks using NTAPI functions. This understanding is crucial for anyone looking into Windows software and security. In my next post, I will explain the different Windows memory types how the Operating System manages memory.</p><br />
 
 <!-- add the button!-->
 <div>
