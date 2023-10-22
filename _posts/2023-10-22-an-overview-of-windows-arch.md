@@ -199,7 +199,7 @@ function topFunction() {
 		<p><strong>Windows Process</strong>: A process in the Windows operating system is an instance of a computer program that is being executed. It has its own memory space, system resources, and is managed by the Windows kernel.</p>
 	</li>
 	<li>
-		<p><strong>Threads</strong>: Threads are the smallest unit of execution within a process in the Windows operating system. They allow for concurrent execution of multiple tasks within the same process.</p>
+		<p><strong>Threads</strong>: Threads are the smallest unit of execution within a process in the Windows operating system. They allow for concurrent execution of multiple tasks/instructions within the same process.</p>
 	</li>
 	<li>
 		<p><strong>Windows Processor</strong>: The Windows Processor refers to the CPU (Central Processing Unit) within a Windows-based system. It executes instructions and processes data within the operating system.</p>
