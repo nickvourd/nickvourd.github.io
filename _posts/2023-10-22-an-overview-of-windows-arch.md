@@ -290,8 +290,9 @@ int main() {
     return 0;
 }
 ```
+<p>ℹ️ The "windows.h" header file includes DLLs related to Windows API functions.<br /><br />
 
-<p>Referring to the earlier diagram, when the user executes this C program, <span style="color: red;">please remember the following five (5) steps (as general overview)</span>:</p>
+Referring to the earlier diagram, when the user executes this C program, <span style="color: red;">please remember the following five (5) steps (as general overview)</span>:</p>
 
 <ol>
 	<li>
