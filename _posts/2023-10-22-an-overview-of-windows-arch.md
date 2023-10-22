@@ -232,7 +232,13 @@ function topFunction() {
 
 <p>The main reason for this distinction is to protect user applications from accessing and modifying critical Operating System data. User application code runs in User Land, while operating system componets, such as system services and device drivers, operates in Kernel Land.</p><br />
 
-<p>Kernel mode is an execution mode in a processor that allows access to all system memory and CPU instructions. However, some processors use alternative terms for this mode, such as supervisor mode, privilege level, or ring level. Regardless of the nomenclature, the primary purpose of this CPU design is to elevate the kernel to a higher privilege level than user mode applications. This is done to ensure that a misbehaving application cannot compromise the overall stability of the system.</p>
+<p>Kernel mode is an execution mode in a processor that allows access to all system memory and CPU instructions. However, some processors use alternative terms for this mode, such as supervisor mode, privilege level, or ring level. Regardless of the nomenclature, the primary purpose of this CPU design is to elevate the kernel to a higher privilege level than user mode applications. This is done to ensure that a misbehaving application cannot compromise the overall stability of the system.</p><br />
+
+<p>Personally, I prefer the term 'ring level' for kernel mode. It reminds me of one of my favorite movies, The Lord of the Rings!</p>
+
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://giphy.com/embed/VfwIk1LD84CI" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
 <div align="center">
 <!-- add the button!-->
