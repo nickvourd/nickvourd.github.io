@@ -313,6 +313,8 @@ int main() {
 
 <p>The following diagram illustrates the aforementioned five (5) steps:</p>
 
+<img src="/assets/img/post-img/22-10-2023/Diagram-2.png" class="post-images" alt="Example Diagram Function Call Flow">
+
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/2599kjzl9M5anzPSbh" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
