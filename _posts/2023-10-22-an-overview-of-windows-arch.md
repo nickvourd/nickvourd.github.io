@@ -148,7 +148,7 @@ function topFunction() {
 <p>There are various computer architectures, and each has its own unique instruction set and design. The most popular architectures that we will discuss in this article are x86 and x86-64. What do x86 and x86-64 mean? The terms x86 and x86-64 refer to computer processor architectures.<br /></p>
 <ul>
 	<li>
-		<p><strong>x86</strong>typically refers to a family of backward compatible instruction set architectures based on the Intel 8086 CPU. It has become the standard for many personal computers and servers.</p>
+		<p><strong>x86</strong> typically refers to a family of backward compatible instruction set architectures based on the Intel 8086 CPU. It has become the standard for many personal computers and servers.</p>
 	</li>
 	<li>
 		<p><strong>x86-64</strong>, also known as x64, is an extension of the x86 instruction set, allowing for 64-bit addressing. This extension enables processors to handle larger amounts of memory and perform more complex calculations compared to earlier 32-bit versions of the x86 architecture. Most modern desktops, laptops, and servers utilize the x86-64 architecture.</p>
