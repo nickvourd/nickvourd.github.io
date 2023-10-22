@@ -324,9 +324,30 @@ Referring to the earlier diagram, when the user executes this C program, <span s
 
 <p>Alright, let's proceed with a practical example! 😛<br /><br />
 
-We will compile the above example C code into Demo.exe and then analyze it in x64dbg. Navigate to "Symbols" option on the toolbar and locate the DLLs used by Demo.exe. n this tab, you have the opportunity to search for specific Windows APIs.</p>
+We will compile the above example C code into Demo.exe and then analyze it in x64dbg.</p>
+<ol>
+	<li>
+		<p>The user application calls the CreateDirectoryW Windows API.</p>
+	</li>
+</ol>
 
-<img src="/assets/img/post-img/22-10-2023/x64dbg-Symbols-Dlls.png" class="post-images" alt="x64dbg Symbols DLLs>
+<img src="/assets/img/post-img/22-10-2023/x64dbg-CreateDirectoryW-Call.png" class="post-images" alt="x64dbg Call instruction of CreateDirectoryW">
+
+<ol>
+	<li>
+		<p>Next, CreateDirectoryW calls its equivalent NTAPI function, NtCreateDirectory.</p>
+	</li>
+</ol>
+
+<img src="/assets/img/post-img/22-10-2023/x64dbg-NtDirectory-Call.png" class="post-images" alt="x64dbg Call instruction of NtDirectory">
+
+<ol>
+	<li>
+		<p>Last but not least, the NtCreateDirectory function uses a syscall assembly instruction to transition from user land to kernel land. The kernel will be the entity that creates the new directory.</p>
+	</li>
+</ol>
+
+<img src="/assets/img/post-img/22-10-2023/x64dbg-Syscall.png" class="post-images" alt="x64dbg Syscall">
 
 <!-- add the button!-->
 <div>
