@@ -191,7 +191,7 @@ function topFunction() {
 </table>
 
 
-<p>Before we move on to the next section, I would like to explain some basic terms.</p>
+<p>Before we move on to the next section, I would like to explain some basic terms:</p><br />
 <ul>
 	<li>
 		<p><strong>Windows Process</strong>: A process in the Windows operating system is an instance of a computer program that is being executed. It has its own memory space, system resources, and is managed by the Windows kernel.</p>
