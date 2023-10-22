@@ -154,8 +154,40 @@ function topFunction() {
 		<p><strong>x86-64</strong>, also known as x64 or AMD64, is an extension of the x86 instruction set, allowing for 64-bit addressing. This extension enables processors to handle larger amounts of memory and perform more complex calculations compared to earlier 32-bit versions of the x86 architecture. Most modern desktops, laptops, and servers utilize the x86-64 architecture.</p>
 	</li>
 </ul>
-<br />
 
+<p>Before we move on to the next section, I would like to explain some basic terms.</p>
+<ul>
+	<li>
+		<p><strong>Windows Process</strong>: A process in the Windows operating system is an instance of a computer program that is being executed. It has its own memory space, system resources, and is managed by the Windows kernel.</p>
+	</li>
+	<li>
+		<p><strong>Threads</strong>: Threads are the smallest unit of execution within a process in the Windows operating system. They allow for concurrent execution of multiple tasks within the same process.</p>
+	</li>
+	<li>
+		<p><strong>Windows Processor</strong>: The Windows Processor refers to the CPU (Central Processing Unit) within a Windows-based system. It executes instructions and processes data within the operating system.</p>
+	</li>
+	<li>
+		<p><strong>Windows Service</strong>: A Windows service is a program that runs in the background, independently of any user and without the need for a user to log in to the PC. Services are typically used for tasks such as managing network connections, web servers, and other system functions.</p>
+	</li>
+	<li>
+		<p><strong>Windows Kernel</strong>:The Windows Kernel is the core of the Windows operating system. It is responsible for low-level tasks such as hardware management, process management, memory management, and security.</p>
+	</li>
+	<li>
+		<p><strong>Handle</strong>: In the context of Windows, a handle is a reference to an object that can be manipulated by the operating system. It allows processes to interact with system resources like files, devices, or other objects.</p>
+	</li>
+	<li>
+		<p><strong>Windows API</strong>: The Windows API (Application Programming Interface) is a set of functions and data structures that provide an interface for programmers to interact with the Windows operating system. It allows applications to access and use operating system services.</p>
+	</li>
+	<li>
+		<p><strong>Native API</strong>: The Native API is a lower-level interface used by the Windows operating system internally. It provides direct access to system functions that are not accessible through the standard Windows API. It is primarily used for system-level programming and development.</p>
+	</li>
+	<li>
+		<p><strong>DLL (Dynamic Link Library)</strong>: A DLL is a file that contains code and data that can be used by multiple programs at the same time. It allows software to modularize functionalities and share resources, promoting code reuse and efficient memory usage.</p>
+	</li>
+	<li>
+		<p><strong>Syscall</strong>: A syscall (system call) is a request made by an active process to the Windows Kernel. It allows user-level programs to request services from the operating system, such as file operations, input/output operations, and process control.</p>
+	</li>
+</ul>
 
 
 <div align="center">
