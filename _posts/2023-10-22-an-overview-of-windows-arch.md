@@ -240,7 +240,9 @@ function topFunction() {
     <iframe src="https://giphy.com/embed/VfwIk1LD84CI" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>At this point, it is important to note that both the x86 and x86-64 architectures define four (4) ring/privilege levels to protect system code from malicious actions or misbehaviors of the applications. The ring 0 is used for Kernel mode and ring 3 is used for user mode. The main reason Windows uses only two levels is that some hardware architectures, such as ARM, implement only two privilege levels.</p><br />
+<p>At this point, it is important to note that both the x86 and x86-64 architectures define four (4) ring/privilege levels to protect system code from malicious actions or misbehaviors of the applications. The ring 0 is used for Kernel mode and ring 3 is used for user mode. The main reason Windows uses only two levels is that some hardware architectures, such as ARM, implement only two privilege levels.</p>
+
+<h3>Function Call Flow</h3>
 
 <div align="center">
 <!-- add the button!-->
