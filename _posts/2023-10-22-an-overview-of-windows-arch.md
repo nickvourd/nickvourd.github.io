@@ -265,10 +265,12 @@ function topFunction() {
 	</li>
 </ul>
 
-<p>ℹ️ The Windows kernel is partly stored in a file named ```ntoskrnl.exe``` located in ```C:\Windows\System32```.<br /></p>
+<p>ℹ️ The Windows kernel is partly stored in a file named "ntoskrnl.exe" located in "C:\Windows\System32".<br /></p>
 
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://giphy.com/embed/xT9KVqOt8xuRYhNpq8" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
-<div align="center">
 <!-- add the button!-->
 <applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/win-arch-intro"/>
 </div>
