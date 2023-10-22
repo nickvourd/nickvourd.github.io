@@ -136,7 +136,7 @@ function topFunction() {
 }
 </script>
 
-<p>Hello folks, welcome back, and have a nice day! 😃. Today, I will explain some internal aspects of Windows architecture, providing an overview of how processes work and memory allocation. You will need to know some basic aspects of <a href="https://x64dbg.com">x64dbg</a> to follow this article. If you haven't already read my previous article on <a href="https://nickvourd.github.io/x64dbg-intro/">the introduction of x64dbg</a>, you should do so first. So, get ready, boyz/girlz, for the next round!</p>
+<p>Hello folks, welcome back, and have a nice day! 😃. Today, I will explain some internal aspects of Windows architecture, providing an overview of how processes work and memory allocation. You will need to know some basic aspects of <a href="https://x64dbg.com">x64dbg</a> to follow this article. If you have not already read my previous article on <a href="https://nickvourd.github.io/x64dbg-intro/">the introduction of x64dbg</a>, you should do so before continuing. So, get ready, boyz/girlz, for the next round!</p>
 
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/7WvAUvZZTRpSuudobh" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
