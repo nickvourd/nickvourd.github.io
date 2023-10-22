@@ -232,7 +232,7 @@ function topFunction() {
 
 <p>The main reason for this distinction is to protect user applications from accessing and modifying critical Operating System data. User application code runs in User Land, while operating system componets, such as system services and device drivers, operates in Kernel Land.</p><br />
 
-<p>Kernel mode is an execution mode in a processor that allows access to all system memory and CPU instructions. However, some processors use alternative terms for this mode, such as supervisor mode, privilege level, or ring level. Regardless of the nomenclature, the primary purpose of this CPU design is to elevate the kernel to a higher privilege level than user mode applications. This is done to ensure that a misbehaving application cannot compromise the overall stability of the system.</p><br />
+<p>Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. However, some processors use alternative terms for this mode, such as supervisor mode, privilege level, or ring level. Regardless of the nomenclature, the primary purpose of this CPU design is to elevate the kernel to a higher privilege level than user mode applications. This is done to ensure that a misbehaving application cannot compromise the overall stability of the system.</p><br />
 
 <p>Personally, I prefer the term 'ring level' for kernel mode. It reminds me of one of my favorite movies, The Lord of the Rings! 😂</p>
 
@@ -240,9 +240,12 @@ function topFunction() {
     <iframe src="https://giphy.com/embed/VfwIk1LD84CI" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>At this point, it is important to note that both the x86 and x86-64 architectures define four (4) ring/privilege levels to protect system code from malicious actions or misbehaviors of the applications. The ring 0 is used for Kernel mode and ring 3 is used for user mode. The main reason Windows uses only two levels is that some hardware architectures, such as ARM, implement only two privilege levels.</p><br />
+<p>At this point, it is important to note that both the x86 and x86-64 architectures define four (4) ring/privilege levels to protect system code from malicious actions or misbehaviors of the applications. The ring 0 is used for Kernel mode and ring 3 is used for user mode. The main reason Windows uses only two levels is that some hardware architectures, such as ARM, implement only two privilege levels and there are no intermediate levels.</p><br />
 
 <h3>Function Call Flow</h3>
+
+<p>User applications do not have the capability to perform tasks independently; the kernel is the only entity that can complete any task. Consequently, applications typically follow a standard function call flow to execute tasks. Generally, this flow allows any user application to call a function through the Windows API. After a series of steps, the request reaches the kernel, which then executes it. The following diagram illustrates this general approach:</p>
+
 
 <div align="center">
 <!-- add the button!-->
