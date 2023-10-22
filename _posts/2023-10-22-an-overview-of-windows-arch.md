@@ -292,9 +292,9 @@ int main() {
 }
 ```
 
-<p>Referring to the earlier diagram, when the user executes this C program, <span style="color: red;">please remember the following 5 steps (as general overview)</span></p>
+<p>Referring to the earlier diagram, when the user executes this C program, <span style="color: red;">please remember the following 5 steps (as general overview)</span>:</p>
 
-<ul>
+<ol>
 	<li>
 		<p>The C program calls subsystem DLLs, such as kernel32.dll.</p>
 	</li>
@@ -310,7 +310,7 @@ int main() {
 	<li>
 		<p>Finally, the kernel employs NtCreateDirectory to invoke other modules and drivers in order to execute the task.</p>
 	</li>
-</ul>
+</ol>
 
 <!-- add the button!-->
 <div>
