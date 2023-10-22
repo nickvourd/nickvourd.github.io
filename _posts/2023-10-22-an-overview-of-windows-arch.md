@@ -248,6 +248,25 @@ function topFunction() {
 
 <img src="/assets/img/post-img/22-10-2023/Diagram-1.png" class="post-images" alt="General Diagram Function Call Flow">
 
+<p>Let's explain this diagram:<br /><br /></p>
+
+<ul>
+	<li>
+		<p><strong>User Process</strong>: An application that is executed by the user (i.e., Notepad, Firefox).</p>
+	</li>
+	<li>
+		<p><strong>SubSystem DLLs</strong>: Dynamic Link Libraries (DLLs) containing Windows API functions that are invoked by user processes (i.e., kernel32.dll for CreateFileW API).</p>
+	</li>
+	<li>
+		<p><strong>ntdll.dll</strong>: A system-wide DLL which is the lowest layer available in user land. This is a special DLL that creates the transition from user kernel to kernel land.</p>
+	</li>
+	<li>
+		<p><strong>Kernel</strong>: The Windows Kernel calls drivers and other modules to complete tasks.</p>
+	</li>
+</ul>
+
+<p>ℹ️ The Windows kernel is partly stored in a file named ntoskrnl.exe located in "C:\Windows\System32".<br /></p>
+
 
 <div align="center">
 <!-- add the button!-->
