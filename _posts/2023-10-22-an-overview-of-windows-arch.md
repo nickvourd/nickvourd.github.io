@@ -317,7 +317,7 @@ int main() {
     <iframe src="https://giphy.com/embed/2599kjzl9M5anzPSbh" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>OK! OK! Let's go for a practical example... 😛</p>
+<p>Alright, let's proceed with a practical example! 😛</p>
 
 <!-- add the button!-->
 <div>
