@@ -137,7 +137,7 @@ function topFunction() {
 }
 </script>
 
-<p>Hello folks, welcome back, and have a nice day! 😃. Today, I will explain some internal aspects of Windows architecture, providing an overview of how processes work and memory allocation. You will need to know some basic aspects of [x64dbg](https://x64dbg.com) to follow this article. If you haven't already read my previous article on [the introduction of x64dbg](https://nickvourd.github.io/x64dbg-intro/), you should do so first. So, get ready, boyz/girlz, for the next round!</p>
+<p>Hello folks, welcome back, and have a nice day! 😃. Today, I will explain some internal aspects of Windows architecture, providing an overview of how processes work and memory allocation. You will need to know some basic aspects of <a href="https://x64dbg.com">x64dbg</a> to follow this article. If you haven't already read my previous article on <a href="https://nickvourd.github.io/x64dbg-intro/">the introduction of x64dbg</a>, you should do so first. So, get ready, boyz/girlz, for the next round!</p>
 
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/7WvAUvZZTRpSuudobh" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -145,7 +145,7 @@ function topFunction() {
 
 <h3>x86/x86-64</h3>
 
-</p>There are various computer architectures, and each has its own unique instruction set and design. The most popular architectures that we will discuss in this article are x86 and x86-64. What do x86 and x86-64 mean?<br />
+<p>There are various computer architectures, and each has its own unique instruction set and design. The most popular architectures that we will discuss in this article are x86 and x86-64. What do x86 and x86-64 mean?<br />
 The terms x86 and x86-64 refer to computer processor architectures. x86 typically refers to a family of backward compatible instruction set architectures based on the Intel 8086 CPU. It has become the standard for many personal computers and servers. x86-64, also known as x64 or AMD64, is an extension of the x86 instruction set. It supports 64-bit addressing, allowing for more significant amounts of memory to be accessed. Most modern computers and laptops use the x86-64 architecture, which provides improved performance for handling large amounts of data and running complex applications.</p>
 
 
