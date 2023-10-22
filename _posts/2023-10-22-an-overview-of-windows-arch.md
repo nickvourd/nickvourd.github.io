@@ -244,9 +244,9 @@ function topFunction() {
 
 <h3>Function Call Flow</h3>
 
-<p>User applications do not have the capability to perform tasks independently; the kernel is the only entity that can complete any task. Consequently, applications typically follow a standard function call flow to execute tasks. Generally, this flow allows any user application to call a function through the Windows API. After a series of steps, the request reaches the kernel, which then executes it. The following diagram illustrates this general approach.I inspired the below diagram from <a href="https://maldevacademy.com">Maldev academy</a>, and I recommend it to anyone looking to learn more about evasion.</p>
+<p>User applications do not have the capability to perform tasks independently; the kernel is the only entity that can complete any task. Consequently, applications typically follow a standard function call flow to execute tasks. Generally, this flow allows any user application to call a function through the Windows API. After a series of steps, the request reaches the kernel, which then executes it. The following diagram illustrates this general approach. I inspired it from <a href="https://maldevacademy.com">Maldev academy</a>, and I recommend it to anyone looking to learn more about evasion.</p>
 
-<img href="/assets/img/post-img/22-10-2023/Diagram-1.png" class="post-images" alt="General Diagram Function Call">
+<img src="/assets/img/post-img/22-10-2023/Diagram-1.png" class="post-images" alt="General Diagram Function Call Flow">
 
 
 <div align="center">
