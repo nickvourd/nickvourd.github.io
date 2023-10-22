@@ -145,7 +145,7 @@ function topFunction() {
 
 <h3>x86/x86-64</h3>
 
-<p>There are various computer architectures, and each has its own unique instruction set and design. The most popular architectures that we will discuss in this article are x86 and x86-64. What do x86 and x86-64 mean? The terms x86 and x86-64 refer to computer processor architectures.<br /></p>
+<p>There are various computer architectures, and each has its own unique instruction set and design. The most popular architectures that we will discuss in this article are x86 and x86-64. What do x86 and x86-64 mean? Well, the terms x86 and x86-64 refer to computer processor architectures.<br /></p>
 <ul>
 	<li>
 		<p><strong>x86</strong> typically refers to a family of backward compatible instruction set architectures based on the Intel 8086 CPU. It has become the standard for many personal computers and servers.</p>
