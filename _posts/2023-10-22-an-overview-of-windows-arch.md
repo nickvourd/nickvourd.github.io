@@ -218,7 +218,7 @@ function topFunction() {
 		<p><strong>Native API</strong>: The Native API is a lower-level interface used by the Windows operating system internally. It provides direct access to system functions that are not accessible through the standard Windows API. It is primarily used for system-level programming and development.</p>
 	</li>
 	<li>
-		<p><strong>DLL (Dynamic Link Library)</strong>: A DLL is a file that contains code and data that can be used by multiple programs at the same time. It allows software to modularize functionalities and share resources, promoting code reuse and efficient memory usage.</p>
+		<p><strong>DLL</strong>: A DLL (Dynamic Link Library) is a file that contains code and data that can be used by multiple programs at the same time. It allows software to modularize functionalities and share resources, promoting code reuse and efficient memory usage.</p>
 	</li>
 	<li>
 		<p><strong>Syscall</strong>: A syscall (system call) is a request made by an active process to the Windows Kernel. It allows user-level programs to request services from the operating system, such as file operations, input/output operations, and process control.</p>
