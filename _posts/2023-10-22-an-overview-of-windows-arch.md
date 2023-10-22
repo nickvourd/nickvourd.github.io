@@ -325,27 +325,27 @@ Referring to the earlier diagram, when the user executes this C program, <span s
 <p>Alright, let's proceed with a practical example! 😛<br /><br />
 
 We will compile the above example C code into Demo.exe and then analyze it in x64dbg.</p>
-<ol>
+<ul>
 	<li>
 		<p>The user application calls the CreateDirectoryW Windows API.</p>
 	</li>
-</ol>
+</ul>
 
 <img src="/assets/img/post-img/22-10-2023/x64dbg-CreateDirectoryW-Call.png" class="post-images" alt="x64dbg Call instruction of CreateDirectoryW">
 
-<ol>
+<ul>
 	<li>
 		<p>Next, CreateDirectoryW calls its equivalent NTAPI function, ZwCreateDirectory.</p>
 	</li>
-</ol>
+</ul>
 
 <img src="/assets/img/post-img/22-10-2023/x64dbg-NtDirectory-Call.png" class="post-images" alt="x64dbg Call instruction of ZwDirectory">
 
-<ol>
+<ul>
 	<li>
 		<p>Last but not least, the ZwCreateDirectory function uses a syscall assembly instruction to transition from user land to kernel land. The kernel will be the entity that creates the new directory.</p>
 	</li>
-</ol>
+</ul>
 
 <img src="/assets/img/post-img/22-10-2023/x64dbg-Syscall.png" class="post-images" alt="x64dbg Syscall">
 
