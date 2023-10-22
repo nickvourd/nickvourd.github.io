@@ -335,7 +335,7 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 	</li>
 </ul>
 
-<img src="/assets/img/post-img/22-10-2023/x64dbg-CreateDirectoryW-Call.png" class="post-images" alt="x64dbg Call instruction of CreateDirectoryW">
+<img src="/assets/img/post-img/22-10-2023/x64dbg-Call-CreateFileW.png" class="post-images" alt="x64dbg Call instruction of CreateFileW">
 
 <ul>
 	<li>
@@ -343,7 +343,7 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 	</li>
 </ul>
 
-<img src="/assets/img/post-img/22-10-2023/x64dbg-NtDirectory-Call.png" class="post-images" alt="x64dbg Call instruction of ZwDirectory">
+<img src="/assets/img/post-img/22-10-2023/x64dbg-Call-NtCreateFile.png" class="post-images" alt="x64dbg Call instruction of NtCreateFile">
 
 <ul>
 	<li>
