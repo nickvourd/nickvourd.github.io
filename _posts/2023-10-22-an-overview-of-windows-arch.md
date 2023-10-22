@@ -190,6 +190,7 @@ function topFunction() {
     </tr>
 </table>
 
+<h3>Basic Terms</h3>
 
 <p>Before we move on to the next section, I would like to explain some basic terms:</p><br />
 <ul>
