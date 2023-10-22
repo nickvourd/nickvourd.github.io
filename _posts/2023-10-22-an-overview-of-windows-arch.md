@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An overview of Windows architecture and memory management"
+title: "An overview of Windows architecture & memory management"
 image: ""
 date: 2023-10-22 10:10:02
 tags:
@@ -140,7 +140,7 @@ function topFunction() {
 <p>Hello folks, welcome back, and have a nice day! 😃. Today, I will explain some internal aspects of Windows architecture, providing an overview of how processes work and memory allocation. You will need to know some basic aspects of <a href="https://x64dbg.com">x64dbg</a> to follow this article. If you haven't already read my previous article on <a href="https://nickvourd.github.io/x64dbg-intro/">the introduction of x64dbg</a>, you should do so first. So, get ready, boyz/girlz, for the next round!</p>
 
 <div style="display: flex; justify-content: center;">
-    <iframe src="https://giphy.com/embed/7WvAUvZZTRpSuudobh" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <iframe src="https://giphy.com/embed/7WvAUvZZTRpSuudobh" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
 <h3>x86/x86-64</h3>
