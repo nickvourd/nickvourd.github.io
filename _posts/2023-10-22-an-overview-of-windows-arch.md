@@ -271,6 +271,29 @@ function topFunction() {
     <iframe src="https://giphy.com/embed/xT9KVqOt8xuRYhNpq8" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
+<p>Before proceeding with a practical example, I want to clarify a crucial point. I intend to provide more details about this function call flow to enhance familiarity with it.<br /><br />
+Let's consider a sample C application that utilizes the CreateDirectoryW Windows API, like the example below:</p>
+
+```
+#include <stdio.h>
+#include <windows.h>
+
+int main() {
+    LPCWSTR dirPath = L"C:\\Users\\nickvourd\\Desktop\\NewDirectory";
+
+    if (CreateDirectoryW(dirPath, NULL)) {
+        wprintf(L"[+] Directory '%s' created successfully.\n", dirPath);
+    } else {
+        wprintf(L"[-] CreateDirectoryW API Function Failed with Error: %d\n", GetLastError());
+        return -1;
+    }
+
+    return 0;
+}
+```
+
+<p>Referring to the earlier diagram, when the user executes this C program:</p>
+
 <!-- add the button!-->
 <applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/win-arch-intro"/>
 </div>
