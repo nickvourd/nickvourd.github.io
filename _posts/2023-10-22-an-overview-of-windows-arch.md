@@ -265,7 +265,7 @@ function topFunction() {
 	</li>
 </ul>
 
-<p>ℹ️ The Windows kernel is partly stored in a file named `ntoskrnl.exe` located in `C:\Windows\System32`.<br /></p>
+<p>ℹ️ The Windows kernel is partly stored in a file named ```ntoskrnl.exe``` located in ```C:\Windows\System32```.<br /></p>
 
 
 <div align="center">
