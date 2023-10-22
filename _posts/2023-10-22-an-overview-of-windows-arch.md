@@ -292,7 +292,7 @@ int main() {
 }
 ```
 
-<p>Referring to the earlier diagram, when the user executes this C program:</p>
+<p>Referring to the earlier diagram, when the user executes this C program, <span style="color: red;">please remember the following 5 steps (as general overview)</span></p>
 
 <ul>
 	<li>
