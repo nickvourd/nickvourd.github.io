@@ -155,6 +155,42 @@ function topFunction() {
 	</li>
 </ul>
 
+<p>The following table presents the main differences of x86 and x86-64 architectures:</p>
+
+<table border="1">
+    <tr>
+        <th>Characteristic</th>
+        <th>x86 (32-bit)</th>
+        <th>x86-64 (64-bit)</th>
+    </tr>
+    <tr>
+        <td>Word Size</td>
+        <td>32-bit</td>
+        <td>64-bit</td>
+    </tr>
+    <tr>
+        <td>Memory Limit</td>
+        <td>4 GB</td>
+        <td>Several TB</td>
+    </tr>
+    <tr>
+        <td>Performance</td>
+        <td>Limited by 32-bit processing</td>
+        <td>Enhanced performance due to 64-bit processing and larger memory addressing</td>
+    </tr>
+    <tr>
+        <td>Compatibility</td>
+        <td>32-bit applications can generally run on both 32-bit and 64-bit processors</td>
+        <td>64-bit applications can only run on 64-bit processors</td>
+    </tr>
+    <tr>
+        <td>Register Set</td>
+        <td>Smaller number of general-purpose registers</td>
+        <td>More general-purpose registers, leading to potential performance improvements for specific tasks</td>
+    </tr>
+</table>
+
+
 <p>Before we move on to the next section, I would like to explain some basic terms.</p>
 <ul>
 	<li>
