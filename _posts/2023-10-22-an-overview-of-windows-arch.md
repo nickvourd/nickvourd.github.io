@@ -271,19 +271,23 @@ function topFunction() {
 </div>
 
 <p>Before proceeding with a practical example, I want to clarify a crucial point. I intend to provide more details about this function call flow to enhance familiarity with it.<br /><br />
-Let's consider a sample C application that utilizes the CreateDirectoryW Windows API, to create a new directory:</p>
+Let's consider a sample C application that utilizes the CreateFileW Windows API, to create a new file:</p>
 
 ```
 #include <stdio.h>
 #include <windows.h>
 
 int main() {
-    LPCWSTR dirPath = L"C:\\Users\\nickvourd\\Desktop\\NewDirectory";
+    HANDLE hFile = INVALID_HANDLE_VALUE;
+    LPCWSTR filePath = L"C:\\Users\\nickvourd\\Desktop\\nickvourd.txt";
 
-    if (CreateDirectoryW(dirPath, NULL)) {
-        wprintf(L"[+] Directory '%s' created successfully.\n", dirPath);
+    hFile = CreateFileW(filePath, GENERIC_ALL, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+
+    if (hFile != INVALID_HANDLE_VALUE) {
+        wprintf(L"[+] File '%s' created successfully.\n", filePath);
+        CloseHandle(hFile);
     } else {
-        wprintf(L"[-] CreateDirectoryW API Function Failed with Error: %d\n", GetLastError());
+        wprintf(L"[-] CreateFileW API Function Failed with Error: %d\n", GetLastError());
         return -1;
     }
 
@@ -299,16 +303,16 @@ Referring to the earlier diagram, when the user executes this C program, <span s
 		<p>The C program calls subsystem DLLs, such as kernel32.dll.</p>
 	</li>
 	<li>
-		<p>The kernel32.dll contains the CreateDirectoryW Windows API.</p>
+		<p>The kernel32.dll contains the CreateFileW Windows API.</p>
 	</li>
 	<li>
-		<p>The CreateDirectoryW API calls the Native API named ZwCreateDirectory, which is part of ntdll.dll.</p>
+		<p>The CreateFileW API calls the Native API named NtCreateFile, which is part of ntdll.dll.</p>
 	</li>
 	<li>
 		<p>The ntdll.dll executes an assembly sysenter (x86) or syscall (x64) instruction, transferring the execution to kernel land.</p>
 	</li>
 	<li>
-		<p>Finally, the kernel employs ZwCreateDirectory to invoke other modules and drivers in order to execute the task.</p>
+		<p>Finally, the kernel employs NtCreateFile to invoke other modules and drivers in order to execute the task.</p>
 	</li>
 </ol>
 
