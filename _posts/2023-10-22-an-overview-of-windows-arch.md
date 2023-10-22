@@ -291,7 +291,7 @@ int main() {
 }
 ```
 
-<p>Referring to the earlier diagram, when the user executes this C program, <span style="color: red;">please remember the following 5 steps (as general overview)</span>:</p>
+<p>Referring to the earlier diagram, when the user executes this C program, <span style="color: red;">please remember the following five (5) steps (as general overview)</span>:</p>
 
 <ol>
 	<li>
@@ -311,11 +311,13 @@ int main() {
 	</li>
 </ol>
 
+<p>The following diagram illustrates the aforementioned five (5) steps:</p>
+
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/2599kjzl9M5anzPSbh" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>OK! OK! Let's go for a practical example... 😝</p>
+<p>OK! OK! Let's go for a practical example... 😛</p>
 
 <!-- add the button!-->
 <div>
