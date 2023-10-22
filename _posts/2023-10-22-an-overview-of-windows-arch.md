@@ -322,7 +322,9 @@ Referring to the earlier diagram, when the user executes this C program, <span s
     <iframe src="https://giphy.com/embed/2599kjzl9M5anzPSbh" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>Alright, let's proceed with a practical example! 😛</p><br />
+<p>Alright, let's proceed with a practical example! 😛<br /><br />
+
+We will compile the above example C code into Demo.exe and then analyze it in x64dbg.</p>
 
 <!-- add the button!-->
 <div>
