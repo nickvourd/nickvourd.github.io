@@ -295,5 +295,6 @@ int main() {
 <p>Referring to the earlier diagram, when the user executes this C program:</p>
 
 <!-- add the button!-->
+<div>
 <applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/win-arch-intro"/>
 </div>
