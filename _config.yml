@@ -77,6 +77,8 @@ projects:
       url: https://github.com/nickvourd/Responder-Parser
     - name: COM-Hunter (C#)
       url: https://github.com/nickvourd/COM-Hunter
+    - name: Rootend (Python)
+      url: https://github.com/twelvesec/rootend
     - name: Deskmody (Bash)
       url: https://github.com/nickvourd/Deskmody
       
