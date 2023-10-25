@@ -1,0 +1,18 @@
+---
+layout: minimal
+title: "My Tools"
+permalink: /tools/
+description: "My Custom tools"
+---
+
+<img itemprop="image" class="img-rounded about_perfil" src="/assets/img/index-logo/nickvourd-logo-200x200.png" alt="nickvourd's profile picture"> 
+
+<h2>My Tools</h2>
+
+<div class="aboutme">
+	<ul class="recent">
+		{% for project in site.projects %}
+	    	<li><a href="{{ project.url}}"><h3 class="project-name" itemprop="name">{{ project.name }}</h3></a></li>
+	    {% endfor %}
+	</ul>
+</div>
