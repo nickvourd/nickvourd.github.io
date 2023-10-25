@@ -56,6 +56,10 @@ links:
       url: /my-tools
       key_trigger: m
   section_3:
+    - title: accredible
+      new_tab: true
+      url: https://www.credential.net/profile/nickvourd/wallet
+      key_trigger: a
     - title: donate
       new_tab: true
       url: https://www.buymeacoffee.com/nickvourd
