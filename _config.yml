@@ -56,7 +56,7 @@ links:
       url: https://www.linkedin.com/in/nickvourd/
       key_trigger: l
   section_3:
-    - title: my-tools
+    - title: my tools
       url: /my-tools
       key_trigger: m
     - title: twitter
