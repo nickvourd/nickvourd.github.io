@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello World"
-image: "/assets/img/index-logo/fox-ncv.png"
+image: ""
 date: 2023-08-08 00:06:02
 tags:
   - Base64
