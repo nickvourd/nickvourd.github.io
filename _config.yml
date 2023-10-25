@@ -61,7 +61,7 @@ links:
       url: /my-tools
       key_trigger: m
     - title: search
-      url: ""
+      url: "/_includes/menu-search.html"
       key_trigger: s #WARNING: search only works with "s"
     - title: twitter
       new_tab: true
