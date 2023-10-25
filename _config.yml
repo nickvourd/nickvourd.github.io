@@ -60,9 +60,9 @@ links:
     - title: my-tools
       url: /my-tools
       key_trigger: m
-    - title: search
-      url: ""
-      key_trigger: s #WARNING: search only works with "s"
+  #  - title: search
+  #    url: ""
+  #    key_trigger: s #WARNING: search only works with "s"
     
 
 # Projects in header index
