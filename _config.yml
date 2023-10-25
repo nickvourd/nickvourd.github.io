@@ -40,22 +40,6 @@ links:
       url: /tags
       key_trigger: 4
   section_2:
-    - title: github
-      url: https://www.github.com/nickvourd
-      new_tab: true
-      key_trigger: g
-    - title: twitter
-      new_tab: true
-      url: https://www.twitter.com/nickvourd
-      key_trigger: t
-    - title: linkedin
-      new_tab: true
-      url: https://www.linkedin.com/in/nickvourd/
-      key_trigger: l
-    - title: my-tools
-      url: /my-tools
-      key_trigger: m
-  section_3:
     - title: accredible
       new_tab: true
       url: https://www.credential.net/profile/nickvourd/wallet
@@ -64,9 +48,25 @@ links:
       new_tab: true
       url: https://www.buymeacoffee.com/nickvourd
       key_trigger: d
+    - title: github
+      url: https://www.github.com/nickvourd
+      new_tab: true
+      key_trigger: g
+    - title: linkedin
+      new_tab: true
+      url: https://www.linkedin.com/in/nickvourd/
+      key_trigger: l
+  section_3:
+    - title: my-tools
+      url: /my-tools
+      key_trigger: m
     - title: search
       url: ""
       key_trigger: s #WARNING: search only works with "s"
+    - title: twitter
+      new_tab: true
+      url: https://www.twitter.com/nickvourd
+      key_trigger: t
     
 # Projects in header index
 projects:
