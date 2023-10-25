@@ -361,5 +361,5 @@ We will compile the above example C code into Demo.exe and then analyze it in x6
 
 <!-- add the button!-->
 <div>
-<applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/win-arch-intro"/>
+<applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/an-overview-of-windows-arch/"/>
 </div>
