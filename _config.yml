@@ -76,6 +76,8 @@ projects:
       url: https://github.com/nickvourd/Responder-Parser
     - name: COM-Hunter (C#)
       url: https://github.com/nickvourd/COM-Hunter
+    - name: Deskmody (Bash)
+      url: https://github.com/nickvourd/Deskmody
       
 # exclude node related stuff
 exclude: ['package.json', 'src', 'node_modules']
