@@ -52,19 +52,18 @@ links:
       new_tab: true
       url: https://www.linkedin.com/in/nickvourd/
       key_trigger: l
+    - title: my-tools
+      url: /my-tools
+      key_trigger: m
+  section_3:
     - title: donate
       new_tab: true
       url: https://www.buymeacoffee.com/nickvourd
       key_trigger: d
-  section_3:
-    - title: my-tools
-      url: /my-tools
-      key_trigger: m
-  #  - title: search
-  #    url: ""
-  #    key_trigger: s #WARNING: search only works with "s"
+    - title: search
+      url: ""
+      key_trigger: s #WARNING: search only works with "s"
     
-
 # Projects in header index
 projects:
     - name: PS-Cisco-Downloader (PowerShell)
