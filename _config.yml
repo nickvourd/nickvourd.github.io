@@ -2,7 +2,8 @@
 title: "@nickvourd - InfoSec Blog"
 description: "NCV's Official Blog!"
 baseurl: "" 
-url: ""
+url: "https://nickvourd.github.io"
+
 # User settings
 username: nickvourd
 user_title: nickvourd - Just your friendly neighborhood APT
