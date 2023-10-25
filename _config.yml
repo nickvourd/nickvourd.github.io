@@ -56,12 +56,13 @@ links:
       url: https://www.buymeacoffee.com/nickvourd
       key_trigger: d
   section_3:
+    - title: my-tools
+      url: /my-tools
+      key_trigger: m
     - title: search
       url: ""
       key_trigger: s #WARNING: search only works with "s"
-    - title: tools
-      url: /tools
-      key_trigger: t
+    
 
 # Projects in header index
 projects:
