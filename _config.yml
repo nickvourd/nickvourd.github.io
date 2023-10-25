@@ -59,6 +59,9 @@ links:
     - title: search
       url: ""
       key_trigger: s #WARNING: search only works with "s"
+    - title: tools
+      url: /tools
+      key_trigger: t
 
 # Projects in header index
 projects:
