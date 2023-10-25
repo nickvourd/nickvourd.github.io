@@ -55,10 +55,10 @@ links:
       new_tab: true
       url: https://www.buymeacoffee.com/nickvourd
       key_trigger: d
-  #section_3:
-  #  - title: search
-  #    url: ""
-  #    key_trigger: s #WARNING: search only works with "s"
+  section_3:
+    - title: search
+      url: ""
+      key_trigger: s #WARNING: search only works with "s"
 
 # Projects in header index
 projects:
