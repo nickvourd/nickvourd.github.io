@@ -59,13 +59,14 @@ links:
     - title: my tools
       url: /my-tools
       key_trigger: m
+    - title: search
+      url: ""
+      key_trigger: s #WARNING: search only works with "s"
     - title: twitter
       new_tab: true
       url: https://www.twitter.com/nickvourd
       key_trigger: t
-    #- title: search
-    #  url: "/_includes/menu-search.html"
-    #  key_trigger: s #WARNING: search only works with "s"
+    
     
 # Projects in header index
 projects:
