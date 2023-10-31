@@ -70,6 +70,8 @@ links:
     
 # Projects in header index
 projects:
+    - name: Mini-Tools (Python)
+      url: https://github.com/nickvourd/Mini-Tools
     - name: PS-Cisco-Downloader (PowerShell)
       url: https://github.com/nickvourd/PS-Cisco-Downloader
     - name: RTI-Toolkit (PowerShell)
