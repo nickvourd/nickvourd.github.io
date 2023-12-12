@@ -72,8 +72,6 @@ links:
 projects:
     - name: Mini-Tools (Misc)
       url: https://github.com/nickvourd/Mini-Tools
-    - name: PS-Cisco-Downloader (PowerShell)
-      url: https://github.com/nickvourd/PS-Cisco-Downloader
     - name: RTI-Toolkit (PowerShell)
       url: https://github.com/nickvourd/RTI-Toolkit
     - name: Supernova (Go)
