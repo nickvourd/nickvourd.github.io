@@ -70,6 +70,8 @@ links:
     
 # Projects in header index
 projects:
+    - name: Tmux-Yaml-Collection (Yaml)
+      url: https://github.com/nickvourd/Tmux-Yaml-Collection
     - name: Mini-Tools (Misc)
       url: https://github.com/nickvourd/Mini-Tools
     - name: RTI-Toolkit (PowerShell)
