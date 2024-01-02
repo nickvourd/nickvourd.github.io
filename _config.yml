@@ -54,11 +54,11 @@ links:
       url: https://www.github.com/nickvourd
       new_tab: true
       key_trigger: g
+  section_3:
     - title: linkedin
       new_tab: true
       url: https://www.linkedin.com/in/nickvourd/
       key_trigger: l
-  section_3:
     - title: my tools
       url: /my-tools
       key_trigger: m
