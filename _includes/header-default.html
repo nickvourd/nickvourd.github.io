@@ -49,7 +49,7 @@
               {% endfor %}
         </ul>
 
-		<ul class="recent">
+	<ul class="recent">
             <p>Recent projects:</p>
              {% for project in site.projects limit:3%}
                 <li>
@@ -60,6 +60,17 @@
               {% endfor %}
         </ul>
 
+	<ul class="recent">
+            <p>Cookbooks:</p>
+             {% for cookbook in site.cookbooks limit:3%}
+                <li>
+                    <a title="Show my recent cookbook" href="{{ cookbooks.url}}">
+                        <h2 class="post-title" itemprop="name">{{ cookbooks.name }}</h2>
+                    </a>
+                </li>
+              {% endfor %}
+        </ul>
+	    
         <ul class="recent">
             <p>Feeling generous?</p>
                 <li>
