@@ -40,7 +40,6 @@ links:
       key_trigger: 4
   section_2:
     - title: accredible
-      new_tab: true
       url: https://www.credential.net/profile/nickvourd/wallet
       key_trigger: a
     - title: cookbooks
