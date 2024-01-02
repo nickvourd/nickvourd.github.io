@@ -62,13 +62,11 @@
 
 	<ul class="recent">
             <p>Cookbooks:</p>
-             {% for cookbook in site.cookbooks limit:3%}
                 <li>
-                    <a title="Show my recent cookbook" href="{{ cookbooks.url}}">
-                        <h2 class="post-title" itemprop="name">{{ cookbooks.name }}</h2>
+                    <a title="Show my recent cookbook" href="https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook">
+                        <h2 class="post-title" itemprop="name">Windows Local Privilege Escalation Cookbook</h2>
                     </a>
                 </li>
-              {% endfor %}
         </ul>
 	    
         <ul class="recent">
