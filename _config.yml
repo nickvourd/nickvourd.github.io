@@ -86,7 +86,11 @@ projects:
       url: https://github.com/twelvesec/rootend
     - name: Deskmody (Bash)
       url: https://github.com/nickvourd/Deskmody
-      
+
+cookbooks:
+  - name: Windows Local Privilege Escalation Cookbook
+    url: https://github.com/nickvourd/Windows-Local-Privilege-Escalation-Cookbook
+    
 # exclude node related stuff
 exclude: ['package.json', 'src', 'node_modules']
 
