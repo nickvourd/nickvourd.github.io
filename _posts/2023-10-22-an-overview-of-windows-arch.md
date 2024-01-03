@@ -208,7 +208,7 @@ function topFunction() {
 		<p><strong>Windows Service</strong>: A Windows service is a program that runs in the background, independently of any user and without the need for a user to log in to the PC. Services are typically used for tasks such as managing network connections, web servers, and other system functions.</p>
 	</li>
 	<li>
-		<p><strong>Windows Kernel</strong>:The Windows Kernel is the core of the Windows operating system. It is responsible for low-level tasks such as hardware management, process management, memory management, and security.</p>
+		<p><strong>Windows Kernel</strong>: The Windows Kernel is the core of the Windows operating system. It is responsible for low-level tasks such as hardware management, process management, memory management, and security.</p>
 	</li>
 	<li>
 		<p><strong>Handle</strong>: In the context of Windows, a handle is a reference to an object that can be manipulated by the operating system. It allows processes to interact with system resources like files, devices, or other objects.</p>
