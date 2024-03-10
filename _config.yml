@@ -73,6 +73,8 @@ links:
     
 # Projects in header index
 projects:
+    - name: CS-Aggressor-Scripts (Aggressor)
+      url: https://github.com/nickvourd/CS-Aggressor-Scripts
     - name: Tmux-Yaml-Collection (Yaml)
       url: https://github.com/nickvourd/Tmux-Yaml-Collection
     - name: Mini-Tools (Misc)
