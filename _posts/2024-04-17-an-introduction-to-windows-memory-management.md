@@ -145,9 +145,9 @@ function topFunction() {
 
 <p>The first thing we need to discuss is what memory is! Memory in computing systems refers to the electronic components that store data and instructions for processing by the Central Processing Unit (CPU).Most people out there, when they hear the word "memory," typically think of RAM or a hard disk. To be honest, while these examples are contextualized to memory types, in Windows Internals, the meaning is slightly different...<br /></p>
 
-<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br /><br />
+<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br />
 
-You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br /><br />
+You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br />
 
 By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).<br /><br /></p>
 
@@ -157,11 +157,11 @@ By utilizing virtual memory addressing and allowing the operating system's Memor
 
 For years, I've been hearing about terms like stack, heap, and more from hardcore cybersecurity colleagues, and of course, from <a href="https://twitter.com/0xvm">Lovely Uncle Bill</a>. To be honest, all this stuff seemed very confusing to me. So, I started from the basics to understand what they are.<br /><br />
 
-The following picture depicts an overview of the virtual memory layout of a process (x86). Also, it is important to note that this picture is from the great blog post [Exploit writing tutorial part 1 : Stack Based Overflows](https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/) by [@corelanconsultn](https://twitter.com/corelanconsultn):
+The following picture depicts an overview of the virtual memory layout of a process (x86). Also, it is important to note that this picture is from the great blog post <a href="https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/">Exploit writing tutorial part 1 : Stack Based Overflows</a> by <a href="https://twitter.com/corelanconsultn">@corelanconsultn</a>:
 
 <img src="https://www.corelan.be/wp-content/uploads/2010/08/image3.png" class="post-images" alt="Exploit writing tutorial part 1 : Stack Based Overflows (Corelan)">
 
-Let’s work our way up from the bottom (Kernel Land), starting with the portion of memory from 0xFFFFFFFF to 0x7FFFFFFF, and discuss the most important parts:
+Let’s work our way up from the bottom (Kernel Land), starting with the portion of memory from 0xFFFFFFFF to 0x7FFFFFFF, and discuss the most important parts:<br />
 
 <h4>Kernel Land</h4>
 
@@ -183,15 +183,15 @@ Let’s work our way up from the bottom (Kernel Land), starting with the portion
 
 <p>The stack is a region of memory used for storing function call and local variable data during program execution. It operates on a last-in, first-out (LIFO) basis, meaning that the last item pushed onto the stack is the first one to be popped off.<br />When a function is called, its parameters and local variables are typically allocated on the stack. As subsequent functions are called within the current function, additional stack frames are created, each containing the necessary information for the corresponding function call. When a function returns, its stack frame is removed from the stack, and control returns to the calling function.<br />The stack is managed automatically by the CPU and is typically of fixed size, although it can grow dynamically in some systems.</p>
 
-<p>I know that's a lot of information, and honestly, the main part of my job as an Offensive Security Consultant is to explain difficult topics to my clients and make them easy to understand. This is a skill that I learned from [Mr_P](https://www.linkedin.com/in/panosstam/) and [@S1ckB0y1337](https://twitter.com/S1ckB0y1337).<br /><br />
+<p>I know that's a lot of information, and honestly, the main part of my job as an Offensive Security Consultant is to explain difficult topics to my clients and make them easy to understand. This is a skill that I learned from <a href="https://www.linkedin.com/in/panosstam/">Mr_P</a> and <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a>.<br /><br />
 
 Let's try this together! When I mention a term, please keep two words in mind:<br />
 
-- `Kernel Land`: The lowest level managed by the operating system.<br />
-- `PEB`: A data structure that contains information about procesess.<br />
-- `TEB`: A data structure that contains information about threads within a process.<br />
-- `Heap`: A memory region used for dynamic memory allocation during runtime.<br />
-- `Stack`: A memory region used for function calls and storing local variables during execution.<br /><br />
+- <b>Kernel Land</b>: The lowest level managed by the operating system.<br />
+- <b>PEB</b>: A data structure that contains information about procesess.<br />
+- <b>TEB</b>: A data structure that contains information about threads within a process.<br />
+- <b>Heap</b>: A memory region used for dynamic memory allocation during runtime.<br />
+- <b>Stack</b>: A memory region used for function calls and storing local variables during execution.<br /><br />
 </p>
 
 <h3>Memory Page States</h3>
