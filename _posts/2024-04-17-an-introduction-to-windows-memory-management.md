@@ -241,13 +241,10 @@ However, if you want to find more memory page protection options, you can visit 
 First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
 
 ```
-// Method 1 - Using malloc()
 PVOID pAddress = malloc(number);
 
-// Method 2 - Using HeapAlloc()
 PVOID pAddress = HeapAlloc(GetProcessHeap(), 0, number);
 
-// Method 3 - Using LocalAlloc()
 PVOID pAddress = LocalAlloc(LPTR, number);
 ```
 
