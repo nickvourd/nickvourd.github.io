@@ -240,17 +240,9 @@ However, if you want to find more memory page protection options, you can visit 
 
 First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
 
-```c
-// Method 1 - Using malloc()
-PVOID pAddress = malloc(number);
+<img src="/assets/img/post-img/17-04-2024/Memory-allocation-methods.png" class="post-images" alt="methods_of_allocation" height="500" weight="500">
 
-// Method 2 - Using HeapAlloc()
-PVOID pAddress = HeapAlloc(GetProcessHeap(), 0, number);
-
-// Method 3 - Using LocalAlloc()
-PVOID pAddress = LocalAlloc(LPTR, number);
-```
-
+<br /><br />
 <!-- add the button!-->
 <div>
 <applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/an-introduction-to-windows-memory-management/"/>
