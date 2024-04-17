@@ -143,17 +143,17 @@ function topFunction() {
 
 <h3>Intro to Memory</h3>
 
-<p>The first thing we need to discuss is what memory is! Memory in computing systems refers to the electronic components that store data and instructions for processing by the Central Processing Unit (CPU).Most people out there, when they hear the word "memory," typically think of RAM or a hard disk. To be honest, while these examples are contextualized to memory types, in Windows Internals, the meaning is slightly different...</p>
+<p>The first thing we need to discuss is what memory is! Memory in computing systems refers to the electronic components that store data and instructions for processing by the Central Processing Unit (CPU).Most people out there, when they hear the word "memory," typically think of RAM or a hard disk. To be honest, while these examples are contextualized to memory types, in Windows Internals, the meaning is slightly different...<br /></p>
 
-<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br />
+<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br /><br />
 
-You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br />
+You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br /><br />
 
-By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).<br /></p>
+By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).<br /><br /></p>
 
 <h3>Memory Structures</h3>
 
-<p>Before proceeding to technical details and protections regarding virtual memory, it is important to explain the basic virtual memory structures.<br />
+<p>Before proceeding to technical details and protections regarding virtual memory, it is important to explain the basic virtual memory structures.<br /><br />
 
 For years, I've been hearing about terms like stack, heap, and more from hardcore cybersecurity colleagues, and of course, from <a href="https://twitter.com/0xvm">Lovely Uncle Bill</a>. To be honest, all this stuff seemed very confusing to me. So, I started from the basics to understand what they are.<br /><br />
 
@@ -165,19 +165,19 @@ Let’s work our way up from the bottom (Kernel Land), starting with the portion
 
 <h4>Kernel Land</h4>
 
-<p>As we discussed in my previous article titled <a href="(https://nickvourd.github.io/an-overview-of-windows-arch/">An Introduction to Windows Architecture</a>, Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. This portion of memory (0xFFFFFFFF) is reserved by the Opertaing System for device drivers, system cache, paged/non-paged pool, etc. There is no user access to this portion of memory.</p>
+<p>As we discussed in my previous article titled <a href="(https://nickvourd.github.io/an-overview-of-windows-arch/">An Introduction to Windows Architecture</a>, Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. This portion of memory (0xFFFFFFFF) is reserved by the Opertaing System for device drivers, system cache, paged/non-paged pool, etc. There is no user access to this portion of memory.<br /><br /></p>
 
 <h4>Process Environment Block (PEB)</h4>
 
-<p>The Process Environment Block (PEB) is a data structure used by the Windows operating system to store information about a process. It contains various attributes and parameters related to the execution environment of the process. Some of the information stored in the PEB includes process parameters, environment variables, the process heap pointer, and loader data. </p>
+<p>The Process Environment Block (PEB) is a data structure used by the Windows operating system to store information about a process. It contains various attributes and parameters related to the execution environment of the process. Some of the information stored in the PEB includes process parameters, environment variables, the process heap pointer, and loader data.<br /><br /></p>
 
 <h4>Thread Environment Block (TEB)</h4>
 
-<p>The Thread Environment Block (TEB) is a data structure used by the Windows operating system to store information specific to a thread. Each thread in a Windows process has its own TEB. The TEB contains thread-specific information such as the thread ID, thread-local storage (TLS) data, exception handling information, and a pointer to the Process Environment Block (PEB) of the process to which the thread belongs. Additionally, the TEB may include other thread-related data required for efficient thread execution and management.<p>
+<p>The Thread Environment Block (TEB) is a data structure used by the Windows operating system to store information specific to a thread. Each thread in a Windows process has its own TEB. The TEB contains thread-specific information such as the thread ID, thread-local storage (TLS) data, exception handling information, and a pointer to the Process Environment Block (PEB) of the process to which the thread belongs. Additionally, the TEB may include other thread-related data required for efficient thread execution and management.<br /><br /><p>
 
 <h4>Heap</h4>
 
-<p>The heap is a region of memory used for dynamic memory allocation in computer programs. The heap allows for the allocation and deallocation of memory blocks at runtime. In Windows operating systems, processes can allocate memory from the heap using functions like `HeapAlloc` and `HeapFree`. The heap is managed by the operating system's Heap Manager, which tracks allocated and free memory blocks and ensures efficient memory usage.</p>
+<p>The heap is a region of memory used for dynamic memory allocation in computer programs. The heap allows for the allocation and deallocation of memory blocks at runtime. In Windows operating systems, processes can allocate memory from the heap using functions like `HeapAlloc` and `HeapFree`. The heap is managed by the operating system's Heap Manager, which tracks allocated and free memory blocks and ensures efficient memory usage.<br /><br /></p>
 
 <h4>Stack</h4>
 
@@ -187,18 +187,18 @@ Let’s work our way up from the bottom (Kernel Land), starting with the portion
 
 Let's try this together! When I mention a term, please keep two words in mind:<br />
 
-- `Kernel Land`: The lowest level managed by the operating system.
-- `PEB`: A data structure that contains information about procesess.
-- `TEB`: A data structure that contains information about threads within a process.
-- `Heap`: A memory region used for dynamic memory allocation during runtime.
-- `Stack`: A memory region used for function calls and storing local variables during execution.
+- `Kernel Land`: The lowest level managed by the operating system.<br />
+- `PEB`: A data structure that contains information about procesess.<br />
+- `TEB`: A data structure that contains information about threads within a process.<br />
+- `Heap`: A memory region used for dynamic memory allocation during runtime.<br />
+- `Stack`: A memory region used for function calls and storing local variables during execution.<br /><br />
 </p>
 
 <h3>Memory Page States</h3>
 
 <p>After explaining all of this, let's proceed to memory paging.<br />
 
-What is Virtual Memory Page? Virtual memory relies on the concept of memory paging, which involves dividing memory into fixed-size chunks called "pages." On most modern systems, these pages are typically 4KB in size, though the size can vary depending on the architecture and configuration. Memory paging allows the operating system to manage memory more efficiently by loading and unloading pages between physical memory (RAM) and disk storage as needed. 
+What is Virtual Memory Page? Virtual memory relies on the concept of memory paging, which involves dividing memory into fixed-size chunks called "pages." On most modern systems, these pages are typically 4KB in size, though the size can vary depending on the architecture and configuration. Memory paging allows the operating system to manage memory more efficiently by loading and unloading pages between physical memory (RAM) and disk storage as needed.<br /><br />
 
 The following picture depicts a high-level overview of how virtual memory is mapped to physical memory using paging. Also, it is important to note that this picture is from the book [Windows Internals, Part 1](https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189) by [Pavel Yosifovich](https://twitter.com/zodiacon).</p> 
 
@@ -213,20 +213,20 @@ The following picture depicts a high-level overview of how virtual memory is map
 
 <h3>Memory Page Protections</h3>
 
-<p>This section is specifically about the memory page state called `committed`. The most popular memory page protection options are:
+<p>This section is specifically about the memory page state called `committed`. The most popular memory page protection options are:<br />
 
-- `PAGE_NOACCESS`: Specifies that a memory page cannot be accessed by any process. This means that attempting to read from or write to the memory page will result in an access violation error.
-- `PAGE_EXECUTE_READWRITE`: Specifies that a memory page can be executed from and also read from and written to by a process. This means that the code within the memory page can be executed as instructions, and data within the page can be both read from and written to.
-- `PAGE_READONLY`: Specifies that a memory page can be read from but not written to or executed. This means that data within the memory page can be read by a process, but attempts to modify the data or execute code from the page will result in access violation errors.<br />
+- `PAGE_NOACCESS`: Specifies that a memory page cannot be accessed by any process. This means that attempting to read from or write to the memory page will result in an access violation error.<br />
+- `PAGE_EXECUTE_READWRITE`: Specifies that a memory page can be executed from and also read from and written to by a process. This means that the code within the memory page can be executed as instructions, and data within the page can be both read from and written to.<br />
+- `PAGE_READONLY`: Specifies that a memory page can be read from but not written to or executed. This means that data within the memory page can be read by a process, but attempts to modify the data or execute code from the page will result in access violation errors.<br /><br />
 
 However, if you want to find more memory page protection options, you can visit [Microsoft's official website](https://learn.microsoft.com/en-us/windows/win32/memory/memory-protection-constants).
 </p>
 
 <h3>Memory Protections</h3>
 
-<p>To protect against exploits and attacks, modern operating systems have built-in memory protections such as:
-- `Data Execution Prevention (DEP)`: DEP works by marking certain memory pages as non-executable, meaning that code cannot be executed from those pages. 
-- `Address space layout randomization (ASLR)`: ASLR works by randomly positioning the memory layout of processes, making it difficult for attackers to predict the memory addresses of system components or injected code.
+<p>To protect against exploits and attacks, modern operating systems have built-in memory protections such as:<br />
+- `Data Execution Prevention (DEP)`: DEP works by marking certain memory pages as non-executable, meaning that code cannot be executed from those pages.<br /> 
+- `Address space layout randomization (ASLR)`: ASLR works by randomly positioning the memory layout of processes, making it difficult for attackers to predict the memory addresses of system components or injected code.<br /><br />
 </p>
 
 <!--<div style="width:480px; justify-content: center;"><iframe allow="fullscreen" frameBorder="0" height="200" src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480"></iframe></div>-->
