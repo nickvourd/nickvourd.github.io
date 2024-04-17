@@ -196,19 +196,19 @@ Let's try this together! When I mention a term, please keep two words in mind:<b
 
 <h3>Memory Page States</h3>
 
-<p>After explaining all of this, let's proceed to memory paging.<br />
+<p>After explaining all of this, let's proceed to memory paging.<br /><br />
 
 What is Virtual Memory Page? Virtual memory relies on the concept of memory paging, which involves dividing memory into fixed-size chunks called "pages." On most modern systems, these pages are typically 4KB in size, though the size can vary depending on the architecture and configuration. Memory paging allows the operating system to manage memory more efficiently by loading and unloading pages between physical memory (RAM) and disk storage as needed.<br /><br />
 
-The following picture depicts a high-level overview of how virtual memory is mapped to physical memory using paging. Also, it is important to note that this picture is from the book [Windows Internals, Part 1](https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189) by [Pavel Yosifovich](https://twitter.com/zodiacon).</p> 
+The following picture depicts a high-level overview of how virtual memory is mapped to physical memory using paging. Also, it is important to note that this picture is from the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">Windows Internals, Part 1</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>.</p> 
 
 <img src="/assets/img/post-img/20-04-2024/Windows-Internal_mapping-Memory.png" class="post-images" alt="Mapping-Memory-Windows-Internals-Book" height="500" weight="500">
 
-<p>According to [MalDev Academy](https://maldevacademy.com), a great platform that I totally recommend to anyone who wants to enhance their malware developing skills, there are three paging states:
+<p>According to <a href=" https://maldevacademy.com">MalDev Academy</a>, a great platform that I totally recommend to anyone who wants to enhance their malware developing skills, there are three paging states:<br />
 
-- `Free`: A page of memory that is currently not allocated to any active process or stored data and is available for use.<br />
-- `Reserved`: A page of memory that has been allocated by the operating system but is not currently in use by any active process.<br />
-- `Committed`: A page of memory that has been allocated and is actively being used by a process.<br />
+- <b>Free</b>: A page of memory that is currently not allocated to any active process or stored data and is available for use.<br />
+- <b>Reserved</b>: A page of memory that has been allocated by the operating system but is not currently in use by any active process.<br />
+- <b>Committed</b>: A page of memory that has been allocated and is actively being used by a process.<br /><br />
 </p>
 
 <h3>Memory Page Protections</h3>
