@@ -241,18 +241,26 @@ However, if you want to find more memory page protection options, you can visit 
 First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
 
 ```
-// Method 1 - Using malloc()
-PVOID pAddress = malloc(<int_number>)
+#include <stdio.h>
+#include <windows.h>
 
-// Method 2 - Using HeapAlloc()
-PVOID pAddress = HeapAlloc(GetProcessHeap(), 0, <int_number>);
+int main() {
+    HANDLE hFile = INVALID_HANDLE_VALUE;
+    LPCWSTR filePath = L"C:\\Users\\nickvourd\\Desktop\\nickvourd.txt";
 
-// Method 3 - Using LocalAlloc()
-PVOID pAddress = LocalAlloc(LPTR, <int_number>);
+    hFile = CreateFileW(filePath, GENERIC_ALL, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+
+    if (hFile != INVALID_HANDLE_VALUE) {
+        wprintf(L"[+] File '%s' created successfully.\n", filePath);
+        CloseHandle(hFile);
+    } else {
+        wprintf(L"[-] CreateFileW API Function Failed with Error: %d\n", GetLastError());
+        return -1;
+    }
+
+    return 0;
+}
 ```
-
-<p> Hello </p>
-
 
 <!-- add the button!-->
 <div>
