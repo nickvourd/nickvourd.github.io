@@ -139,7 +139,7 @@ function topFunction() {
 
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/Yh30S0qiIw1wsF1L0T" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-</div><br />
+</div>
 
 <h3>Intro to Memory</h3>
 
@@ -153,9 +153,9 @@ By utilizing virtual memory addressing and allowing the operating system's Memor
 
 <h3>Memory Structures</h3>
 
-<p>Before proceeding to technical details and protections regarding virtual memory, it is important to explain the basic virtual memory structures.<br /><br />
+<p>Before proceeding to technical details and protections regarding virtual memory, it is important to explain the basic virtual memory structures.<br />
 
-For years, I've been hearing about terms like stack, heap, and more from hardcore cybersecurity colleagues, and of course, from [Lovely Uncle Bill](https://twitter.com/0xvm). To be honest, all this stuff seemed very confusing to me. So, I started from the basics to understand what they are.<br /><br />
+For years, I've been hearing about terms like stack, heap, and more from hardcore cybersecurity colleagues, and of course, from <a href="https://twitter.com/0xvm">Lovely Uncle Bill</a>. To be honest, all this stuff seemed very confusing to me. So, I started from the basics to understand what they are.<br /><br />
 
 The following picture depicts an overview of the virtual memory layout of a process (x86). Also, it is important to note that this picture is from the great blog post [Exploit writing tutorial part 1 : Stack Based Overflows](https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/) by [@corelanconsultn](https://twitter.com/corelanconsultn):
 
@@ -165,7 +165,7 @@ Let’s work our way up from the bottom (Kernel Land), starting with the portion
 
 <h4>Kernel Land</h4>
 
-<p>As we discussed in my previous article titled [An Introduction to Windows Architecture](https://nickvourd.github.io/an-overview-of-windows-arch/), Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. This portion of memory (0xFFFFFFFF) is reserved by the Opertaing System for device drivers, system cache, paged/non-paged pool, etc. There is no user access to this portion of memory.</P>
+<p>As we discussed in my previous article titled <a href="(https://nickvourd.github.io/an-overview-of-windows-arch/">An Introduction to Windows Architecture</a>, Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. This portion of memory (0xFFFFFFFF) is reserved by the Opertaing System for device drivers, system cache, paged/non-paged pool, etc. There is no user access to this portion of memory.</p>
 
 <h4>Process Environment Block (PEB)</h4>
 
