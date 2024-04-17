@@ -145,9 +145,9 @@ function topFunction() {
 
 <p>The first thing we need to discuss is what memory is! Memory in computing systems refers to the electronic components that store data and instructions for processing by the Central Processing Unit (CPU).Most people out there, when they hear the word "memory," typically think of RAM or a hard disk. To be honest, while these examples are contextualized to memory types, in Windows Internals, the meaning is slightly different...<br /></p>
 
-<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br />
+<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br /><br />
 
-You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br />
+You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br /><br />
 
 By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).<br /><br /></p>
 
@@ -161,7 +161,7 @@ The following picture depicts an overview of the virtual memory layout of a proc
 
 <img src="https://www.corelan.be/wp-content/uploads/2010/08/image3.png" class="post-images" alt="Exploit writing tutorial part 1 : Stack Based Overflows (Corelan)">
 
-Let’s work our way up from the bottom (Kernel Land), starting with the portion of memory from 0xFFFFFFFF to 0x7FFFFFFF, and discuss the most important parts:<br />
+Let’s work our way up from the bottom (Kernel Land), starting with the portion of memory from 0xFFFFFFFF to 0x7FFFFFFF, and discuss the most important parts:<br /><br />
 
 <h4>Kernel Land</h4>
 
@@ -181,7 +181,7 @@ Let’s work our way up from the bottom (Kernel Land), starting with the portion
 
 <h4>Stack</h4>
 
-<p>The stack is a region of memory used for storing function call and local variable data during program execution. It operates on a last-in, first-out (LIFO) basis, meaning that the last item pushed onto the stack is the first one to be popped off.<br />When a function is called, its parameters and local variables are typically allocated on the stack. As subsequent functions are called within the current function, additional stack frames are created, each containing the necessary information for the corresponding function call. When a function returns, its stack frame is removed from the stack, and control returns to the calling function.<br />The stack is managed automatically by the CPU and is typically of fixed size, although it can grow dynamically in some systems.</p>
+<p>The stack is a region of memory used for storing function call and local variable data during program execution. It operates on a last-in, first-out (LIFO) basis, meaning that the last item pushed onto the stack is the first one to be popped off.<br />When a function is called, its parameters and local variables are typically allocated on the stack. As subsequent functions are called within the current function, additional stack frames are created, each containing the necessary information for the corresponding function call. When a function returns, its stack frame is removed from the stack, and control returns to the calling function.<br />The stack is managed automatically by the CPU and is typically of fixed size, although it can grow dynamically in some systems.<br /><br /></p>
 
 <p>I know that's a lot of information, and honestly, the main part of my job as an Offensive Security Consultant is to explain difficult topics to my clients and make them easy to understand. This is a skill that I learned from <a href="https://www.linkedin.com/in/panosstam/">Mr_P</a> and <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a>.<br /><br />
 
