@@ -246,6 +246,13 @@ First of all, we need to know that there are several methods to allocate memory 
 
 <img src="/assets/img/post-img/17-04-2024/Deallocate-Memory-Ways.png" class="post-images" alt="methods_of_deallocation" height="200" weight="200">
 
+
+<p>Now, lets try to write to memory!</p>
+
+```
+Hello Test
+```
+
 <br /><br />
 <!-- add the button!-->
 <div>
