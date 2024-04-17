@@ -228,10 +228,34 @@ However, if you want to find more memory page protection options, you can visit 
 - <b>Address space layout randomization (ASLR)</b>: ASLR works by randomly positioning the memory layout of processes, making it difficult for attackers to predict the memory addresses of system components or injected code.<br /><br />
 </p>
 
-<!--
-
 <h3>Memory in Action</h3>
-<div style="width:480px; justify-content: center;"><iframe allow="fullscreen" frameBorder="0" height="200" src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480"></iframe></div>-->
+
+<p>Let's dive into the technical world of memory allocation and see how it works in action!</p>
+
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+
+<p>It is important to note that the following example was inspired by <a href="https://maldevacademy.com">Maldev Academy</a><br /><br />
+
+First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:
+
+```
+// Method 1 - Using malloc()
+PVOID pAddress = malloc(<int_number>)
+```
+
+```
+// Method 2 - Using HeapAlloc()
+PVOID pAddress = HeapAlloc(GetProcessHeap(), 0, <int_number>);
+```
+
+```
+// Method 3 - Using LocalAlloc()
+PVOID pAddress = LocalAlloc(LPTR, <int_number>);
+```
+
+</p>
 
 <!-- add the button!-->
 <div>
