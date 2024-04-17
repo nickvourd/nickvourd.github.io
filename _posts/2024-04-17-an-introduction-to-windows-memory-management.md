@@ -139,7 +139,7 @@ function topFunction() {
 
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/Yh30S0qiIw1wsF1L0T" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-</div>
+</div><br />
 
 <h3>Intro to Memory</h3>
 
@@ -149,7 +149,7 @@ function topFunction() {
 
 You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br />
 
-By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).</p>
+By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).<br /></p>
 
 <h3>Memory Structures</h3>
 
