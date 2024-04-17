@@ -135,7 +135,7 @@ function topFunction() {
 }
 </script>
 
-<p>Hello, folks! After a long time, I've officially found some time to continue this awesome journey. In my last blog post, we discussed some topics about Windows architecture, such as the difference between x86 and x86-64 architectures, some basic terms, and we examined a detailed example of a function call flow. If you haven't already read my previous article on the <a href="https://nickvourd.github.io/an-overview-of-windows-arch/">introduction to Windows architecture</a>, you should do so before continuing. This is officially Part 2. So, get ready, boyz/girlz, for the next round!</p>
+<p>Hello, folks! After a long time, I've officially found some time to continue this awesome journey. In my last blog post, we discussed some topics about Windows architecture, such as the difference between x86 and x86-64 architectures, some basic terms, and we examined a detailed example of a function call flow. If you haven't already read my previous article on <a href="https://nickvourd.github.io/an-overview-of-windows-arch/">the introduction to Windows architecture (part 1)</a>, you should do so before continuing. This is officially Part 2. So, get ready, boyz/girlz, for the next round!</p>
 
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/Yh30S0qiIw1wsF1L0T" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -165,7 +165,7 @@ Let’s work our way up from the bottom (Kernel Land), starting with the portion
 
 <h4>Kernel Land</h4>
 
-<p>As we discussed in my previous article titled <a href="(https://nickvourd.github.io/an-overview-of-windows-arch/">An Introduction to Windows Architecture</a>, Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. This portion of memory (0xFFFFFFFF) is reserved by the Opertaing System for device drivers, system cache, paged/non-paged pool, etc. There is no user access to this portion of memory.<br /><br /></p>
+<p>As we discussed in my previous article titled <a href="(https://nickvourd.github.io/an-overview-of-windows-arch/">An Introduction to Windows Architecture (Part 1)</a>, Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. This portion of memory (0xFFFFFFFF) is reserved by the Opertaing System for device drivers, system cache, paged/non-paged pool, etc. There is no user access to this portion of memory.<br /><br /></p>
 
 <h4>Process Environment Block (PEB)</h4>
 
@@ -228,7 +228,10 @@ However, if you want to find more memory page protection options, you can visit 
 - <b>Address space layout randomization (ASLR)</b>: ASLR works by randomly positioning the memory layout of processes, making it difficult for attackers to predict the memory addresses of system components or injected code.<br /><br />
 </p>
 
-<!--<div style="width:480px; justify-content: center;"><iframe allow="fullscreen" frameBorder="0" height="200" src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480"></iframe></div>-->
+<!--
+
+<h3>Memory in Action</h3>
+<div style="width:480px; justify-content: center;"><iframe allow="fullscreen" frameBorder="0" height="200" src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480"></iframe></div>-->
 
 <!-- add the button!-->
 <div>
