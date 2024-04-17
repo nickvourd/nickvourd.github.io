@@ -248,7 +248,7 @@ However, if you want to find more memory page protection options, you can visit 
 
 First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
 
-<p class=command>
+<p class="command">
 // Method 1 - Using malloc()
 PVOID pAddress = malloc(number);
 
