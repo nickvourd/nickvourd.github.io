@@ -240,7 +240,23 @@ However, if you want to find more memory page protection options, you can visit 
 
 First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
 
-<img src="/assets/img/post-img/17-04-2024/Memory-allocation-methods.png" class="post-images" alt="methods_of_allocation" height="500" weight="500">
+<img src="/assets/img/post-img/17-04-2024/Memory-allocation-methods.png" class="post-images" alt="methods_of_allocation" height="200" weight="200">
+
+<p>However, it's important to note that after any memory allocation, the buffer should be deallocated or freed to avoid memory leaks. Any of the above methods have a way to deallocate the memory:</p>
+
+<img src="/assets/img/post-img/17-04-2024/Memory-allocation-methods.png" class="post-images" alt="methods_of_allocation" height="200" weight="200">
+
+
+```c
+// For malloc
+free(pAdrress)
+
+// For HeapAlloc
+HeapFree(GetProcessHeap(), 0, pAdrress)
+
+// For LocalAlloc
+LocalFree(LPTR, pAddress)
+```
 
 <br /><br />
 <!-- add the button!-->
