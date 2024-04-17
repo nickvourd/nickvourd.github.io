@@ -137,7 +137,9 @@ function topFunction() {
 
 <p>Hello, folks! After a long time, I've officially found some time to continue this awesome journey. In my last blog post, we discussed some topics about Windows architecture, such as the difference between x86 and x86-64 architectures, some basic terms, and we examined a detailed example of a function call flow. If you haven't already read my previous article on [the introduction to Windows architecture](https://nickvourd.github.io/an-overview-of-windows-arch/), you should do so before continuing. This is officially Part 2. So, get ready, boyz/girlz, for the next round!</p>
 
-<div style="width:480px; justify-content: center;"><iframe allow="fullscreen" frameBorder="0" height="200" src="https://giphy.com/embed/Yh30S0qiIw1wsF1L0T/video" width="480"></iframe></div>
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://giphy.com/embed/Yh30S0qiIw1wsF1L0T" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
 <h3>Intro to Memory</h3>
 
@@ -200,7 +202,7 @@ What is Virtual Memory Page? Virtual memory relies on the concept of memory pagi
 
 The following picture depicts a high-level overview of how virtual memory is mapped to physical memory using paging. Also, it is important to note that this picture is from the book [Windows Internals, Part 1](https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189) by [Pavel Yosifovich](https://twitter.com/zodiacon).</p> 
 
-<img src="/assets/img/post-img/20-04-2024/Windows-Internal_mapping-Memory.png" class="post-images" alt="Mapping-Memory-Windows-Internals-Book">
+<img src="/assets/img/post-img/20-04-2024/Windows-Internal_mapping-Memory.png" class="post-images" alt="Mapping-Memory-Windows-Internals-Book" height="500" weight="500">
 
 <p>According to [MalDev Academy](https://maldevacademy.com), a great platform that I totally recommend to anyone who wants to enhance their malware developing skills, there are three paging states:
 
@@ -227,7 +229,7 @@ However, if you want to find more memory page protection options, you can visit 
 - `Address space layout randomization (ASLR)`: ASLR works by randomly positioning the memory layout of processes, making it difficult for attackers to predict the memory addresses of system components or injected code.
 </p>
 
-<div style="width:480px; justify-content: center;"><iframe allow="fullscreen" frameBorder="0" height="200" src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480"></iframe></div>
+<!--<div style="width:480px; justify-content: center;"><iframe allow="fullscreen" frameBorder="0" height="200" src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480"></iframe></div>-->
 
 <!-- add the button!-->
 <div>
