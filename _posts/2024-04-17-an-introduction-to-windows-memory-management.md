@@ -242,13 +242,13 @@ First of all, we need to know that there are several methods to allocate memory 
 
 ```
 // Method 1 - Using malloc()
-PVOID pAddress = malloc(<int_number>);
+PVOID pAddress = malloc(number);
 
 // Method 2 - Using HeapAlloc()
-PVOID pAddress = HeapAlloc(GetProcessHeap(), 0, <int_number>);
+PVOID pAddress = HeapAlloc(GetProcessHeap(), 0, number);
 
 // Method 3 - Using LocalAlloc()
-PVOID pAddress = LocalAlloc(LPTR, <int_number>);
+PVOID pAddress = LocalAlloc(LPTR, number);
 ```
 
 <!-- add the button!-->
