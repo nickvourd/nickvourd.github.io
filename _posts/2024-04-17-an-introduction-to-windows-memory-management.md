@@ -112,6 +112,14 @@ categories:
 		content: attr(data-label);
 	}
 
+	.command {
+    	font-family: monospace; /* Use a monospace font */
+    	background-color: #000; /* Black background */
+    	color: #0f0; /* Green text */
+    	padding: 5px; /* Add padding for better readability */
+    	display: inline-block; /* Make the frame expand or contract based on text length */
+	}	
+
 </style>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
@@ -240,11 +248,20 @@ However, if you want to find more memory page protection options, you can visit 
 
 First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
 
-<!--<img src="/assets/img/post-img/17-04-2024/Memory-allocation-methods.png" class="post-images" alt="methods_of_allocation" height="200" weight="200">
+<p class=command>
+// Method 1 - Using malloc()
+PVOID pAddress = malloc(number);
+
+// Method 2 - Using HeapAlloc()
+PVOID pAddress = HeapAlloc(GetProcessHeap(), 0, number);
+
+// Method 3 - Using LocalAlloc()
+PVOID pAddress = LocalAlloc(LPTR, number);
+</p>
 
 <p>However, it's important to note that after any memory allocation, the buffer should be deallocated or freed to avoid memory leaks. Any of the above methods have a way to deallocate the memory:</p>
 
-<img src="/assets/img/post-img/17-04-2024/Deallocate-Memory-Ways.png" class="post-images" alt="methods_of_deallocation" height="200" weight="200">
+<!--<img src="/assets/img/post-img/17-04-2024/Deallocate-Memory-Ways.png" class="post-images" alt="methods_of_deallocation" height="200" weight="200">
 
 
 <p>Now, lets try to write to memory!</p>-->
