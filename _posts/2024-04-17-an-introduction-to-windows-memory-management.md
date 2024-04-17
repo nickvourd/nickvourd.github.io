@@ -143,7 +143,7 @@ function topFunction() {
 
 <h3>Intro to Memory</h3>
 
-<p>The first thing we need to discuss is what memory is! Memory in computing systems refers to the electronic components that store data and instructions for processing by the Central Processing Unit (CPU).Most people out there, when they hear the word "memory," typically think of RAM or a hard disk. To be honest, while these examples are contextualized to memory types, in Windows Internals, the meaning is slightly different...<br /></p>
+<p>The first thing we need to discuss is what memory is! Memory in computing systems refers to the electronic components that store data and instructions for processing by the Central Processing Unit (CPU).Most people out there, when they hear the word "memory," typically think of RAM or a hard disk. To be honest, while these examples are contextualized to memory types, in Windows Internals, the meaning is slightly different...<br /><br /></p>
 
 <p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br /><br />
 
@@ -215,12 +215,11 @@ The following picture depicts a high-level overview of how virtual memory is map
 
 <p>This section is specifically about the memory page state called `committed`. The most popular memory page protection options are:<br />
 
-- `PAGE_NOACCESS`: Specifies that a memory page cannot be accessed by any process. This means that attempting to read from or write to the memory page will result in an access violation error.<br />
-- `PAGE_EXECUTE_READWRITE`: Specifies that a memory page can be executed from and also read from and written to by a process. This means that the code within the memory page can be executed as instructions, and data within the page can be both read from and written to.<br />
-- `PAGE_READONLY`: Specifies that a memory page can be read from but not written to or executed. This means that data within the memory page can be read by a process, but attempts to modify the data or execute code from the page will result in access violation errors.<br /><br />
+- <b>PAGE_NOACCESS</b>: Specifies that a memory page cannot be accessed by any process. This means that attempting to read from or write to the memory page will result in an access violation error.<br />
+- <b>PAGE_EXECUTE_READWRITE</b>: Specifies that a memory page can be executed from and also read from and written to by a process. This means that the code within the memory page can be executed as instructions, and data within the page can be both read from and written to.<br />
+- <b>PAGE_READONLY</b>: Specifies that a memory page can be read from but not written to or executed. This means that data within the memory page can be read by a process, but attempts to modify the data or execute code from the page will result in access violation errors.<br /><br />
 
-However, if you want to find more memory page protection options, you can visit [Microsoft's official website](https://learn.microsoft.com/en-us/windows/win32/memory/memory-protection-constants).
-</p>
+However, if you want to find more memory page protection options, you can visit <a href="https://learn.microsoft.com/en-us/windows/win32/memory/memory-protection-constants">Microsoft's official website</a>.<br /><br /></p>
 
 <h3>Memory Protections</h3>
 
