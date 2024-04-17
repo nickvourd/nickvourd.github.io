@@ -236,21 +236,17 @@ However, if you want to find more memory page protection options, you can visit 
     <iframe src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>It is important to note that the following example was inspired by <a href="https://maldevacademy.com">Maldev Academy</a><br /><br />
+<p>It is important to note that the following example was inspired by <a href="https://maldevacademy.com">Maldev Academy.</a><br /><br />
 
 First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:<br /><br /></p>
 
 ```
 // Method 1 - Using malloc()
 PVOID pAddress = malloc(<int_number>)
-```
 
-```
 // Method 2 - Using HeapAlloc()
 PVOID pAddress = HeapAlloc(GetProcessHeap(), 0, <int_number>);
-```
 
-```
 // Method 3 - Using LocalAlloc()
 PVOID pAddress = LocalAlloc(LPTR, <int_number>);
 ```
