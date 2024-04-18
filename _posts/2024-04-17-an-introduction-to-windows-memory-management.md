@@ -187,11 +187,14 @@ Let’s work our way up from the bottom (Kernel Land), starting with the portion
 
 Let's try this together! When I mention a term, please keep two words in mind:<br />
 
-- <b>Kernel Land</b>: The lowest level managed by the operating system.<br />
-- <b>PEB</b>: A data structure that contains information about procesess.<br />
-- <b>TEB</b>: A data structure that contains information about threads within a process.<br />
-- <b>Heap</b>: A memory region used for dynamic memory allocation during runtime.<br />
-- <b>Stack</b>: A memory region used for function calls and storing local variables during execution.<br /><br />
+<ul>
+    <li><b>Kernel Land</b>: The lowest level managed by the operating system.</li>
+    <li><b>PEB</b>: A data structure that contains information about processes.</li>
+    <li><b>TEB</b>: A data structure that contains information about threads within a process.</li>
+    <li><b>Heap</b>: A memory region used for dynamic memory allocation during runtime.</li>
+    <li><b>Stack</b>: A memory region used for function calls and storing local variables during execution.</li>
+</ul>
+<br /><br />
 </p>
 
 <h3>Memory Page States</h3>
@@ -248,15 +251,9 @@ However, if you want to find more memory page protection options, you can visit 
 
 First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
 
-<div class="container">
-	<p class="command">// Method 1 - Using malloc()<br />PVOID pAddress = malloc(number);<br /><br />// Method 2 - Using HeapAlloc()<br />PVOID pAddress = HeapAlloc(GetProcessHeap(), 0, number);<br /><br />// Method 3 - Using LocalAlloc()<br />PVOID pAddress = LocalAlloc(LPTR, number);<br /><br /></p>
-</div>
 
 <p>However, it's important to note that after any memory allocation, the buffer should be deallocated or freed to avoid memory leaks. Any of the above methods have a way to deallocate the memory:</p>
 
-```
-Hello
-```
 
 <p>Now, lets try to write to memory!</p>
 
