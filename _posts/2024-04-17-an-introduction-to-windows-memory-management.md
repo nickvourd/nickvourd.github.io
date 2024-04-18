@@ -260,8 +260,10 @@ First of all, we need to know that there are several methods to allocate memory 
 
 <p>However, it's important to note that after any memory allocation, the buffer should be deallocated or freed to avoid memory leaks. Any of the above methods have a way to deallocate the memory:</p>
 
+```
+Hello
 
-
+```
 
 <p>Now, lets try to write to memory!</p>-->
 
