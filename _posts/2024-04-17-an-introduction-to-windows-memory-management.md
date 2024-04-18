@@ -234,9 +234,12 @@ However, if you want to find more memory page protection options, you can visit 
 
 <h3>Memory Protections</h3>
 
-<p>To protect against exploits and attacks, modern operating systems have built-in memory protections such as:<br />
-- <b>Data Execution Prevention (DEP)</b>: DEP works by marking certain memory pages as non-executable, meaning that code cannot be executed from those pages.<br /> 
-- <b>Address space layout randomization (ASLR)</b>: ASLR works by randomly positioning the memory layout of processes, making it difficult for attackers to predict the memory addresses of system components or injected code.<br /><br />
+<p>To protect against exploits and attacks, modern operating systems have built-in memory protections such as:
+<ul>
+    <li><b>Data Execution Prevention (DEP)</b>: DEP works by marking certain memory pages as non-executable, meaning that code cannot be executed from those pages.</li>
+    <li><b>Address space layout randomization (ASLR)</b>: ASLR works by randomly positioning the memory layout of processes, making it difficult for attackers to predict the memory addresses of system components or injected code.</li>
+</ul>
+<br /><br />
 </p>
 
 <h3>Memory in Action</h3>
