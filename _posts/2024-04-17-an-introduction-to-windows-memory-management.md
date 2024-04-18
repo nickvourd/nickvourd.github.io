@@ -256,7 +256,7 @@ The following picture depicts a high-level overview of how virtual memory is map
 
 First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
 
-```
+```c
 x = 5;
 y = 12;
 ```
