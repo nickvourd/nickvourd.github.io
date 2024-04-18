@@ -252,13 +252,14 @@ The following picture depicts a high-level overview of how virtual memory is map
     <iframe src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>It is important to note that the following example was inspired by <a href="https://maldevacademy.com">Maldev Academy.</a><br /><br />
+<p>It is important to note that the following example was inspired by <a href="https://maldevacademy.com">Maldev Academy</a>.</p>
+<br />
 
-First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
+<p>First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
 
-```
-#include <stdio.h>
-#include <windows.h>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;windows.h&gt;
 
 int main() {
     HANDLE hFile = INVALID_HANDLE_VALUE;
@@ -276,10 +277,9 @@ int main() {
 
     return 0;
 }
-```
+</pre>
 
 <p>However, it's important to note that after any memory allocation, the buffer should be deallocated or freed to avoid memory leaks. Any of the above methods have a way to deallocate the memory:</p>
-
 
 <p>Now, lets try to write to memory!</p>
 
