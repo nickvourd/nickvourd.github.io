@@ -19,43 +19,41 @@ categories:
 
 <style>
 	#myBtn {
-		display: none;
-		position: fixed;
-		bottom: 40px;
-		right: 50px;
-		z-index: 99;
-		font-size: 12px;
-		border: 1px solid black;
-		outline: black;
-		background-color: #262626;
-		color: white;
-		cursor: pointer;
-		padding: 10px 22px 10px 22px;
-		border-radius: 10px;
-		font-family: 'Open Sans';
+  		display: none;
+  		position: fixed;
+  		bottom: 40px;
+  		right: 50px;
+  		z-index: 99;
+  		font-size: 12px;
+  		border: 1px solid black;
+  		outline: black;
+  		background-color: #262626;
+  		color: white;
+  		cursor: pointer;
+  		padding: 10px 22px 10px 22px;
+  		border-radius: 10px;
+  		font-family: 'Open Sans';
 	}
 
 	#myBtn:hover {
-		background-color: #5d4d7a;
+  		background-color: #5d4d7a;
 	}
-
-	.applause-button {
+	applause-button {
 		margin: auto;
 	}
-
 	.header-site .site-title {
-		padding-top: 5px;
-		color: white;
-		text-align: center;
-		font-weight: bold;
-		padding-left: 19px;
+      	padding-top: 5px;
+      	color: white;
+      	text-align: center;
+      	font-weight: bold;
+      	padding-left: 19px;
 	}
-
+	
 	.post-images {
 		max-width: 100%;
 	}
 
-	.post-images2 {
+  .post-images2 {
 		max-width: 50%;
 	}
 
@@ -65,67 +63,55 @@ categories:
 	}
 
 	table {
-		width: 70%;
-		border-collapse: collapse;
+	width: 70%;
+	border-collapse: collapse;
 	}
 
 	table, th, td {
-		border: 1px solid black;
+	border: 1px solid black;
 	}
 
 	th, td {
-		text-align: left;
-		padding: 8px;
+	text-align: left;
+	padding: 8px;
 	}
 
 	tr:nth-child(even) {
-		background-color: #f2f2f2;
+	background-color: #f2f2f2;
 	}
 
 	@media screen and (max-width: 600px) {
-		table, thead, tbody, th, td, tr {
-			display: block;
-		}
-
-		thead tr {
-			position: absolute;
-			top: -9999px;
-			left: -9999px;
-		}
-
-		tr {
-			border: 1px solid #ccc;
-		}
-
-		td {
-			border: none;
-			border-bottom: 1px solid #eee;
-			position: relative;
-			padding-left: 50%;
-		}
-
-		td:before {
-			position: absolute;
-			top: 6px;
-			left: 6px;
-			width: 45%;
-			padding-right: 10px;
-			white-space: nowrap;
-			content: attr(data-label);
-		}
+	table, thead, tbody, th, td, tr {
+		display: block;
 	}
 
-	.container {
-    	text-align: center; /* Center align all content within the container */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
 	}
 
-	.command {
-    	font-family: monospace; /* Use a monospace font */
-    	background-color: #000000; /* Black background */
-    	color: #FFFFFF; /* Green text */
-    	padding: 5px; /* Add padding for better readability */
-    	display: inline-block; /* Make the frame expand or contract based on text length */
+	tr {
+		border: 1px solid #ccc;
 	}
+
+	td {
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		content: attr(data-label);
+	}
+
 </style>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
@@ -220,9 +206,17 @@ The following picture depicts a high-level overview of how virtual memory is map
 
 <p>According to <a href=" https://maldevacademy.com">MalDev Academy</a>, a great platform that I totally recommend to anyone who wants to enhance their malware developing skills, there are three paging states:<br />
 
-- <b>Free</b>: A page of memory that is currently not allocated to any active process or stored data and is available for use.<br />
-- <b>Reserved</b>: A page of memory that has been allocated by the operating system but is not currently in use by any active process.<br />
-- <b>Committed</b>: A page of memory that has been allocated and is actively being used by a process.<br /><br />
+<ul>
+	<li>
+		<b>Free</b>: A page of memory that is currently not allocated to any active process or stored data and is available for use.<br />
+	</li>
+	<li>
+		<b>Reserved</b>: A page of memory that has been allocated by the operating system but is not currently in use by any active process.<br />
+	</li>
+	<li>
+		 <b>Committed</b>: A page of memory that has been allocated and is actively being used by a process.<br /><br />
+	</li>
+</ul>
 </p>
 
 <h3>Memory Page Protections</h3>
@@ -262,10 +256,9 @@ First of all, we need to know that there are several methods to allocate memory 
 
 ```
 Hello
-
 ```
 
-<p>Now, lets try to write to memory!</p>-->
+<p>Now, lets try to write to memory!</p>
 
 
 <br /><br />
