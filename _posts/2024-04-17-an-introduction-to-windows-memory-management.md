@@ -135,134 +135,227 @@ function topFunction() {
 }
 </script>
 
-<p>Hello, folks! After a long time, I've officially found some time to continue this awesome journey. In my last blog post, we discussed some topics about Windows architecture, such as the difference between x86 and x86-64 architectures, some basic terms, and we examined a detailed example of a function call flow. If you haven't already read my previous article <a href="https://nickvourd.github.io/an-overview-of-windows-arch/">an overview of Windows architecture (part 1)</a>, you should do so before continuing. This is officially Part 2. So, get ready, boyz/girlz, for the next round!</p>
+<p>Hello folks, welcome back, and have a nice day! 😃. Today, I will explain some internal aspects of Windows architecture, providing an overview of how processes work and memory allocation. You will need to know some basic aspects of <a href="https://x64dbg.com">x64dbg</a> to follow this article. If you have not already read my previous article on <a href="https://nickvourd.github.io/x64dbg-intro/">the introduction of x64dbg</a>, you should do so before continuing. So, get ready, boyz/girlz, for the next round!</p>
 
 <div style="display: flex; justify-content: center;">
-    <iframe src="https://giphy.com/embed/Yh30S0qiIw1wsF1L0T" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <iframe src="https://giphy.com/embed/7WvAUvZZTRpSuudobh" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<h3>Intro to Memory</h3>
+<h3>x86/x86-64</h3>
 
-<p>The first thing we need to discuss is what memory is! Memory in computing systems refers to the electronic components that store data and instructions for processing by the Central Processing Unit (CPU).Most people out there, when they hear the word "memory," typically think of RAM or a hard disk. To be honest, while these examples are contextualized to memory types, in Windows Internals, the meaning is slightly different...<br /><br /></p>
-
-<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br /><br />
-
-You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br /><br />
-
-By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).<br /><br /></p>
-
-<h3>Memory Structures</h3>
-
-<p>Before proceeding to technical details and protections regarding virtual memory, it is important to explain the basic virtual memory structures.<br /><br />
-
-For years, I've been hearing about terms like stack, heap, and more from hardcore cybersecurity colleagues, and of course, from <a href="https://twitter.com/0xvm">Lovely Uncle Bill</a>. To be honest, all this stuff seemed very confusing to me. So, I started from the basics to understand what they are.<br /><br />
-
-The following picture depicts an overview of the virtual memory layout of a process (x86). Also, it is important to note that this picture inspired by the great blog post <a href="https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/">Exploit writing tutorial part 1 : Stack Based Overflows</a> by <a href="https://twitter.com/corelanconsultn">@corelanconsultn</a>:
-
-<img src="/assets/img/post-img/17-04-2024/Memory-Strucutre.png" class="post-images" alt="Exploit writing tutorial part 1 : Stack Based Overflows (Corelan)" height="500" weight="500">
-
-Let’s work our way up from the bottom (Kernel Land), starting with the portion of memory from 0xFFFFFFFF to 0x7FFFFFFF, and discuss the most important parts:<br /><br />
-
-<h4>Kernel Land</h4>
-
-<p>As we discussed in my previous article titled <a href="(https://nickvourd.github.io/an-overview-of-windows-arch/">An Overview of Windows Architecture (Part 1)</a>, Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. This portion of memory (0xFFFFFFFF) is reserved by the Opertaing System for device drivers, system cache, paged/non-paged pool, etc. There is no user access to this portion of memory.<br /><br /></p>
-
-<h4>Process Environment Block (PEB)</h4>
-
-<p>The Process Environment Block (PEB) is a data structure used by the Windows operating system to store information about a process. It contains various attributes and parameters related to the execution environment of the process. Some of the information stored in the PEB includes process parameters, environment variables, the process heap pointer, and loader data.<br /><br /></p>
-
-<h4>Thread Environment Block (TEB)</h4>
-
-<p>The Thread Environment Block (TEB) is a data structure used by the Windows operating system to store information specific to a thread. Each thread in a Windows process has its own TEB. The TEB contains thread-specific information such as the thread ID, thread-local storage (TLS) data, exception handling information, and a pointer to the Process Environment Block (PEB) of the process to which the thread belongs. Additionally, the TEB may include other thread-related data required for efficient thread execution and management.<br /><br /><p>
-
-<h4>Heap</h4>
-
-<p>The heap is a region of memory used for dynamic memory allocation in computer programs. The heap allows for the allocation and deallocation of memory blocks at runtime. In Windows operating systems, processes can allocate memory from the heap using functions like `HeapAlloc` and `HeapFree`. The heap is managed by the operating system's Heap Manager, which tracks allocated and free memory blocks and ensures efficient memory usage.<br /><br /></p>
-
-<h4>Stack</h4>
-
-<p>The stack is a region of memory used for storing function call and local variable data during program execution. It operates on a last-in, first-out (LIFO) basis, meaning that the last item pushed onto the stack is the first one to be popped off.<br />When a function is called, its parameters and local variables are typically allocated on the stack. As subsequent functions are called within the current function, additional stack frames are created, each containing the necessary information for the corresponding function call. When a function returns, its stack frame is removed from the stack, and control returns to the calling function.<br />The stack is managed automatically by the CPU and is typically of fixed size, although it can grow dynamically in some systems.<br /><br /></p>
-
-<p>I know that's a lot of information, and honestly, the main part of my job as an Offensive Security Consultant is to explain difficult topics to my clients and make them easy to understand. This is a skill that I learned from <a href="https://www.linkedin.com/in/panosstam/">Mr_P</a> and <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a>.<br /><br />
-
-Let's try this together! When I mention a term, please keep two words in mind:<br />
-
-<ul>
-    <li><b>Kernel Land</b>: The lowest level managed by the operating system.</li>
-    <li><b>PEB</b>: A data structure that contains information about processes.</li>
-    <li><b>TEB</b>: A data structure that contains information about threads within a process.</li>
-    <li><b>Heap</b>: A memory region used for dynamic memory allocation during runtime.</li>
-    <li><b>Stack</b>: A memory region used for function calls and storing local variables during execution.</li>
-</ul>
-<br /><br />
-</p>
-
-<h3>Memory Page States</h3>
-
-<p>After explaining all of this, let's proceed to memory paging.<br /><br />
-
-What is Virtual Memory Page? Virtual memory relies on the concept of memory paging, which involves dividing memory into fixed-size chunks called "pages." On most modern systems, these pages are typically 4KB in size, though the size can vary depending on the architecture and configuration. Memory paging allows the operating system to manage memory more efficiently by loading and unloading pages between physical memory (RAM) and disk storage as needed.<br /><br />
-
-The following picture depicts a high-level overview of how virtual memory is mapped to physical memory using paging. Also, it is important to note that this picture is from the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">Windows Internals, Part 1</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>.</p> 
-
-<img src="/assets/img/post-img/17-04-2024/Windows-Internal_mapping-Memory.png" class="post-images" alt="Mapping-Memory-Windows-Internals-Book" height="500" weight="500">
-
-<p>According to <a href=" https://maldevacademy.com">MalDev Academy</a>, a great platform that I totally recommend to anyone who wants to enhance their malware developing skills, there are three paging states:<br />
-
+<p>There are various computer architectures, and each has its own unique instruction set and design. The most popular architectures that we will discuss in this article are x86 and x86-64. What do x86 and x86-64 mean? Well, the terms x86 and x86-64 refer to computer processor architectures.<br /></p>
 <ul>
 	<li>
-		<b>Free</b>: A page of memory that is currently not allocated to any active process or stored data and is available for use.<br />
+		<p><strong>x86</strong> typically refers to a family of backward compatible instruction set architectures based on the Intel 8086 CPU. It has become the standard for many personal computers and servers.</p>
 	</li>
 	<li>
-		<b>Reserved</b>: A page of memory that has been allocated by the operating system but is not currently in use by any active process.<br />
+		<p><strong>x86-64</strong>, also known as x64 or AMD64, is an extension of the x86 instruction set, allowing for 64-bit addressing. This extension enables processors to handle larger amounts of memory and perform more complex calculations compared to earlier 32-bit versions of the x86 architecture. Most modern desktops, laptops, and servers utilize the x86-64 architecture.</p>
+	</li>
+</ul>
+
+<p>The following table presents the main differences of x86 and x86-64 architectures:</p>
+
+<table border="1">
+    <tr>
+        <th>Characteristic</th>
+        <th>x86 (32-bit)</th>
+        <th>x86-64 (64-bit)</th>
+    </tr>
+    <tr>
+        <td>Word Size</td>
+        <td>32-bit</td>
+        <td>64-bit</td>
+    </tr>
+    <tr>
+        <td>Memory Limit</td>
+        <td>4 GB</td>
+        <td>Several TB</td>
+    </tr>
+    <tr>
+        <td>Performance</td>
+        <td>Limited by 32-bit processing</td>
+        <td>Enhanced performance due to 64-bit processing and larger memory addressing</td>
+    </tr>
+    <tr>
+        <td>Compatibility</td>
+        <td>32-bit applications can generally run on both 32-bit and 64-bit processors</td>
+        <td>64-bit applications can only run on 64-bit processors</td>
+    </tr>
+    <tr>
+        <td>Register Set</td>
+        <td>Smaller number of general-purpose registers</td>
+        <td>More general-purpose registers, leading to potential performance improvements for specific tasks</td>
+    </tr>
+</table>
+
+<h3>Basic Terms</h3>
+
+<p>Before we move on to the next section, I would like to explain some basic terms:</p><br />
+<ul>
+	<li>
+		<p><strong>Windows Process</strong>: A process in the Windows operating system is an instance of a computer program that is being executed. It has its own memory space, system resources, and is managed by the Windows kernel.</p>
 	</li>
 	<li>
-		 <b>Committed</b>: A page of memory that has been allocated and is actively being used by a process.<br /><br />
+		<p><strong>Threads</strong>: Threads are the smallest unit of execution within a process in the Windows operating system. They allow for concurrent execution of multiple tasks/instructions within the same process.</p>
+	</li>
+	<li>
+		<p><strong>Windows Processor</strong>: The Windows Processor refers to the CPU (Central Processing Unit) within a Windows-based system. It executes instructions and processes data within the operating system.</p>
+	</li>
+	<li>
+		<p><strong>Windows Service</strong>: A Windows service is a program that runs in the background, independently of any user and without the need for a user to log in to the PC. Services are typically used for tasks such as managing network connections, web servers, and other system functions.</p>
+	</li>
+	<li>
+		<p><strong>Windows Kernel</strong>: The Windows Kernel is the core of the Windows operating system. It is responsible for low-level tasks such as hardware management, process management, memory management, and security.</p>
+	</li>
+	<li>
+		<p><strong>Handle</strong>: In the context of Windows, a handle is a reference to an object that can be manipulated by the operating system. It allows processes to interact with system resources like files, devices, or other objects.</p>
+	</li>
+	<li>
+		<p><strong>Windows API</strong>: The Windows API (Application Programming Interface) is a set of functions and data structures that provide an interface for programmers to interact with the Windows operating system. It allows applications to access and use operating system services.</p>
+	</li>
+	<li>
+		<p><strong>Native API</strong>: The Native API is a lower-level interface used by the Windows operating system internally. It provides direct access to system functions that are not accessible through the standard Windows API. It is primarily used for system-level programming and development.</p>
+	</li>
+	<li>
+		<p><strong>DLL</strong>: A DLL (Dynamic Link Library) is a file that contains code and data that can be used by multiple programs at the same time. It allows software to modularize functionalities and share resources, promoting code reuse and efficient memory usage.</p>
+	</li>
+	<li>
+		<p><strong>Syscall</strong>: A syscall (system call) is a request made by an active process to the Windows Kernel. It allows user-level programs to request services from the operating system, such as file operations, input/output operations, and process control.</p>
 	</li>
 </ul>
-</p>
 
-<h3>Memory Page Protections</h3>
+<h3>User mode vs Kernel mode</h3>
 
-<p>This section is specifically about the memory page state called `committed`. The most popular memory page protection options are:</p><br />
+<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, there are two main access modes that a Windows processor uses: User mode (a.k.a. User Land) and Kernel mode (a.k.a. Kernel Land).</p><br />
 
-<ul>
-    <li><b>PAGE_NOACCESS</b>: Specifies that a memory page cannot be accessed by any process. This means that attempting to read from or write to the memory page will result in an access violation error.</li>
-    <li><b>PAGE_EXECUTE_READWRITE</b>: Specifies that a memory page can be executed from and also read from and written to by a process. This means that the code within the memory page can be executed as instructions, and data within the page can be both read from and written to.</li>
-    <li><b>PAGE_READONLY</b>: Specifies that a memory page can be read from but not written to or executed. This means that data within the memory page can be read by a process, but attempts to modify the data or execute code from the page will result in access violation errors.</li>
-</ul><br />
+<p>The main reason for this distinction is to protect user applications from accessing and modifying critical Operating System data. User application code runs in User Land, while operating system componets, such as system services and device drivers, operates in Kernel Land.</p><br />
 
-<p>However, if you want to find more memory page protection options, you can visit <a href="https://learn.microsoft.com/en-us/windows/win32/memory/memory-protection-constants">Microsoft's official website</a>.<br /><br /></p>
+<p>Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. However, some processors use alternative terms for this mode, such as supervisor mode, privilege level, or ring level. Regardless of the nomenclature, the primary purpose of this CPU design is to elevate the kernel to a higher privilege level than user mode applications. This is done to ensure that a misbehaving application cannot compromise the overall stability of the system.</p><br />
 
-<h3>Memory Protections</h3>
-
-<p>To protect against exploits and attacks, modern operating systems have built-in memory protections such as:
-<ul>
-    <li><b>Data Execution Prevention (DEP)</b>: DEP works by marking certain memory pages as non-executable, meaning that code cannot be executed from those pages.</li>
-    <li><b>Address space layout randomization (ASLR)</b>: ASLR works by randomly positioning the memory layout of processes, making it difficult for attackers to predict the memory addresses of system components or injected code.</li>
-</ul>
-<br /><br />
-</p>
-
-<h3>Memory in Action</h3>
-
-<p>Let's dive into the technical world of memory allocation and see how it works in action!</p>
+<p>Personally, I prefer the term 'ring level' for kernel mode. It reminds me of one of my favorite movies, The Lord of the Rings! 😂</p>
 
 <div style="display: flex; justify-content: center;">
-    <iframe src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <iframe src="https://giphy.com/embed/VfwIk1LD84CI" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>It is important to note that the following example was inspired by <a href="https://maldevacademy.com">Maldev Academy</a>.</p>
-<br />
+<p>At this point, it is important to note that both the x86 and x86-64 architectures define several ring/privilege levels to protect system code from malicious actions or misbehaviors of the applications. The most popular ring levels are as follows: ring 0, used for Kernel mode; ring 3, used for user mode; ring -1, used for the hypervisor; and ring -2, used for SMM (System Management Mode).</p><br />
 
-<p>First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
+<h3>Function Call Flow</h3>
 
-<p>However, it's important to note that after any memory allocation, the buffer should be deallocated or freed to avoid memory leaks. Any of the above methods have a way to deallocate the memory:</p>
+<p>User applications do not have the capability to perform tasks independently; the kernel is the only entity that can complete any task. Consequently, applications typically follow a standard function call flow to execute tasks. Generally, this flow allows any user application to call a function through the Windows API. After a series of steps, the request reaches the kernel, which then executes it. The following diagram illustrates this general approach. I inspired it from <a href="https://maldevacademy.com">Maldev academy</a>, and I recommend it to anyone looking to learn more about evasion.</p>
 
-<p>Now, lets try to write to memory!</p>
+<img src="/assets/img/post-img/22-10-2023/Diagram-1.png" class="post-images" alt="General Diagram Function Call Flow">
 
+<p>Let's explain this diagram:<br /><br /></p>
 
-<br /><br />
+<ul>
+	<li>
+		<p><strong>User Process</strong>: An application that is executed by the user (i.e., Notepad, Firefox).</p>
+	</li>
+	<li>
+		<p><strong>SubSystem DLLs</strong>: Dynamic Link Libraries (DLLs) containing Windows API functions that are invoked by user processes (i.e., kernel32.dll for CreateFileW API).</p>
+	</li>
+	<li>
+		<p><strong>ntdll.dll</strong>: A system-wide DLL which is the lowest layer available in user land. This is a special DLL that creates the transition from user kernel to kernel land.</p>
+	</li>
+	<li>
+		<p><strong>Kernel</strong>: The Windows Kernel calls drivers and other modules to complete tasks.</p>
+	</li>
+</ul>
+
+<p>ℹ️ The Windows kernel is partly stored in a file named "ntoskrnl.exe" located in "C:\Windows\System32".<br /></p>
+
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://giphy.com/embed/xT9KVqOt8xuRYhNpq8" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+
+<p>Before proceeding with a practical example, I want to clarify a crucial point. I intend to provide more details about this function call flow to enhance familiarity with it.<br /><br />
+Let's consider a sample C application that utilizes the CreateFileW Windows API, to create a new file:</p>
+
+```
+#include <stdio.h>
+#include <windows.h>
+
+int main() {
+    HANDLE hFile = INVALID_HANDLE_VALUE;
+    LPCWSTR filePath = L"C:\\Users\\nickvourd\\Desktop\\nickvourd.txt";
+
+    hFile = CreateFileW(filePath, GENERIC_ALL, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+
+    if (hFile != INVALID_HANDLE_VALUE) {
+        wprintf(L"[+] File '%s' created successfully.\n", filePath);
+        CloseHandle(hFile);
+    } else {
+        wprintf(L"[-] CreateFileW API Function Failed with Error: %d\n", GetLastError());
+        return -1;
+    }
+
+    return 0;
+}
+```
+<p>ℹ️ The "windows.h" header file includes DLLs related to Windows API functions.<br /><br />
+
+Referring to the earlier diagram, when the user executes this C program, <span style="color: red;"><b>please remember the following five (5) steps (as general overview)</b></span>:</p>
+
+<ol>
+	<li>
+		<p>The C program calls subsystem DLLs, such as kernel32.dll.</p>
+	</li>
+	<li>
+		<p>The kernel32.dll contains the CreateFileW Windows API.</p>
+	</li>
+	<li>
+		<p>The CreateFileW API calls the Native API named NtCreateFile, which is part of ntdll.dll.</p>
+	</li>
+	<li>
+		<p>The ntdll.dll executes an assembly sysenter (x86) or syscall (x64) instruction, transferring the execution to kernel land.</p>
+	</li>
+	<li>
+		<p>Finally, the kernel employs NtCreateFile to invoke other modules and drivers in order to execute the task.</p>
+	</li>
+</ol>
+
+<p>The following diagram illustrates the aforementioned five (5) steps:</p>
+
+<img src="/assets/img/post-img/22-10-2023/Diagram-2.png" class="post-images" alt="Example Diagram Function Call Flow">
+
+<p>ℹ️ It is essential to understand that applications have the capability to directly invoke syscalls (i.e., NTDLL functions) without necessarily navigating through the Windows API. The Windows API essentially functions as a wrapper for the Native API.</p>
+
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://giphy.com/embed/2599kjzl9M5anzPSbh" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+
+<p>Alright, let's proceed with a practical example! 😛<br /><br />
+
+We will compile the above example C code into Demo.exe and then analyze it in x64dbg.</p>
+<ul>
+	<li>
+		<p>The user application calls the CreateFileW Windows API.</p>
+	</li>
+</ul>
+
+<img src="/assets/img/post-img/22-10-2023/x64dbg-Call-CreateFilew.png" class="post-images" alt="x64dbg Call instruction of CreateFileW">
+
+<ul>
+	<li>
+		<p>Next, CreateFileW calls its equivalent NTAPI function, NtCreateFile.</p>
+	</li>
+</ul>
+
+<img src="/assets/img/post-img/22-10-2023/x64dbg-Call-NtCreateFile.png" class="post-images" alt="x64dbg Call instruction of NtCreateFile">
+
+<ul>
+	<li>
+		<p>Last but not least, the NtCreateFile function uses a syscall assembly instruction to transition from user land to kernel land. The kernel will be the entity that creates the new file.</p>
+	</li>
+</ul>
+
+<img src="/assets/img/post-img/22-10-2023/x64dbg-Syscall.png" class="post-images" alt="x64dbg Syscall">
+
+<h3>Conclusion</h3>
+
+<p>In summary, Windows works through different layers like user apps, DLLs, and the kernel. The Windows API acts as a middleman, making it easy for users to interact, while the kernel handles crucial tasks using NTAPI functions. This understanding is crucial for anyone looking into Windows software and security. In my next post, I will explain the different Windows memory types how the Operating System manages memory.</p><br />
+
 <!-- add the button!-->
 <div>
 <applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/an-introduction-to-windows-memory-management/"/>
