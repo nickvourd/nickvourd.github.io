@@ -122,7 +122,7 @@ categories:
 	.command {
     	font-family: monospace; /* Use a monospace font */
     	background-color: #000000; /* Black background */
-    	color: #00FF00; /* Green text */
+    	color: #FFFFFF; /* Green text */
     	padding: 5px; /* Add padding for better readability */
     	display: inline-block; /* Make the frame expand or contract based on text length */
 	}
@@ -260,7 +260,7 @@ First of all, we need to know that there are several methods to allocate memory 
 
 <p>However, it's important to note that after any memory allocation, the buffer should be deallocated or freed to avoid memory leaks. Any of the above methods have a way to deallocate the memory:</p>
 
-<!--<img src="/assets/img/post-img/17-04-2024/Deallocate-Memory-Ways.png" class="post-images" alt="methods_of_deallocation" height="200" weight="200">
+
 
 
 <p>Now, lets try to write to memory!</p>-->
