@@ -224,7 +224,7 @@ The following picture depicts a high-level overview of how virtual memory is map
 
 <h3>Memory Page Protections</h3>
 
-<p>This section is specifically about the memory page state called `committed`. The most popular memory page protection options are:<br />
+<p>This section is specifically about the memory page state called `committed`. The most popular memory page protection options are:</p><br />
 
 <ul>
     <li><b>PAGE_NOACCESS</b>: Specifies that a memory page cannot be accessed by any process. This means that attempting to read from or write to the memory page will result in an access violation error.</li>
@@ -232,7 +232,7 @@ The following picture depicts a high-level overview of how virtual memory is map
     <li><b>PAGE_READONLY</b>: Specifies that a memory page can be read from but not written to or executed. This means that data within the memory page can be read by a process, but attempts to modify the data or execute code from the page will result in access violation errors.</li>
 </ul><br />
 
-However, if you want to find more memory page protection options, you can visit <a href="https://learn.microsoft.com/en-us/windows/win32/memory/memory-protection-constants">Microsoft's official website</a>.<br /><br /></p>
+<p>However, if you want to find more memory page protection options, you can visit <a href="https://learn.microsoft.com/en-us/windows/win32/memory/memory-protection-constants">Microsoft's official website</a>.<br /><br /></p>
 
 <h3>Memory Protections</h3>
 
