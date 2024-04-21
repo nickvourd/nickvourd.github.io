@@ -324,6 +324,10 @@ int main() {
 
 <p>As you have already observed the appearance of new random data, this is most likely attributed to a new allocation performed by the operating system within the process.</p>
 
+<h3>Conclusion</h3>
+
+<p>In summary, this article provides an explanation of how Windows memory management operates, covering various memory structures and protections. Understanding this knowledge is crucial for those seeking insight into Windows internals. Until next time, happy hacking!</p>
+
 <br /><br />
 <!-- add the button!-->
 <div>
