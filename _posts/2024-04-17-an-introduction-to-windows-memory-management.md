@@ -205,7 +205,20 @@ The following picture depicts a high-level overview of how virtual memory is map
 
 <img src="/assets/img/post-img/17-04-2024/Windows-Internal_mapping-Memory.png" class="post-images" alt="Mapping-Memory-Windows-Internals-Book" height="500" weight="500">
 
+<p>According to <a href=" https://maldevacademy.com">MalDev Academy</a>, a great platform that I totally recommend to anyone who wants to enhance their malware developing skills, there are three paging states:<br />
 
+<ul>
+	<li>
+		<b>Free</b>: A page of memory that is currently not allocated to any active process or stored data and is available for use.<br />
+	</li>
+	<li>
+		<b>Reserved</b>: A page of memory that has been allocated by the operating system but is not currently in use by any active process.<br />
+	</li>
+	<li>
+		 <b>Committed</b>: A page of memory that has been allocated and is actively being used by a process.<br /><br />
+	</li>
+</ul>
+</p>
 
 ```
 #include <stdio.h>
