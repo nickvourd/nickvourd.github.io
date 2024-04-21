@@ -1,0 +1,146 @@
+---
+layout: post
+title: "The anatomy of PE"
+image: ""
+date: 2024-04-21 10:10:02
+tags:
+  - Windows Internals
+  - C Language
+
+description: ""
+categories:
+  - Fundamentals
+---
+
+<!-- add the button style & script -->
+<link rel="stylesheet" href="/assets/css/applause-button.css"/>
+<script src="/assets/js/applause-button.js"></script>
+
+<style>
+	#myBtn {
+  		display: none;
+  		position: fixed;
+  		bottom: 40px;
+  		right: 50px;
+  		z-index: 99;
+  		font-size: 12px;
+  		border: 1px solid black;
+  		outline: black;
+  		background-color: #262626;
+  		color: white;
+  		cursor: pointer;
+  		padding: 10px 22px 10px 22px;
+  		border-radius: 10px;
+  		font-family: 'Open Sans';
+	}
+
+	#myBtn:hover {
+  		background-color: #5d4d7a;
+	}
+	applause-button {
+		margin: auto;
+	}
+	.header-site .site-title {
+      	padding-top: 5px;
+      	color: white;
+      	text-align: center;
+      	font-weight: bold;
+      	padding-left: 19px;
+	}
+	
+	.post-images {
+		max-width: 100%;
+	}
+
+  .post-images2 {
+		max-width: 50%;
+	}
+
+	.post-content img { 
+		margin: 1.875rem auto;
+		display: block;
+	}
+
+	table {
+	width: 70%;
+	border-collapse: collapse;
+	}
+
+	table, th, td {
+	border: 1px solid black;
+	}
+
+	th, td {
+	text-align: left;
+	padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	background-color: #f2f2f2;
+	}
+
+	@media screen and (max-width: 600px) {
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr {
+		border: 1px solid #ccc;
+	}
+
+	td {
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		content: attr(data-label);
+	}
+
+</style>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<p>Hello, world! Hello, world! <a href="https://twitter.com/nickvourd">@nickvourd</a> is calling! Welcome back to another blog post. Today, I want to discuss the Portable Executable (PE) file format.</p><br /><br />
+
+<p>So, what is a PE?</p><br /><br />
+
+<p>The first time I heard about PE was in the course titled <a href="https://institute.sektor7.net/red-team-operator-malware-development-essentials">RED TEAM Operator: Malware Development Essentials Course</a> by <a href="https://institute.sektor7.net">Sector 7</a>.<br /><br />PE is a way to organize executable code in a file on disk.</p>
+
+<!-- add the button!-->
+<div>
+<applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/the-anatomy-of-pe/"/>
+</div>
