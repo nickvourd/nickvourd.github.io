@@ -161,6 +161,12 @@ The following picture depicts an overview of the virtual memory layout of a proc
 
 <img src="/assets/img/post-img/17-04-2024/Memory-Strucutre.png" class="post-images" alt="Exploit writing tutorial part 1 : Stack Based Overflows (Corelan)" height="500" weight="500">
 
+<p>Let’s work our way up from the bottom (Kernel Land), starting with the portion of memory from 0xFFFFFFFF to 0x7FFFFFFF, and discuss the most important parts:</p><br /><br />
+
+<h4>Kernel Land</h4>
+
+<p>As we discussed in my previous article titled <a href="(https://nickvourd.github.io/an-overview-of-windows-arch/">An Overview of Windows Architecture (Part 1)</a>, Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. This portion of memory (0xFFFFFFFF) is reserved by the Opertaing System for device drivers, system cache, paged/non-paged pool, etc. There is no user access to this portion of memory.</p><br /><br />
+
 ```
 #include <stdio.h>
 #include <windows.h>
