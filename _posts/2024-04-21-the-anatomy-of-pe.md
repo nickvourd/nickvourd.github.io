@@ -140,9 +140,11 @@ function topFunction() {
 
 <p>The first time I heard about PE was in the course titled <a href="https://institute.sektor7.net/red-team-operator-malware-development-essentials">RED TEAM Operator: Malware Development Essentials Course</a> by <a href="https://institute.sektor7.net">Sector 7</a> (Which I totally recommend to anyone interested).<br /><br />➡️ PE is a way to organize executable code in a file on disk.<br /><br />And how does this actually work?<br /><br />➡️ The Windows Operating System has a component named the loader, which reads the PE from disk and then loads it into memory as a process and starts to execute it.</p><br />
 
-<p>I think <a href="https://institute.sektor7.net">Sector 7</a> offers the best introduction to the PE format that I have ever come across!<br /><br />What I mean?<br /><br />Well, the PE structure is very complicated, but with any complex topic, you should change your approach to viewing it!<br/>The following picture shows the original (complex) structure view of PE. It is important to note that this image is from the <a hred="https://en.wikipedia.org/wiki/Portable_Executable">Wikipedia</a> article:</p>
+<p>I think Sector 7 offers the best introduction to the PE format that I have ever come across!<br /><br />What I mean?<br /><br />Well, the PE structure is very complicated, but with any complex topic, you should change your approach to viewing it!<br/>The following picture shows the original (complex) structure view of PE. It is important to note that this image is from the <a hred="https://en.wikipedia.org/wiki/Portable_Executable">Wikipedia</a> article:</p>
 
 <img src="/assets/img/post-img/21-04-2024/Portable-ExecucatbleFormat.svg.png" class="post-images" alt="PE Structure from Wikipedia">
+
+<p>As you can see, the structure of a PE file is really complicated. According to Sector 7, a better approach is to view it as a book. Personally, I think it's a great idea! Let's assume that a PE is a book. This book contains two parts: <b>data</b> and <b>metadata</b>.</p>
 
 <!-- add the button!-->
 <div>
