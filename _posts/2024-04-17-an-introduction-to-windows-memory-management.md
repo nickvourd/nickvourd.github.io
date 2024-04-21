@@ -183,10 +183,9 @@ The following picture depicts an overview of the virtual memory layout of a proc
 
 <p>The stack is a region of memory used for storing function call and local variable data during program execution. It operates on a last-in, first-out (LIFO) basis, meaning that the last item pushed onto the stack is the first one to be popped off.<br />When a function is called, its parameters and local variables are typically allocated on the stack. As subsequent functions are called within the current function, additional stack frames are created, each containing the necessary information for the corresponding function call. When a function returns, its stack frame is removed from the stack, and control returns to the calling function.<br />The stack is managed automatically by the CPU and is typically of fixed size, although it can grow dynamically in some systems.</p><br />
 
-<p>I know that's a lot of information, and honestly, the main part of my job as an Offensive Security Consultant is to explain difficult topics to my clients and make them easy to understand. This is a skill that I learned from <a href="https://www.linkedin.com/in/panosstam/">Mr_P</a> and <a href="https://www.linkedin.com/in/aretis/">Dimitris Aretis</a>.<br />
+<p>I know that's a lot of information, and honestly, the main part of my job as an Offensive Security Consultant is to explain difficult topics to my clients and make them easy to understand. This is a skill that I learned from <a href="https://www.linkedin.com/in/panosstam/">Mr_P</a> and <a href="https://www.linkedin.com/in/aretis/">Dimitris Aretis</a>.<br /><br />
 
 Let's try this together! When I mention a term, please keep two words in mind:<br />
-
 <ul>
     <li><b>Kernel Land</b>: The lowest level managed by the operating system.</li>
     <li><b>PEB</b>: A data structure that contains information about processes.</li>
@@ -194,7 +193,17 @@ Let's try this together! When I mention a term, please keep two words in mind:<b
     <li><b>Heap</b>: A memory region used for dynamic memory allocation during runtime.</li>
     <li><b>Stack</b>: A memory region used for function calls and storing local variables during execution.</li>
 </ul>
-</p><br /><br />
+</p><br />
+
+<h3>Memory Page States</h3>
+
+<p>After explaining all of this, let's proceed to memory paging.<br /><br />
+
+What is Virtual Memory Page? Virtual memory relies on the concept of memory paging, which involves dividing memory into fixed-size chunks called "pages." On most modern systems, these pages are typically 4KB in size, though the size can vary depending on the architecture and configuration. Memory paging allows the operating system to manage memory more efficiently by loading and unloading pages between physical memory (RAM) and disk storage as needed.<br /><br />
+
+The following picture depicts a high-level overview of how virtual memory is mapped to physical memory using paging. Also, it is important to note that this picture is from the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">Windows Internals, Part 1</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>.</p> 
+
+<img src="/assets/img/post-img/17-04-2024/Windows-Internal_mapping-Memory.png" class="post-images" alt="Mapping-Memory-Windows-Internals-Book" height="500" weight="500">
 
 ```
 #include <stdio.h>
