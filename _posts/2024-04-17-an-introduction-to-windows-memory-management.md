@@ -149,7 +149,7 @@ According to the book <a href="https://www.amazon.com/Windows-Internals-Part-arc
 
 You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br /><br />
 
-By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).</p><br /><br />
+By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).</p><br />
 
 <h3>Memory Structures</h3>
 
@@ -182,6 +182,19 @@ The following picture depicts an overview of the virtual memory layout of a proc
 <h4>Stack</h4>
 
 <p>The stack is a region of memory used for storing function call and local variable data during program execution. It operates on a last-in, first-out (LIFO) basis, meaning that the last item pushed onto the stack is the first one to be popped off.<br />When a function is called, its parameters and local variables are typically allocated on the stack. As subsequent functions are called within the current function, additional stack frames are created, each containing the necessary information for the corresponding function call. When a function returns, its stack frame is removed from the stack, and control returns to the calling function.<br />The stack is managed automatically by the CPU and is typically of fixed size, although it can grow dynamically in some systems.</p><br />
+
+<p>I know that's a lot of information, and honestly, the main part of my job as an Offensive Security Consultant is to explain difficult topics to my clients and make them easy to understand. This is a skill that I learned from <a href="https://www.linkedin.com/in/panosstam/">Mr_P</a> and <a href="https://www.linkedin.com/in/aretis/">Dimitris Aretis</a>.<br />
+
+Let's try this together! When I mention a term, please keep two words in mind:<br />
+
+<ul>
+    <li><b>Kernel Land</b>: The lowest level managed by the operating system.</li>
+    <li><b>PEB</b>: A data structure that contains information about processes.</li>
+    <li><b>TEB</b>: A data structure that contains information about threads within a process.</li>
+    <li><b>Heap</b>: A memory region used for dynamic memory allocation during runtime.</li>
+    <li><b>Stack</b>: A memory region used for function calls and storing local variables during execution.</li>
+</ul>
+</p><br /><br />
 
 ```
 #include <stdio.h>
