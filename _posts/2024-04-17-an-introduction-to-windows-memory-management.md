@@ -137,6 +137,20 @@ function topFunction() {
 
 <p>Hello, folks! After a long time, I've officially found some time to continue this awesome journey. In my last blog post, we discussed some topics about Windows architecture, such as the difference between x86 and x86-64 architectures, some basic terms, and we examined a detailed example of a function call flow. If you haven't already read my previous article <a href="https://nickvourd.github.io/an-overview-of-windows-arch/">An Overview of Windows Architecture (part 1)</a>, you should do so before continuing. This is officially Part 2. So, get ready, boyz/girlz, for the next round!</p>
 
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://giphy.com/embed/Yh30S0qiIw1wsF1L0T" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+
+<h3>Intro to Memory</h3>
+
+<p>The first thing we need to discuss is what memory is! Memory in computing systems refers to the electronic components that store data and instructions for processing by the Central Processing Unit (CPU).Most people out there, when they hear the word "memory," typically think of RAM or a hard disk. To be honest, while these examples are contextualized to memory types, in Windows Internals, the meaning is slightly different...<br /><br /></p>
+
+<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br /><br />
+
+You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br /><br />
+
+By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).</p><br /><br />
+
 ```
 #include <stdio.h>
 #include <windows.h>
@@ -155,7 +169,6 @@ int main() {
         return -1;
     }
 
-    return 0;
 }
 ```
 
