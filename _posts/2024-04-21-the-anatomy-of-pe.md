@@ -173,6 +173,9 @@ function topFunction() {
 </ul>
 </p>
 
+<p>From a malware development perspective, there are several options for storing the payload within different sections of the PE file, such as <b>.data</b>, <b>.rdata</b>, <b>.text</b>, and <b>.rsrc</b>.</p>
+
+
 <!-- add the button!-->
 <div>
 <applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/the-anatomy-of-pe/"/>
