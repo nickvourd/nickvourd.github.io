@@ -161,6 +161,18 @@ function topFunction() {
 
 <p>If you try to view the image above vertically, you'll see what I mean—it resembles a book. 😉</p>
 
+<p>A PE file has several header sections, each serving specific purposes. Some of the most important ones include:
+
+<ul>
+  <li><b>.text</b>: This section contains executable code, typically the actual instructions to be executed by the processor. It is often marked as read-only and executable.</li>
+  <li><b>.data</b>: The .data section holds initialized data that is used by the program during execution. This can include variables, constants, and other data structures that are initialized with specific values.</li>
+  <li><b>.rdata</b>: This section stores read-only data, such as constant strings and other immutable values used by the program.</li>
+  <li><b>.rsrc</b>: The .rsrc section is where resources like icons, images, dialogs, and version information are stored. These resources can be accessed by the program during runtime.</li>
+  <li><b>.reloc</b>: This section contains relocation information, which is used by the loader to adjust memory addresses when the executable is loaded at a different base address than the one it was originally compiled for.</li>
+  <li><b>.pdata</b>: The .pdata section, or Procedure Data, is used for exception handling and runtime function table information. It contains information about functions that have exception handling associated with them.</li>
+</ul>
+</p>
+
 <!-- add the button!-->
 <div>
 <applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/the-anatomy-of-pe/"/>
