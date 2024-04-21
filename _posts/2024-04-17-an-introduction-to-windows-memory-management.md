@@ -215,14 +215,14 @@ The following picture depicts a high-level overview of how virtual memory is map
 		<b>Reserved</b>: A page of memory that has been allocated by the operating system but is not currently in use by any active process.<br />
 	</li>
 	<li>
-		 <b>Committed</b>: A page of memory that has been allocated and is actively being used by a process.<br /><br />
+		 <b>Committed</b>: A page of memory that has been allocated and is actively being used by a process.
 	</li>
 </ul>
 </p>
 
 <h3>Memory Page Protections</h3>
 
-<p>This section is specifically about the memory page state called `committed`. The most popular memory page protection options are:<br />
+<p>This section is specifically about the memory page state called <b>committed</b>. The most popular memory page protection options are:<br />
 <ul>
     <li><b>PAGE_NOACCESS</b>: Specifies that a memory page cannot be accessed by any process. This means that attempting to read from or write to the memory page will result in an access violation error.</li>
     <li><b>PAGE_EXECUTE_READWRITE</b>: Specifies that a memory page can be executed from and also read from and written to by a process. This means that the code within the memory page can be executed as instructions, and data within the page can be both read from and written to.</li>
