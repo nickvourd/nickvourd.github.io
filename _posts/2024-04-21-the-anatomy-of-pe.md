@@ -152,7 +152,7 @@ function topFunction() {
 
 <h3>PE Format</h3>
 
-<p>However, I think Sector 7 offers the best introduction to the PE format that I have ever come across!<br /><br />What I mean?<br /><br />Well, the PE structure is very complicated, but with any complex topic, you should change your approach to viewing it!<br/>The following picture shows the original (complex) structure view of PE. It is important to note that this image is from the <a href="https://en.wikipedia.org/wiki/Portable_Executable">Wikipedia</a> article:</p>
+<p>However, I think Sector 7 offers the best introduction to the PE format that I have ever come across!<br /><br />What I mean?🤔<br /><br />Well, the PE structure is very complicated, but with any complex topic, you should change your approach to viewing it!<br/>The following picture shows the original (complex) structure view of PE. It is important to note that this image is from the <a href="https://en.wikipedia.org/wiki/Portable_Executable">Wikipedia</a> article:</p>
 
 <img src="/assets/img/post-img/21-04-2024/Portable-ExecucatbleFormat.svg.png" class="post-images" alt="PE Structure from Wikipedia">
 
