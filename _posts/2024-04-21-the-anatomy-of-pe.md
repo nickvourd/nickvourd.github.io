@@ -140,9 +140,9 @@ function topFunction() {
 
 <p>The first time I heard about PE was in the course titled <a href="https://institute.sektor7.net/red-team-operator-malware-development-essentials">RED TEAM Operator: Malware Development Essentials Course</a> by <a href="https://institute.sektor7.net">Sector 7</a> (Which I totally recommend to anyone interested).<br /><br />➡️ PE is a way to organize executable code in a file on disk.<br /><br />And how does this actually work?<br /><br />➡️ The Windows Operating System has a component named the loader, which reads the PE from disk and then loads it into memory as a process and starts to execute it.</p><br />
 
-<p>I think <a href="https://institute.sektor7.net">Sector 7</a> offers the best introduction to the PE format that I have ever come across!<br /><br />What I mean?<br /><br />Well, the PE structure is very complicated, but with any complex topic, you should change your approach to viewing it!<br/>The following picture shows the original (complex) structure view of PE. It is important to note that this image is from the <a hred="https://en.wikipedia.org/wiki/Portable_Executable">Wikipedia article</a>:</p>
+<p>I think <a href="https://institute.sektor7.net">Sector 7</a> offers the best introduction to the PE format that I have ever come across!<br /><br />What I mean?<br /><br />Well, the PE structure is very complicated, but with any complex topic, you should change your approach to viewing it!<br/>The following picture shows the original (complex) structure view of PE. It is important to note that this image is from the <a hred="https://en.wikipedia.org/wiki/Portable_Executable">Wikipedia</a> article:</p>
 
-<img src="https://commons.wikimedia.org/wiki/File:Portable_Executable_32_bit_Structure_in_SVG_fixed.svg#/media/File:Portable_Executable_32_bit_Structure_in_SVG_fixed.svg" class="post-images" alt="PE Structure form Wikipedia" height="500" weight="500">
+<img src="https://commons.wikimedia.org/wiki/File:Portable_Executable_32_bit_Structure_in_SVG_fixed.svg#/media/File:Portable_Executable_32_bit_Structure_in_SVG_fixed.svg" class="post-images" alt="PE Structure form Wikipedia">
 
 <!-- add the button!-->
 <div>
