@@ -6,6 +6,9 @@ date: 2024-04-21 10:10:02
 tags:
   - Windows Internals
   - C Language
+  - Debugger
+  - x64dbg
+  - Architecture
 
 description: ""
 categories:
@@ -155,6 +158,8 @@ function topFunction() {
 <p>Another great resource for presenting PE structure is the following image by <a href="https://github.com/corkami">corkami</a>:</p>
 
 <img src="/assets/img/post-img/21-04-2024/pe101.png" class="post-images" alt="PE-Format-Corcami" height="500" weight="500">
+
+<p>If you try to view the image above vertically, you'll see what I mean—it resembles a book. 😉</p>
 
 <!-- add the button!-->
 <div>
