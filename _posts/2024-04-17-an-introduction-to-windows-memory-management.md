@@ -181,7 +181,9 @@ The following picture depicts an overview of the virtual memory layout of a proc
 
 <h4>Stack</h4>
 
-<p>The stack is a region of memory used for storing function call and local variable data during program execution. It operates on a last-in, first-out (LIFO) basis, meaning that the last item pushed onto the stack is the first one to be popped off.<br />When a function is called, its parameters and local variables are typically allocated on the stack. As subsequent functions are called within the current function, additional stack frames are created, each containing the necessary information for the corresponding function call. When a function returns, its stack frame is removed from the stack, and control returns to the calling function.<br />The stack is managed automatically by the CPU and is typically of fixed size, although it can grow dynamically in some systems.</p><br />
+<p>The stack is a region of memory used for storing function call and local variable data during program execution. It operates on a last-in, first-out (LIFO) basis, meaning that the last item pushed onto the stack is the first one to be popped off.<br /><br />When a function is called, its parameters and local variables are typically allocated on the stack. As subsequent functions are called within the current function, additional stack frames are created, each containing the necessary information for the corresponding function call. When a function returns, its stack frame is removed from the stack, and control returns to the calling function.<br /><br />The stack is managed automatically by the CPU and is typically of fixed size, although it can grow dynamically in some systems.</p><br />
+
+<h4>Memory Structures Summary</h4>
 
 <p>I know that's a lot of information, and honestly, the main part of my job as an Offensive Security Consultant is to explain difficult topics to my clients and make them easy to understand. This is a skill that I learned from <a href="https://www.linkedin.com/in/panosstam/">Mr_P</a> and <a href="https://www.linkedin.com/in/aretis/">Dimitris Aretis</a>.<br /><br />
 
@@ -239,6 +241,14 @@ The following picture depicts a high-level overview of how virtual memory is map
     <li><b>Address space layout randomization (ASLR)</b>: ASLR works by randomly positioning the memory layout of processes, making it difficult for attackers to predict the memory addresses of system components or injected code.</li>
 </ul>
 </p>
+
+<h3>Memory in Action</h3>
+
+<p>Let's dive into the technical world of memory allocation and see how it works in action!</p>
+
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
 ```
 #include <stdio.h>
