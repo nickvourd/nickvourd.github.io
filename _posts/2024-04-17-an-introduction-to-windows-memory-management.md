@@ -165,13 +165,23 @@ The following picture depicts an overview of the virtual memory layout of a proc
 
 <h4>Kernel Land</h4>
 
-<p>As we discussed in my previous article titled <a href="(https://nickvourd.github.io/an-overview-of-windows-arch/">An Overview of Windows Architecture (Part 1)</a>, Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. This portion of memory (0xFFFFFFFF) is reserved by the Opertaing System for device drivers, system cache, paged/non-paged pool, etc. There is no user access to this portion of memory.</p><br /><br />
+<p>As we discussed in my previous article titled <a href="(https://nickvourd.github.io/an-overview-of-windows-arch/">An Overview of Windows Architecture (Part 1)</a>, Kernel Land is an execution mode in a processor that allows access to all system memory and CPU instructions. This portion of memory (0xFFFFFFFF) is reserved by the Opertaing System for device drivers, system cache, paged/non-paged pool, etc. There is no user access to this portion of memory.</p><br />
 
 <h4>Process Environment Block (PEB)</h4>
 
-<p>The Process Environment Block (PEB) is a data structure used by the Windows operating system to store information about a process. It contains various attributes and parameters related to the execution environment of the process. Some of the information stored in the PEB includes process parameters, environment variables, the process heap pointer, and loader data.</p><br /><br />
+<p>The Process Environment Block (PEB) is a data structure used by the Windows operating system to store information about a process. It contains various attributes and parameters related to the execution environment of the process. Some of the information stored in the PEB includes process parameters, environment variables, the process heap pointer, and loader data.</p><br />
 
+<h4>Thread Environment Block (TEB)</h4>
 
+<p>The Thread Environment Block (TEB) is a data structure used by the Windows operating system to store information specific to a thread. Each thread in a Windows process has its own TEB. The TEB contains thread-specific information such as the thread ID, thread-local storage (TLS) data, exception handling information, and a pointer to the Process Environment Block (PEB) of the process to which the thread belongs. Additionally, the TEB may include other thread-related data required for efficient thread execution and management.</p><br />
+
+<h4>Heap</h4>
+
+<p>The heap is a region of memory used for dynamic memory allocation in computer programs. The heap allows for the allocation and deallocation of memory blocks at runtime. In Windows operating systems, processes can allocate memory from the heap using functions like `HeapAlloc` and `HeapFree`. The heap is managed by the operating system's Heap Manager, which tracks allocated and free memory blocks and ensures efficient memory usage.</p><br />
+
+<h4>Stack</h4>
+
+<p>The stack is a region of memory used for storing function call and local variable data during program execution. It operates on a last-in, first-out (LIFO) basis, meaning that the last item pushed onto the stack is the first one to be popped off.<br />When a function is called, its parameters and local variables are typically allocated on the stack. As subsequent functions are called within the current function, additional stack frames are created, each containing the necessary information for the corresponding function call. When a function returns, its stack frame is removed from the stack, and control returns to the calling function.<br />The stack is managed automatically by the CPU and is typically of fixed size, although it can grow dynamically in some systems.</p><br />
 
 ```
 #include <stdio.h>
