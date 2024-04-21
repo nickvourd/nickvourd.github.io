@@ -148,7 +148,11 @@ function topFunction() {
 
 <p>The first time I heard about PE was in the course titled <a href="https://institute.sektor7.net/red-team-operator-malware-development-essentials">RED TEAM Operator: Malware Development Essentials Course</a> by <a href="https://institute.sektor7.net">Sector 7</a> (Which I totally recommend to anyone interested).<br /><br />➡️ PE is a way to organize executable code in a file on disk.<br /><br />And how does this actually work?<br /><br />➡️ The Windows Operating System has a component named the loader, which reads the PE from disk and then loads it into memory as a process and starts to execute it.</p><br />
 
-<p>Examples of PE files can include <b>.exe</b>, <b>.dll</b>, <b>.sys</b>, and <b>.scr</b> files etc. However, I think Sector 7 offers the best introduction to the PE format that I have ever come across!<br /><br />What I mean?<br /><br />Well, the PE structure is very complicated, but with any complex topic, you should change your approach to viewing it!<br/>The following picture shows the original (complex) structure view of PE. It is important to note that this image is from the <a href="https://en.wikipedia.org/wiki/Portable_Executable">Wikipedia</a> article:</p>
+<p>Examples of PE files can include <b>.exe</b>, <b>.dll</b>, <b>.sys</b>, and <b>.scr</b> files etc. </p><br />
+
+<h3>PE Format</h3>
+
+<p>However, I think Sector 7 offers the best introduction to the PE format that I have ever come across!<br /><br />What I mean?<br /><br />Well, the PE structure is very complicated, but with any complex topic, you should change your approach to viewing it!<br/>The following picture shows the original (complex) structure view of PE. It is important to note that this image is from the <a href="https://en.wikipedia.org/wiki/Portable_Executable">Wikipedia</a> article:</p>
 
 <img src="/assets/img/post-img/21-04-2024/Portable-ExecucatbleFormat.svg.png" class="post-images" alt="PE Structure from Wikipedia">
 
@@ -161,6 +165,8 @@ function topFunction() {
 <img src="/assets/img/post-img/21-04-2024/pe101.png" class="post-images" alt="PE-Format-Corcami" height="500" weight="500">
 
 <p>If you try to view the image above vertically, you'll see what I mean—it resembles a book. 😉</p><br />
+
+<h3>PE Header Sections</h3>
 
 <p>A PE file has several header sections, each serving specific purposes. Some of the most important ones include:
 
@@ -176,7 +182,7 @@ function topFunction() {
 
 <p>From a malware development perspective, there are several options for storing the payload within different sections of the PE file, such as <b>.data</b>, <b>.rdata</b>, <b>.text</b>, and <b>.rsrc</b>. The following image shows the sections locations where a payload can be stored:</p>
 
-<h3>.data Section</h3>
+<h4>.data Section</h4>
 
 <br /><br />
 
