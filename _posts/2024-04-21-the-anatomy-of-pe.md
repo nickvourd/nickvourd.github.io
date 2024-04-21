@@ -194,7 +194,7 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f c
 
 <img src="/assets/img/post-img/21-04-2024/msfvenom-payload-generation.png" class="post-images" alt="msfvenom-payload-generation" height="500" weight="500">
 
-<h4>.data Section</h4>
+<h4>.text Section</h4>
 
 <br /><br />
 
