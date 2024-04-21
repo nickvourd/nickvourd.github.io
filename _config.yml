@@ -35,8 +35,8 @@ links:
     - title: my posts
       url: /posts
       key_trigger: 3
-    - title: tags
-      url: /tags
+    - title: series
+      url: /series
       key_trigger: 4
   section_2:
     - title: accredible
