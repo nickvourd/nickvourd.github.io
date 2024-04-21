@@ -142,7 +142,7 @@ function topFunction() {
 
 <p>I think <a href="https://institute.sektor7.net">Sector 7</a> offers the best introduction to the PE format that I have ever come across!<br /><br />What I mean?<br /><br />Well, the PE structure is very complicated, but with any complex topic, you should change your approach to viewing it!<br/>The following picture shows the original (complex) structure view of PE. It is important to note that this image is from the <a hred="https://en.wikipedia.org/wiki/Portable_Executable">Wikipedia article</a>:</p>
 
-<img src="https://en.wikipedia.org/wiki/Portable_Executable#/media/File:Portable_Executable_32_bit_Structure_in_SVG_fixed.svg" class="post-images" alt="PE Structure form Wikipedia" height="500" weight="500">
+<img src="https://commons.wikimedia.org/wiki/File:Portable_Executable_32_bit_Structure_in_SVG_fixed.svg#/media/File:Portable_Executable_32_bit_Structure_in_SVG_fixed.svg" class="post-images" alt="PE Structure form Wikipedia" height="500" weight="500">
 
 <!-- add the button!-->
 <div>
