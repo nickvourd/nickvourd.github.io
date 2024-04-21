@@ -302,13 +302,13 @@ int main() {
 <ul>
     <li><b>#include &lt;stdio.h&gt;</b>: This line includes the standard input/output header file, which provides functions like <code>printf()</code> for output.</li>
     <li><b>#include &lt;Windows.h&gt;</b>: This line includes the Windows API header file, necessary for Windows-specific functions such as <code>malloc()</code>.</li>
-    <li>int number = 100;: This line declares an integer variable named <code>number</code> and initializes it to 100. It determines the size of the memory block to be allocated.</li>
-    <li>PVOID pAddress = malloc(number);: This line dynamically allocates memory of size <code>number</code> bytes using the <code>malloc()</code> function from the C standard library. The return type of <code>malloc()</code> is <code>PVOID</code>, which is a pointer to void. The base address of the allocated memory block is stored in the pointer <code>pAddress</code>.</li>
-    <li>CHAR* cString = "Hello Memory World!";: This line declares a character pointer named <code>cString</code> and initializes it with a string literal "Hello Memory World!". This string will be copied into the allocated memory block.</li>
-    <li>memcpy(pAddress, cString, strlen(cString));: This line copies the contents of the string <code>cString</code> into the memory block pointed to by <code>pAddress</code> using the <code>memcpy()</code> function. <code>strlen(cString)</code> determines the number of bytes to copy.</li>
-    <li>printf("[*] Base Address of Allocated Memory: 0x%p\n", pAddress);: This line prints the base address of the allocated memory block using <code>printf()</code> with a format specifier <code>%p</code> for pointer values.</li>
-    <li>free(pAddress);: This line deallocates the memory block pointed to by <code>pAddress</code> using the <code>free()</code> function, releasing it back to the system.</li>
-    <li>return 0;: This line indicates successful program termination with a return value of 0. It ends the <code>main()</code> function.</li>
+    <li><b>int number = 100;</b>: This line declares an integer variable named <code>number</code> and initializes it to 100. It determines the size of the memory block to be allocated.</li>
+    <li><b>PVOID pAddress = malloc(number);</b>: This line dynamically allocates memory of size <code>number</code> bytes using the <code>malloc()</code> function from the C standard library. The return type of <code>malloc()</code> is <code>PVOID</code>, which is a pointer to void. The base address of the allocated memory block is stored in the pointer <code>pAddress</code>.</li>
+    <li><b>CHAR* cString = "Hello Memory World!";</b>: This line declares a character pointer named <code>cString</code> and initializes it with a string literal "Hello Memory World!". This string will be copied into the allocated memory block.</li>
+    <li><b>memcpy(pAddress, cString, strlen(cString));</b>: This line copies the contents of the string <code>cString</code> into the memory block pointed to by <code>pAddress</code> using the <code>memcpy()</code> function. <code>strlen(cString)</code> determines the number of bytes to copy.</li>
+    <li><b>printf("[*] Base Address of Allocated Memory: 0x%p\n", pAddress);</b>: This line prints the base address of the allocated memory block using <code>printf()</code> with a format specifier <code>%p</code> for pointer values.</li>
+    <li><b>free(pAddress);</b>: This line deallocates the memory block pointed to by <code>pAddress</code> using the <code>free()</code> function, releasing it back to the system.</li>
+    <li><b>return 0;</b>: This line indicates successful program termination with a return value of 0. It ends the <code>main()</code> function.</li>
 </ul>
 </p>
 
