@@ -9,6 +9,7 @@ tags:
   - Debugger
   - x64dbg
   - Architecture
+  - metasploit
 
 description: ""
 categories:
@@ -173,8 +174,11 @@ function topFunction() {
 </ul>
 </p>
 
-<p>From a malware development perspective, there are several options for storing the payload within different sections of the PE file, such as <b>.data</b>, <b>.rdata</b>, <b>.text</b>, and <b>.rsrc</b>.</p>
+<p>From a malware development perspective, there are several options for storing the payload within different sections of the PE file, such as <b>.data</b>, <b>.rdata</b>, <b>.text</b>, and <b>.rsrc</b>. The following image shows the sections locations where a payload can be stored:</p>
 
+<h3>.data Section</h3>
+
+<br /><br />
 
 <!-- add the button!-->
 <div>
