@@ -196,6 +196,8 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f c
 
 <h4>.data Section</h4>
 
+<p>As mentioned above, the <b>.data</b> section holds initialized data that is used by the program during execution. This can include variables, constants, and other data structures initialized with specific values. Moreover, this section is both readable and writable, providing a convenient opportunity to store the payload.</p>
+
 <br /><br />
 
 <!-- add the button!-->
