@@ -277,7 +277,26 @@ HeapFree(GetProcessHeap(), 0, pAddress);
 // For Method 3 - Using LocalAlloc():
 LocalFree(pAddress);
 ```
-<p>ℹ️ FYI: When memory is allocated, it may either be empty or contain random data. <br /><br />Now, lets try to write to memory!</p>
+<p>ℹ️ FYI: When memory is allocated, it may either be empty or contain random data.<br /><br />Now, lets try to write to memory!</p>
+
+```
+#include <stdio.h>
+#include <Windows.h>
+
+int main() {
+	int number = 100;
+
+	PVOID pAddress = malloc(number);
+	CHAR* cString = "Hello Memory World!";
+
+	memcpy(pAddress, cString, strlen(cString));
+	printf("[*] Base Address of Allocated Memory: 0x%p\n", pAddress);
+
+	free(pAddress);
+
+	return 0;
+}
+```
 
 <br /><br />
 <!-- add the button!-->
