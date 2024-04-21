@@ -265,7 +265,19 @@ PVOID pAddress = HeapAlloc(GetProcessHeap(), 0, number);
 PVOID pAddress = LocalAlloc(LPTR, number);
 ```
 
-<p>However, it's important to note that after any memory allocation, the buffer should be deallocated or freed to avoid memory leaks. Any of the above methods have a way to deallocate the memory:</p>
+<p>However, it's important to note that after any memory allocation, the buffer should be deallocated or freed to avoid memory leaks. Each of the methods mentioned above should include a corresponding deallocation or freeing of memory:</p>
+
+```
+// For Method 1 - Using malloc()
+free(pAddress);
+
+// For Method 2 - Using HeapAlloc():
+HeapFree(GetProcessHeap(), 0, pAddress);
+
+// For Method 3 - Using LocalAlloc():
+LocalFree(pAddress);
+```
+
 
 <!-- add the button!-->
 <div>
