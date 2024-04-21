@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The anatomy of PE"
+title: "The Anatomy of PE"
 image: ""
 date: 2024-04-21 10:10:02
 tags:
@@ -134,11 +134,11 @@ function topFunction() {
 }
 </script>
 
-<p>Hello, world! Hello, world! <a href="https://twitter.com/nickvourd">@nickvourd</a> is calling! Welcome back to another blog post. Today, I want to discuss the Portable Executable (PE) file format.</p><br /><br />
+<p>Hello, world! Hello, world! <a href="https://twitter.com/nickvourd">@nickvourd</a> is calling! Welcome back to another blog post. Today, I want to discuss the Portable Executable (PE) file format.</p><br />
 
-<p>So, what is a PE?</p><br /><br />
+<p>So, what is a PE?</p><br />
 
-<p>The first time I heard about PE was in the course titled <a href="https://institute.sektor7.net/red-team-operator-malware-development-essentials">RED TEAM Operator: Malware Development Essentials Course</a> by <a href="https://institute.sektor7.net">Sector 7</a>.<br /><br />PE is a way to organize executable code in a file on disk.</p>
+<p>The first time I heard about PE was in the course titled <a href="https://institute.sektor7.net/red-team-operator-malware-development-essentials">RED TEAM Operator: Malware Development Essentials Course</a> by <a href="https://institute.sektor7.net">Sector 7</a>.<br /><br />PE is a way to organize executable code in a file on disk.<br /><br />And how does this actually work?</p>
 
 <!-- add the button!-->
 <div>
