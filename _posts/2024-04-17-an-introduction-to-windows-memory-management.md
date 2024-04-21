@@ -193,7 +193,7 @@ Let's try this together! When I mention a term, please keep two words in mind:<b
     <li><b>Heap</b>: A memory region used for dynamic memory allocation during runtime.</li>
     <li><b>Stack</b>: A memory region used for function calls and storing local variables during execution.</li>
 </ul>
-</p><br />
+</p>
 
 <h3>Memory Page States</h3>
 
@@ -201,9 +201,11 @@ Let's try this together! When I mention a term, please keep two words in mind:<b
 
 What is Virtual Memory Page? Virtual memory relies on the concept of memory paging, which involves dividing memory into fixed-size chunks called "pages." On most modern systems, these pages are typically 4KB in size, though the size can vary depending on the architecture and configuration. Memory paging allows the operating system to manage memory more efficiently by loading and unloading pages between physical memory (RAM) and disk storage as needed.<br /><br />
 
-The following picture depicts a high-level overview of how virtual memory is mapped to physical memory using paging. Also, it is important to note that this picture is from the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">Windows Internals, Part 1</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>.</p> 
+The following picture depicts a high-level overview of how virtual memory is mapped to physical memory using paging. Also, it is important to note that this picture is from the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">Windows Internals, Part 1</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>:</p> 
 
 <img src="/assets/img/post-img/17-04-2024/Windows-Internal_mapping-Memory.png" class="post-images" alt="Mapping-Memory-Windows-Internals-Book" height="500" weight="500">
+
+
 
 ```
 #include <stdio.h>
