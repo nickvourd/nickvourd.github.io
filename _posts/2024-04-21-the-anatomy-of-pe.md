@@ -182,6 +182,15 @@ function topFunction() {
 
 <p>From a malware development perspective, there are several options for storing the payload within different sections of the PE file, such as <b>.data</b>, <b>.rdata</b>, <b>.text</b>, and <b>.rsrc</b>. The following image shows the sections locations where a payload can be stored:</p>
 
+
+<img src="/assets/img/post-img/21-04-2024/sections-payloads.drawio.png" class="post-images" alt="Sections-for -Payloads" height="500" weight="500">
+
+<p>Before proceeding to detailed explanations of each section's payload storing implementation, we need to generate a shellcode. We will use the msfvenom module of <a href="https://docs.rapid7.com/metasploit/msf-overview/">Metasploit</a>. The following command will generate a calc shellcode:</p>
+
+```
+msfvenom -p windows/x64/exec CMD=calc.exe -f c 
+```
+
 <h4>.data Section</h4>
 
 <br /><br />
