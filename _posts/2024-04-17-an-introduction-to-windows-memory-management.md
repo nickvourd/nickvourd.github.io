@@ -277,7 +277,7 @@ HeapFree(GetProcessHeap(), 0, pAddress);
 // For Method 3 - Using LocalAlloc():
 LocalFree(pAddress);
 ```
-<p>Now, lets try to write to memory!</p>
+<p>ℹ️ FYI: When memory is allocated, it may either be empty or contain random data. <br /><br />Now, lets try to write to memory!</p>
 
 <br /><br />
 <!-- add the button!-->
