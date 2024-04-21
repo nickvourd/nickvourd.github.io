@@ -134,7 +134,11 @@ function topFunction() {
 }
 </script>
 
-<p>Hello, world! Hello, world! <a href="https://twitter.com/nickvourd">@nickvourd</a> is calling! Welcome back to another blog post. Today, I want to discuss the Portable Executable (PE) file format.</p><br />
+<p>Hello, world! Hello, world! <a href="https://twitter.com/nickvourd">@nickvourd</a> is calling! Welcome back to another blog post. Today, I want to discuss the Portable Executable (PE) file format. So, get ready, boyz/girlz, for the next round!</p>
+
+<div style="display: flex; justify-content: center;">
+    <iframe src="https://giphy.com/embed/mYtcJJZmkQOBgHRT2a" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
 <p>So, what is a PE?</p><br />
 
