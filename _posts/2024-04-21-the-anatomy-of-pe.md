@@ -154,7 +154,7 @@ function topFunction() {
 
 <p>Another great resource for presenting PE structure is the following image by <a href="https://github.com/corkami">corkami</a>:</p>
 
-<img src="https://github.com/corkami/pics/blob/master/binary/pe101/pe101.png" class="post-images" alt="PE-Structure-Custom-Simple" height="500" weight="500">
+<img src="https://github.com/corkami/pics/blob/master/binary/pe101/pe101.png" class="post-images" alt="PE-Format-Corcami">
 
 <!-- add the button!-->
 <div>
