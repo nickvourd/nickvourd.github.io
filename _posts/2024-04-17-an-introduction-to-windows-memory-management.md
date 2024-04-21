@@ -277,8 +277,9 @@ HeapFree(GetProcessHeap(), 0, pAddress);
 // For Method 3 - Using LocalAlloc():
 LocalFree(pAddress);
 ```
+<p>Now, lets try to write to memory!</p>
 
-
+<br /><br />
 <!-- add the button!-->
 <div>
 <applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/an-introduction-to-windows-memory-management/"/>
