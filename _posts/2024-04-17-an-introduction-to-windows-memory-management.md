@@ -250,6 +250,10 @@ The following picture depicts a high-level overview of how virtual memory is map
     <iframe src="https://giphy.com/embed/4Nq6L6m836paOHEjxy" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
+<p>It is important to note that the following example was inspired by <a href="https://maldevacademy.com">Maldev Academy</a>.</p>
+
+<p>First of all, we need to know that there are several methods to allocate memory during runtime (heap). Some of them are:</p>
+
 ```
 #include <stdio.h>
 #include <windows.h>
