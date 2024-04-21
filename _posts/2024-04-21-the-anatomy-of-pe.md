@@ -138,7 +138,7 @@ function topFunction() {
 
 <p>So, what is a PE?</p><br />
 
-<p>The first time I heard about PE was in the course titled <a href="https://institute.sektor7.net/red-team-operator-malware-development-essentials">RED TEAM Operator: Malware Development Essentials Course</a> by <a href="https://institute.sektor7.net">Sector 7</a>.<br /><br />PE is a way to organize executable code in a file on disk.<br /><br />And how does this actually work?<br /><br />The Windows Operating System has a component named the loader, which reads the PE from disk and then loads it into memory as a process and starts to execute it.</p><br />
+<p>The first time I heard about PE was in the course titled <a href="https://institute.sektor7.net/red-team-operator-malware-development-essentials">RED TEAM Operator: Malware Development Essentials Course</a> by <a href="https://institute.sektor7.net">Sector 7</a>.<br /><br />-> PE is a way to organize executable code in a file on disk.<br /><br />And how does this actually work?<br />-> The Windows Operating System has a component named the loader, which reads the PE from disk and then loads it into memory as a process and starts to execute it.</p><br />
 
 <!-- add the button!-->
 <div>
