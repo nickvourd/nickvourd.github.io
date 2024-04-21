@@ -159,7 +159,7 @@ function topFunction() {
 
 <img src="/assets/img/post-img/21-04-2024/pe101.png" class="post-images" alt="PE-Format-Corcami" height="500" weight="500">
 
-<p>If you try to view the image above vertically, you'll see what I mean—it resembles a book. 😉</p>
+<p>If you try to view the image above vertically, you'll see what I mean—it resembles a book. 😉</p><br />
 
 <p>A PE file has several header sections, each serving specific purposes. Some of the most important ones include:
 
