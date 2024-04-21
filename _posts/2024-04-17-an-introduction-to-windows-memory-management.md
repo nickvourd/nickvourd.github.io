@@ -143,13 +143,23 @@ function topFunction() {
 
 <h3>Intro to Memory</h3>
 
-<p>The first thing we need to discuss is what memory is! Memory in computing systems refers to the electronic components that store data and instructions for processing by the Central Processing Unit (CPU).Most people out there, when they hear the word "memory," typically think of RAM or a hard disk. To be honest, while these examples are contextualized to memory types, in Windows Internals, the meaning is slightly different...<br /><br /></p>
+<p>The first thing we need to discuss is what memory is! Memory in computing systems refers to the electronic components that store data and instructions for processing by the Central Processing Unit (CPU).Most people out there, when they hear the word "memory," typically think of RAM or a hard disk. To be honest, while these examples are contextualized to memory types, in Windows Internals, the meaning is slightly different...<br /><br />
 
-<p>According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br /><br />
+According to the book <a href="https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189">'Windows Internals, Part 1'</a> by <a href="https://twitter.com/zodiacon">Pavel Yosifovich</a>, modern operating systems do not use directly physical memory (i.e., RAM) for mapping. Instead, they utilize virtual memory addressing, where each process has its own virtual address space.<br /><br />
 
 You may rightly wonder why it's so important to work this way rather than mapping directly to physical addresses. The answer is so simple; it's all about optimizing the use of physical memory resources to improve system performance and reliability.<br /><br />
 
 By utilizing virtual memory addressing and allowing the operating system's Memory Management Unit (MMU) to handle the mapping of virtual addresses to physical memory addresses, modern operating systems can efficiently manage physical memory utilization. This approach enables the system to allocate memory resources dynamically based on the current needs of processes and applications, maximizing the use of available physical memory and minimizing waste. Additionally, virtual memory addressing facilitates memory protection and isolation between processes, enhancing system stability and security (We will discuss memory protections later in this article).</p><br /><br />
+
+<h3>Memory Structures</h3>
+
+<p>Before proceeding to technical details and protections regarding virtual memory, it is important to explain the basic virtual memory structures.<br /><br />
+
+For years, I've been hearing about terms like stack, heap, and more from hardcore cybersecurity colleagues, and of course, from <a href="https://twitter.com/0xvm">Lovely Uncle Bill</a>. To be honest, all this stuff seemed very confusing to me. So, I started from the basics to understand what they are.<br /><br />
+
+The following picture depicts an overview of the virtual memory layout of a process (x86). Also, it is important to note that this picture inspired by the great blog post <a href="https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/">Exploit writing tutorial part 1 : Stack Based Overflows</a> by <a href="https://twitter.com/corelanconsultn">@corelanconsultn</a>:</p>
+
+<img src="/assets/img/post-img/17-04-2024/Memory-Strucutre.png" class="post-images" alt="Exploit writing tutorial part 1 : Stack Based Overflows (Corelan)" height="500" weight="500">
 
 ```
 #include <stdio.h>
