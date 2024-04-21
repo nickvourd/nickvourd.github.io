@@ -150,7 +150,7 @@ function topFunction() {
 
 <p>As you can see, the structure of a PE file is really complicated. According to Sector 7, a better approach is to view it as a book. Personally, I think it's a great idea! Let's assume that a PE is a book. This book contains two parts: <b>data</b> and <b>metadata</b>. As for the data, we assume the author's text/content, while for the metadata, we consider the title of the book, the author's name, the publisher's name, the ISBN, the release date, and the table of contents etc.<br /><br />The following picture depicts a custom diagram representing a PE file as a book:</p>
 
-<img src="/assets/img/post-img/21-04-2024/PE-Format-Simple.png" class="post-images" alt="PE-Structure-Custom-Simple" height="500" weight="500">
+<img src="/assets/img/post-img/21-04-2024/PE-Format-Simple.png" class="post-images" alt="PE-Structure-Custom-Simple" height="700" weight="700">
 
 <p>Another great resource for presenting PE structure is the following image by <a href="https://github.com/corkami">corkami</a>:</p>
 
