@@ -312,11 +312,15 @@ int main() {
 </ul>
 </p>
 
-<p>Let's fire up Visual Studio and set breakpoints at lines 13 and 15. Then, we'll search for the allocated base address in this case, <code>0x0000017EB6A15580</code>.</p>
+<p>Let's fire up Visual Studio and set breakpoints at lines 13 and 15. Then, we'll search for the allocated base address in this case, <code>0x0000017EB6A15580</code>.</p><br />
 
-<p>The first image demonstrate <code>free()</code> in operation, releasing allocated memory located at address <code>0x0000017EB6A15580</code>:</p>
+<p>The first image demonstrates <code>free()</code> in operation, releasing allocated memory located at address <code>0x0000017EB6A15580</code>:</p>
 
 <img src="/assets/img/post-img/17-04-2024/Debugging-1.png" class="post-images" alt="Memory-Debugging-1" height="500" weight="500">
+
+<p>The second image demonstrates that the original content has been overwritten with random data after pressing "continue" during the debugging process:</p>
+
+<img src="/assets/img/post-img/17-04-2024/Debugging-2.png" class="post-images" alt="Memory-Debugging-2" height="500" weight="500">
 
 <br /><br />
 <!-- add the button!-->
