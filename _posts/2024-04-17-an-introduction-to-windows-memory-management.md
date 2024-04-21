@@ -322,7 +322,7 @@ int main() {
 
 <img src="/assets/img/post-img/17-04-2024/Debugging-2.png" class="post-images" alt="Memory-Debugging-2" height="500" weight="500">
 
-<p>As you have already observed the appearance of new random data, this is most likely attributed to a new allocation performed by the operating system within the process.</p>
+<p>As you have already observed the appearance of new random data, this is most likely attributed to a new allocation performed by the operating system within the process.</p><br />
 
 <h3>Conclusion</h3>
 
