@@ -152,6 +152,10 @@ function topFunction() {
 
 <img src="/assets/img/post-img/21-04-2024/PE-Format-Simple.png" class="post-images" alt="PE-Structure-Custom-Simple" height="500" weight="500">
 
+<p>Another great resource for presenting PE structure is the following image by <a href="https://github.com/corkami">corkami</a>:</p>
+
+<img src="https://github.com/corkami/pics/blob/master/binary/pe101/pe101.png" class="post-images" alt="PE-Structure-Custom-Simple" height="500" weight="500">
+
 <!-- add the button!-->
 <div>
 <applause-button style="width: 58px; height: 58px;" color="#5d4d7a" url="https://nickvourd.github.io/the-anatomy-of-pe/"/>
