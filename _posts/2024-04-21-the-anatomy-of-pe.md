@@ -288,11 +288,11 @@ int main() {
 }
 ```
 
-<p>Let's fire up x64dbg and attach it to the running process of the PE. The base address of the constant is <code>0x00007FF739B49BB0</code> according to our PE's output.</p>
+<p>Let's fire up x64dbg and attach it to the running process of the PE. The base address of the constant is <code>0x00007FF6AF799BB0</code> according to our PE's output.</p>
 
 <img src="/assets/img/post-img/21-04-2024/cmd-base-address-const.png" class="post-images" alt="cmd-base-address-const.png">
 
-<p>However, according to x64dbg, the base address corresponding to the <b>.rdata</b> section is <code>0x00007FF739B49000</code>!</p>
+<p>However, according to x64dbg, the base address corresponding to the <b>.rdata</b> section is <code>0x00007FF6AF799000</code>!</p>
 
 <img src="/assets/img/post-img/21-04-2024/x64dbg-base-address-const.png" class="post-images" alt="x64dbg-base-address-const.png">
 
@@ -300,7 +300,7 @@ int main() {
     <iframe src="https://giphy.com/embed/dDrgcii3mVnUhbjhGk" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>Of course not! The base addresses above differ by the last three characters, as you can see. I asked my friend named <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a> about this, and he told me, "This is the Offset, bro!". So, what is an offset? An offset is the distance from the base address of a data structure to a specific element (e.g., variable, constant).</p>
+<p>Of course not! The base addresses above differ by the last three characters, as you can see. I asked my friend named <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a> about this, and he told me, "This is the Offset, bro!". So, what is an offset? An offset is the distance from the base address of a data structure to a specific element (e.g., variable, constant).<br /><br />A</p>
 
 <br /><br />
 
