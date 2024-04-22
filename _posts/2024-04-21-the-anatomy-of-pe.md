@@ -288,11 +288,11 @@ int main() {
 }
 ```
 
-<p>Let's fire up x64dbg and attach it to the running process of the PE. The base address of the constant is <code>0x00007FF6AF799BB0</code> according to our PE's output.</p>
+<p>Let's fire up x64dbg and attach it to the running process of the PE. The base address of the constant is <code>0x00007FF79C7D9BB0</code> according to our PE's output.</p>
 
 <img src="/assets/img/post-img/21-04-2024/cmd-base-address-const.png" class="post-images" alt="cmd-base-address-const.png">
 
-<p>However, according to x64dbg, the base address corresponding to the <b>.rdata</b> section is <code>0x00007FF6AF799000</code>!</p>
+<p>However, according to x64dbg, the base address corresponding to the <b>.rdata</b> section is <code>0x00007FF79C7D9000</code>!</p>
 
 <img src="/assets/img/post-img/21-04-2024/x64dbg-base-address-const.png" class="post-images" alt="x64dbg-base-address-const.png">
 
