@@ -288,11 +288,19 @@ int main() {
 }
 ```
 
-<p>Let's fire up x64dbg and attach it to the running process of the PE. The base address of the constant is <code>0x00007FF625359BB0</code> according to our PE's output. However, according to x64dbg, the base address corresponding to the <b>.rdata</b> section is <code>0x00007FF625350000</code>!</p>
+<p>Let's fire up x64dbg and attach it to the running process of the PE. The base address of the constant is <code>0x00007FF739B49BB0</code> according to our PE's output.</p>
+
+<img src="/assets/img/post-img/21-04-2024/cmd-base-address-const.png" class="post-images" alt="cmd-base-address-const.png" height="500" weight="500">
+
+<p>However, according to x64dbg, the base address corresponding to the <b>.rdata</b> section is <code>0x00007FF739B49000</code>!</p>
+
+<img src="/assets/img/post-img/21-04-2024/x64dbg-base-address-const.png" class="post-images" alt="x64dbg-base-address-const.png" height="500" weight="500">
 
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/dDrgcii3mVnUhbjhGk" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
+
+<p></p>
 
 <br /><br />
 
