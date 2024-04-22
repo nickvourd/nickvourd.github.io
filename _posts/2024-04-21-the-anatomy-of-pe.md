@@ -304,6 +304,12 @@ int main() {
 
 <img src="/assets/img/post-img/21-04-2024/find-offset-python.png" class="post-images" alt="find-offset-python.png">
 
+<p>However, according to <a href="https://maldevacademy.com/">Maldev Academy</a> (which I totally recommend to anyone interested), there is another way to detect the section in which the payload is written. You can use the <b>dumpbin</b> tool with the following command:</p>
+
+```
+dumpbin.exe /ALL <pe_file.exe>
+```
+
 <h4>.text Section</h4>
 
 <br /><br />
