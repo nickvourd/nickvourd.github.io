@@ -196,11 +196,11 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f c
 
 <h4>.data Section</h4>
 
-<p>The following list describes the most important characteristics of the <b>.data</b> section:
+<p>The following list describes the most important characteristics of the <b>.data</b> section (It is easier to remember them when presented as a list rather than a paragraph):
 
 <ul>
-  <li>Initialized global variables.</li>
-  <li>Readable and writable section.</li>
+  <li>Initialized global variables</li>
+  <li>Readable and writable section</li>
 </ul>
 </p>
 
