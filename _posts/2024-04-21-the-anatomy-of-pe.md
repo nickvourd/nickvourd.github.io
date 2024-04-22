@@ -241,7 +241,7 @@ int main() {
 
 <p>Let's start x64dbg and attach it to the PE's running process. The base address of the global variable is <code> 0x00007FF6BA84C000</code>. As you can see in the following image, the base address (<code>0x00007FF6BA84C000</code>) corresponds to the <b>.data</b> section:</p>
 
-<img src="/assets/img/post-img/21-04-2024/x64dbg-data-section.png" class="post-images" alt="x64dbg-data-section" height="500" weight="500">
+<img src="/assets/img/post-img/21-04-2024/x64dbg-data-section.png" class="post-images" alt="x64dbg-data-section" height="600" weight="800">
 
 <h4>.rdata Section</h4>
 
@@ -290,11 +290,11 @@ int main() {
 
 <p>Let's fire up x64dbg and attach it to the running process of the PE. The base address of the constant is <code>0x00007FF739B49BB0</code> according to our PE's output.</p>
 
-<img src="/assets/img/post-img/21-04-2024/cmd-base-address-const.png" class="post-images" alt="cmd-base-address-const.png" height="500" weight="500">
+<img src="/assets/img/post-img/21-04-2024/cmd-base-address-const.png" class="post-images" alt="cmd-base-address-const.png" height="500" weight="700">
 
 <p>However, according to x64dbg, the base address corresponding to the <b>.rdata</b> section is <code>0x00007FF739B49000</code>!</p>
 
-<img src="/assets/img/post-img/21-04-2024/x64dbg-base-address-const.png" class="post-images" alt="x64dbg-base-address-const.png" height="500" weight="500">
+<img src="/assets/img/post-img/21-04-2024/x64dbg-base-address-const.png" class="post-images" alt="x64dbg-base-address-const.png" height="500" weight="700">
 
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/dDrgcii3mVnUhbjhGk" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
