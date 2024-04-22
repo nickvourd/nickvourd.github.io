@@ -300,7 +300,7 @@ int main() {
     <iframe src="https://giphy.com/embed/dDrgcii3mVnUhbjhGk" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p></p>
+<p>Of course not! The base addresses above differ by the last three characters, as you can see. I asked my friend named <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a> about this, and he told me, "This is the Offset, bro!". So, what is an offset? An offset is the distance from the base address of a data structure to a specific element (e.g., variable, constant).</p>
 
 <br /><br />
 
