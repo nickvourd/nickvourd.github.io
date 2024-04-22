@@ -288,7 +288,7 @@ int main() {
 }
 ```
 
-Let's fire up x64dbg and attach it to the running process of the PE. The base address of the constant is <code>0x00007FF625359BB0</code> according to our PE's output. However, according to x64dbg, the base address corresponding to the .rdata section is <code>0x00007FF625350000</code>!
+<p>Let's fire up x64dbg and attach it to the running process of the PE. The base address of the constant is <code>0x00007FF625359BB0</code> according to our PE's output. However, according to x64dbg, the base address corresponding to the .rdata section is <code>0x00007FF625350000</code>!</p>
 
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/dDrgcii3mVnUhbjhGk" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
