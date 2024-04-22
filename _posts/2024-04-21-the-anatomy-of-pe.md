@@ -239,7 +239,7 @@ int main() {
 }
 ```
 
-<p>Let's start x64dbg and attach it to the PE's running process. The base address of the global variable is <code> 0x00007FF65083C000</code>. As you can see in the following image, the base address (<code>0x00007FF65083C000</code>) corresponds to the <b>.data</b> section:</p>
+<p>Let's start x64dbg and attach it to the PE's running process. The base address of the global variable is <code> 0x00007FF6BA84C000</code>. As you can see in the following image, the base address (<code>0x00007FF6BA84C000</code>) corresponds to the <b>.data</b> section:</p>
 
 <img src="/assets/img/post-img/21-04-2024/x64dbg-data-section.png" class="post-images" alt="x64dbg-data-section" height="500" weight="500">
 
