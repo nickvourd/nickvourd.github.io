@@ -196,7 +196,13 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f c
 
 <h4>.data Section</h4>
 
-<p>As mentioned above, the <b>.data</b> section holds initialized data that is used by the program during execution. This can include variables, constants, and other data structures initialized with specific values. Moreover, this section is both readable and writable, providing a convenient opportunity to store the payload. If the payload is a global or local variable, it will be stored in the <b>.data</b> section.</p>
+<p>The following list describes the most important characteristics of the <b>.data</b> section:
+
+<ul>
+  <li>Initialized global variables.</li>
+  <li>Readable and writable section.</li>
+</ul>
+</p>
 
 <br /><br />
 
