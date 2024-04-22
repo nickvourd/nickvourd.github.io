@@ -233,7 +233,7 @@ unsigned char buf[] = {
 };
 
 int main() {
-	printf("[+] Base Address: 0x%p \n", buf);
+	printf("[+] Base Address: 0x%p\n", buf);
 	printf("[*] Press <Enter> To Exit ...");
 	getchar();
 	return 0;
