@@ -288,6 +288,8 @@ int main() {
 }
 ```
 
+<p>Let's fire up x64dbg and attach it to the PE's running process. The base address of the constant is <code>0x00007FF625359BB0</code>.</p>
+
 <br /><br />
 
 <!-- add the button!-->
