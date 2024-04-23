@@ -13,7 +13,7 @@ tags:
 
 description: ""
 categories:
-  - Malware Fundamentals
+  - Malware Dev Fundamentals
 ---
 
 <!-- add the button style & script -->
