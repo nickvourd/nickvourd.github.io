@@ -11,7 +11,7 @@ tags:
 
 description: ""
 categories:
-  - Fundamentals
+  - Malware Fundamentals
 ---
 
 <!-- add the button style & script -->
