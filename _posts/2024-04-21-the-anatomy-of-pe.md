@@ -306,7 +306,7 @@ int main() {
 
 <h4>.text Section</h4>
 
-<p>According to <a href="https://maldevacademy.com/">MalDev Academy</a>, to store the payload in the <b>.text</b> section, you must instruct the compiler to do this. More specifically, it differs from the declaration of global/local variables or constants. The compiler's instructions indicate that the variable is placed in the <b>.text</b> section and not in the <b>.rdata</b> or <b>.data sections</b>.</p>
+<p>According to <a href="https://maldevacademy.com/">MalDev Academy</a>, to store the payload in the <b>.text</b> section, you must instruct the compiler to do this. More specifically, it differs from the declaration of global/local variables or constants. The compiler's instructions indicate that the variable is placed in the <b>.text</b> section and not in the <b>.rdata</b> or <b>.data sections</b>.</p><br />
 
 <p>The following list describes the most important characteristics of the <b>.text</b> section:
 
