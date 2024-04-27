@@ -353,7 +353,7 @@ int main() {
 }
 ```
 
-<p>Before proceeding with debugging, let's explain the above code.<br /><br />The <code>#pragma section(".text")</code> directive is used to define a new section named ".text". This directive is specific to certain compilers (like Microsoft Visual Studio's compiler) and allows you to specify custom section names in the object file produced by the compiler.<br /><br />The <code>__declspec(allocate(".text"))</code> attribute is used to instruct the compiler to allocate the variable (in this case, the shellcode) in the ".text" section of the executable. This ensures that the shellcode is placed in the executable code section, which typically contains executable instructions<br /><br />Together, these directives ensure that the shellcode is placed in the ".text" section of the executable file, where executable code is typically stored.</p>
+<p>Before proceeding with debugging, let's explain the above code.<br /><br />The <code>#pragma section(".text")</code> directive is used to define a new section named <b>.text</b>. This directive is specific to certain compilers (like Microsoft Visual Studio's compiler) and allows you to specify custom section names in the object file produced by the compiler.<br /><br />The <code>__declspec(allocate(".text"))</code> attribute is used to instruct the compiler to allocate the variable (in this case, the shellcode) in the <b>.text</b> section of the executable. This ensures that the shellcode is placed in the executable code section, which typically contains executable instructions.</p>
 
 <br /><br />
 
