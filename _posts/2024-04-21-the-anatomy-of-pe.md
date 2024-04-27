@@ -290,11 +290,11 @@ int main() {
 
 <p>Let's fire up x64dbg and attach it to the running process of the PE. The base address of the constant is <code>0x00007FF79C7D9BB0</code> according to our PE's output.</p>
 
-<img src="/assets/img/post-img/21-04-2024/cmd-base-address-const.png" class="post-images" alt="cmd-base-address-const.png">
+<img src="/assets/img/post-img/21-04-2024/cmd-base-address-const.png" class="post-images" alt="cmd-base-address-const">
 
 <p>However, according to x64dbg, the base address corresponding to the <b>.rdata</b> section is <code>0x00007FF79C7D9000</code>!</p>
 
-<img src="/assets/img/post-img/21-04-2024/x64dbg-base-address-const.png" class="post-images" alt="x64dbg-base-address-const.png">
+<img src="/assets/img/post-img/21-04-2024/x64dbg-base-address-const.png" class="post-images" alt="x64dbg-base-address-const">
 
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/dDrgcii3mVnUhbjhGk" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -353,7 +353,15 @@ int main() {
 }
 ```
 
-<p>Before proceeding with debugging, let's explain the above code.<br /><br />The <code>#pragma section(".text")</code> directive is used to define a new section named <b>.text</b>. This directive is specific to certain compilers (like Microsoft Visual Studio's compiler) and allows you to specify custom section names in the object file produced by the compiler.<br /><br />The <code>__declspec(allocate(".text"))</code> attribute is used to instruct the compiler to allocate the variable (in this case, the shellcode) in the <b>.text</b> section of the executable. This ensures that the shellcode is placed in the executable code section, which typically contains executable instructions.</p>
+<p>Before proceeding with debugging, let's explain the above code.<br /><br />The <code>#pragma section(".text")</code> directive is used to define a new section named <b>.text</b>. This directive is specific to certain compilers (like Microsoft Visual Studio's compiler) and allows you to specify custom section names in the object file produced by the compiler.<br /><br />The <code>__declspec(allocate(".text"))</code> attribute is used to instruct the compiler to allocate the variable (in this case, the shellcode) in the <b>.text</b> section of the executable. This ensures that the shellcode is placed in the executable code section, which typically contains executable instructions.<br /><br />Let's open x64dbg and attach it to the binary process. The base address of the constant is <code>0x00007FF775F317B0</code> according to our PE's output.</p>
+
+<img src="/assets/img/post-img/21-04-2024/cmd-base-address-const-text.png" class="post-images" alt="cmd-base-address-const-text">
+
+<p>From the x64dbg side, you can observe that the base address corresponding to the <b>.text</b> section is <code>00007FF775F31000</code>, which means that <code>0x07B0</code>(<code>1968</code>) is the offset.</p>
+
+<img src="/assets/img/post-img/21-04-2024/x64dbg-text-section.png" class="post-images" alt="cmd-base-address-const-text">
+
+<h4>.rsrc Section</h4>
 
 <br /><br />
 
