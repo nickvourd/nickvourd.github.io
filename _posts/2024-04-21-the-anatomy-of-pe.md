@@ -363,6 +363,8 @@ int main() {
 
 <h4>.rsrc Section</h4>
 
+<p>The last section that can store a payload is <b>.rsrc</b>. According to <a href="https://maldevacademy.com/">MalDev Academy</a>, this section is very popular among malware developers. The main reason is its storage size. The <b>.rsrc</b> section can store larger payloads than the limited size that can be stored in the <b>.data</b> or <b>.rdata</b> sections.</p>
+
 <br /><br />
 
 <!-- add the button!-->
