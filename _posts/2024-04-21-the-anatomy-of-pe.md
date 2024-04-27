@@ -357,7 +357,7 @@ int main() {
 
 <img src="/assets/img/post-img/21-04-2024/cmd-base-address-const-text.png" class="post-images" alt="cmd-base-address-const-text">
 
-<p>From the x64dbg side, you can observe that the base address corresponding to the <b>.text</b> section is <code>00007FF775F31000</code>, which means that <code>0x07B0</code>(Decimal: <code>1968</code>) is the offset.</p>
+<p>From the x64dbg side, you can observe that the base address corresponding to the <b>.text</b> section is <code>00007FF775F31000</code>, which means that <code>0x07B0</code> (Decimal: <code>1968</code>) is the offset.</p>
 
 <img src="/assets/img/post-img/21-04-2024/x64dbg-text-section.png" class="post-images" alt="cmd-base-address-const-text">
 
