@@ -363,7 +363,13 @@ int main() {
 
 <h4>.rsrc Section</h4>
 
-<p>The last section that can store a payload is <b>.rsrc</b>. According to <a href="https://maldevacademy.com/">MalDev Academy</a>, this section is very popular among malware developers. The main reason is its storage size. The <b>.rsrc</b> section can store larger payloads than the limited size that can be stored in the <b>.data</b> or <b>.rdata</b> sections.<br /><br />First of all, in order to store a payload in the <b>.rsrc</b> section, you need to create a resource file in the project's Solution Explorer in Visual Studio. More specifically, in Visual Studio, right-click on <b>Resource Files</b>, then click <b>Add</b> > <b>New Item</b> and choose the <b>Resource</b> category and <b>Resource File (.rc)</b>.</p>
+<p>The last section that can store a payload is <b>.rsrc</b>. According to <a href="https://maldevacademy.com/">MalDev Academy</a>, this section is very popular among malware developers. The main reason is its storage size. The <b>.rsrc</b> section can store larger payloads than the limited size that can be stored in the <b>.data</b> or <b>.rdata</b> sections.<br /><br />First of all, we will save the raw shellcode in a file with the extension <b>.ico</b>.</p>
+
+```
+msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o calc.ico
+```
+
+<p>After that, in order to store the payload in the <b>.rsrc</b> section, we need to create a resource file in the project's Solution Explorer in Visual Studio. More specifically, in Visual Studio, right-click on <b>Resource Files</b>, then click <b>Add</b> > <b>New Item</b> and choose the <b>Resource</b> category and <b>Resource File (.rc)</b>.</p>
 
 <img src="/assets/img/post-img/21-04-2024/create-resource-file-1.png" class="post-images" alt="create-resource-file-1">
 
@@ -374,6 +380,8 @@ int main() {
 <img src="/assets/img/post-img/21-04-2024/create-resource-file-3.png" class="post-images" alt="create-resource-file-3">
 
 <img src="/assets/img/post-img/21-04-2024/create-resource-file-4.png" class="post-images" alt="create-resource-file-4">
+
+<p>A new window will appear, and we will use the <b>import</b> button to select the <b>calc.ico</b> file, which contains the raw payload as mentioned above.</p>
 
 <br /><br />
 
