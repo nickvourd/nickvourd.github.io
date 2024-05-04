@@ -391,6 +391,15 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o calc.ico
 
 <img src="/assets/img/post-img/21-04-2024/create-resource-file-7.png" class="post-images" alt="create-resource-file-7">
 
+<p>After that, we need to determine if the payload is stored in the <b>.rsrc</b> section. However, this cannot be done directly; only the following WinAPIs can be used to access it:<br />
+<ul>
+    <li><b>FindResourceW</b></li>
+    <li><b>LoadResource</b></li>
+    <li><b>LockResource </b></li>
+    <li><b>SizeofResource </b></li>
+</ul>
+</p>
+
 <br /><br />
 
 <!-- add the button!-->
