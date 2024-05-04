@@ -385,6 +385,11 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o calc.ico
 
 <img src="/assets/img/post-img/21-04-2024/create-resource-file-5.png" class="post-images" alt="create-resource-file-5">
 
+<p>After importing the ".ico" file, a new window will appear asking for the <b>Resource type</b> of this ICO file. We need to provide the following value: <code>RCDATA</code>.</p>
+
+<img src="/assets/img/post-img/21-04-2024/create-resource-file-6.png" class="post-images" alt="create-resource-file-6">
+
+<img src="/assets/img/post-img/21-04-2024/create-resource-file-7.png" class="post-images" alt="create-resource-file-7">
 
 <br /><br />
 
