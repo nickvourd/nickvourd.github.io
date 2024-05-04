@@ -383,6 +383,9 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o calc.ico
 
 <p>A new window will appear, and we will use the <b>import</b> button to select the <b>calc.ico</b> file, which contains the raw payload as mentioned above.</p>
 
+<img src="/assets/img/post-img/21-04-2024/create-resource-file-5.png" class="post-images" alt="create-resource-file-5">
+
+
 <br /><br />
 
 <!-- add the button!-->
