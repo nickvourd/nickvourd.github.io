@@ -363,7 +363,7 @@ int main() {
 
 <h4>.rsrc Section</h4>
 
-<p>The last section that can store a payload is <b>.rsrc</b>. According to <a href="https://maldevacademy.com/">MalDev Academy</a>, this section is very popular among malware developers. The main reason is its storage size. The <b>.rsrc</b> section can store larger payloads than the limited size that can be stored in the <b>.data</b> or <b>.rdata</b> sections.<br /><br />First of all, we will save the raw shellcode in a file with the extension <b>.ico</b>.</p>
+<p>The last section that can store a payload is <b>.rsrc</b>. According to <a href="https://maldevacademy.com/">MalDev Academy</a>, this section is very popular among malware developers. The main reason is its storage size. The <b>.rsrc</b> section can store larger payloads than the limited size that can be stored in the <b>.data</b> or <b>.rdata</b> sections.<br /><br />First of all, we will save the raw shellcode in a file with the extension <b>.ico</b>:</p>
 
 ```
 msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o calc.ico
@@ -375,7 +375,7 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o calc.ico
 
 <img src="/assets/img/post-img/21-04-2024/create-resource-file-2.png" class="post-images" alt="create-resource-file-2">
 
-<p>After that, a new sidebar will appear named <b>Resource View</b>, which will contain your new <code>.rc</code> file. Right-click on the resource file and choose the option named <b>Add Resource...</b>.</p>
+<p>After that, a new sidebar will appear named <b>Resource View</b>, which will contain your new <b>.rc</b> file. Right-click on the resource file and choose the option named <b>Add Resource...</b>.</p>
 
 <img src="/assets/img/post-img/21-04-2024/create-resource-file-3.png" class="post-images" alt="create-resource-file-3">
 
