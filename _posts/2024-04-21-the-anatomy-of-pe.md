@@ -400,7 +400,7 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o calc.ico
 </ul>
 </p>
 
-<p>As we can see from the names of the above WinAPIs, it's obvious what they are doing, but let's find out more details about them.<br /><br />The <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-findresourcew">FindResourceW</a>, attempts to locate the location of a resource identified by a specified type and name within the given module. The identification of the resource is typically done using an ID defined in the <b>resource.h</b> header file.<br ><br />The <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadresource">LoadResource</a>, retrieves a handle (HGLOBAL) that can be used to obtain a pointer to the first byte of the specified resource in memory.</p>
+<p>As we can see from the names of the above WinAPIs, it's obvious what they are doing, but let's find out more details about them.<br /><br />The <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-findresourcew">FindResourceW</a>, attempts to locate the location of a resource identified by a specified type and name within the given module. The identification of the resource is typically done using an ID defined in the <b>resource.h</b> header file.<br ><br />The <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadresource">LoadResource</a>, retrieves a handle (<b>HGLOBAL</b>) that can be used to obtain a pointer to the first byte of the specified resource in memory.</p>
 
 <br /><br />
 
