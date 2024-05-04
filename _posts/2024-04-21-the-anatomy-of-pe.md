@@ -363,9 +363,11 @@ int main() {
 
 <h4>.rsrc Section</h4>
 
-<p>The last section that can store a payload is <b>.rsrc</b>. According to <a href="https://maldevacademy.com/">MalDev Academy</a>, this section is very popular among malware developers. The main reason is its storage size. The <b>.rsrc</b> section can store larger payloads than the limited size that can be stored in the <b>.data</b> or <b>.rdata</b> sections.<br /><br />First of all, in order to store a payload in the <b>.rsrc</b> section, you need to create a resource file in the project's Solution Explorer in Visual Studio. More specifically, in Visual Studio, right-click on <b>Resource files</b>, then click <b>Add</b> > <b>New Item</b> and choose the <b>Resource file</b>.</p>
+<p>The last section that can store a payload is <b>.rsrc</b>. According to <a href="https://maldevacademy.com/">MalDev Academy</a>, this section is very popular among malware developers. The main reason is its storage size. The <b>.rsrc</b> section can store larger payloads than the limited size that can be stored in the <b>.data</b> or <b>.rdata</b> sections.<br /><br />First of all, in order to store a payload in the <b>.rsrc</b> section, you need to create a resource file in the project's Solution Explorer in Visual Studio. More specifically, in Visual Studio, right-click on <b>Resource files</b>, then click <b>Add</b> > <b>New Item</b> and choose the <b>Resource</b> category and <b>Resource File (.rc)</b>.</p>
 
-<img src="/assets/img/post-img/21-04-2024/create-resource-file-1.png" class="post-images" alt="create-resource-file-1.png">
+<img src="/assets/img/post-img/21-04-2024/create-resource-file-1.png" class="post-images" alt="create-resource-file-1">
+
+<img src="/assets/img/post-img/21-04-2024/create-resource-file-2.png" class="post-images" alt="create-resource-file-2">
 
 <br /><br />
 
