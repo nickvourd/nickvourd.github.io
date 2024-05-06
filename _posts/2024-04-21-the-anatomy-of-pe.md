@@ -479,7 +479,7 @@ int main() {
     }
 
     // Printing the base address of temp buffer
-    printf("[i] Temp buffer address : 0x%p \n", pTmpBuffer);
+    printf("[+] Temp buffer address : 0x%p \n", pTmpBuffer);
 
     // Freeing the allocated memory
     HeapFree(GetProcessHeap(), 0, pTmpBuffer);
@@ -488,9 +488,14 @@ int main() {
 }
 ```
 
-<p>Let's add some breakpoints in our code to observe what's happening behind the scenes. We will add the first breakpoint in line 29 where we try to allocate memory. Then, we will add another breakpoint in line 33 where we copy the payload from the <b>rsrc</b> section to the temporary buffer. Finally, we'll add another breakpoint in line 40 where we free the allocated memory.</p>
+<p>Let's add some breakpoints in our code to observe what's happening behind the scenes. We will add the first breakpoint in line 29 where we try to allocate memory. We'll add another breakpoint in line 40 where we free the allocated memory.</p>
 
 <img src="/assets/img/post-img/21-04-2024/debugging-the-code.png" class="post-images" alt="debugging-the-code">
+
+<p>As depicted in the following picture, the variable <code>pTmpBuffer</code> now points to a writable memory region containing the payload. This enables us to make any necessary updates to it:</p>
+
+<img src="/assets/img/post-img/21-04-2024/debugging-the-code-2.png" class="post-images" alt="debugging-the-code-2">
+
 
 <br /><br />
 
