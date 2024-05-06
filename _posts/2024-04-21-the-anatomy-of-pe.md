@@ -488,9 +488,9 @@ int main() {
 }
 ```
 
-<p>Let's add some breakpoints in our code to observe what's happening behind the scenes.</p>
+<p>Let's add some breakpoints in our code to observe what's happening behind the scenes. We will add the first breakpoint in line 29 where we try to allocate memory. Then, we will add another breakpoint in line 33 where we copy the payload from the <b>rsrc</b> section to the temporary buffer. Finally, we'll add another breakpoint in line 40 where we free the allocated memory.</p>
 
-
+<img src="/assets/img/post-img/21-04-2024/debugging-the-code.png" class="post-images" alt="debugging-the-code">
 
 <br /><br />
 
