@@ -416,35 +416,15 @@ int main() {
 
     // Find the resource with the specified ID and type in the .rsrc section
     hRsrc = FindResourceW(NULL, MAKEINTRESOURCEW(IDR_RCDATA1), RT_RCDATA);
-    if (hRsrc == NULL) {
-        // If the resource is not found, display an error message and exit
-        printf("[!] FindResourceW Failed With Error : %d \n", GetLastError());
-        return -1;
-    }
 
     // Load the specified resource into memory
     hGlobal = LoadResource(NULL, hRsrc);
-    if (hGlobal == NULL) {
-        // If the resource cannot be loaded, display an error message and exit
-        printf("[!] LoadResource Failed With Error : %d \n", GetLastError());
-        return -1;
-    }
 
     // Lock the resource and retrieve a pointer to its data
     pPayloadAddress = LockResource(hGlobal);
-    if (pPayloadAddress == NULL) {
-        // If locking the resource fails, display an error message and exit
-        printf("[!] LockResource Failed With Error : %d \n", GetLastError());
-        return -1;
-    }
 
     // Get the size of the resource
     sPayloadSize = SizeofResource(NULL, hRsrc);
-    if (sPayloadSize == 0) {
-        // If getting the resource size fails, display an error message and exit
-        printf("[!] SizeofResource Failed With Error : %d \n", GetLastError());
-        return -1;
-    }
 
     // Print the address and size of the payload
     printf("[+] Payload Address : 0x%p \n", pPayloadAddress);
@@ -456,7 +436,9 @@ int main() {
 }
 ```
 
-<p>Let's compile it and attach it to x64dbg to observe what is happening at a low level.</p>
+<p>Let's compile it and attach it to x64dbg to observe what is happening at a low level. As you can see, the payload's base address is <code>0x00007FF76ABE60A0</code>, and according to x64dbg, the base address is <code>00007FF76ABE6000</code>, indicating that the offset is <code>0x0A0</code> (Decimal: <code>160</code>). Moreover, as you can see, the payload is stored in the <b>.rsrc</b> section.</p>
+
+<img src="/assets/img/post-img/21-04-2024/cmd-base-address-rsrc.png" class="post-images" alt="cmd-base-address-rsrc">
 
 <br /><br />
 
