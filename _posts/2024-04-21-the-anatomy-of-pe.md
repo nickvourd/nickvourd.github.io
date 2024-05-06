@@ -440,7 +440,7 @@ int main() {
 
 <img src="/assets/img/post-img/21-04-2024/cmd-base-address-rsrc.png" class="post-images" alt="cmd-base-address-rsrc">
 
-<p>As we already know, this section is not writable, so we cannot write to it directly. For this reason, if we need to edit the payload located in the <b>.rsrc</b> section, we need to move it to a temporary buffer.</p>
+<p>As we already know, this section is not writable, so we cannot write to it directly. For this reason, if we need to edit the payload located in the <b>.rsrc</b> section, we need to move it to a temporary buffer. In order to do that, we need to allocate memory (from the heap memory section, as mentioned in <a href="https://nickvourd.github.io/an-introduction-to-windows-memory-management/">An Introduction to Windows Memory Management</a> blog post) and move the payload from the resource section to the temporary buffer using <code>memcpy</code>.</p>
 
 <br /><br />
 
