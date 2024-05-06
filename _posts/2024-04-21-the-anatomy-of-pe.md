@@ -400,7 +400,61 @@ msfvenom -p windows/x64/exec CMD=calc.exe -f raw -o calc.ico
 </ul>
 </p>
 
-<p>As we can see from the names of the above WinAPIs, it's obvious what they are doing, but let's find out more details about them.<br /><br />The <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-findresourcew">FindResourceW</a> attempts to locate the location of a resource identified by a specified type and name within the given module. The identification of the resource is typically done using an ID defined in the <b>resource.h</b> header file.<br ><br />The <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadresource">LoadResource</a> retrieves a handle (<b>HGLOBAL</b>) that can be used to obtain the base address of the specified resource in memory.<br /><br />The <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-lockresource">LockResource</a> retrieves a pointer to the specified data in the resource section from its handle (<b>HGLOBAL</b>).<br /><br /><a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-sizeofresource">SizeofResource</a>retrieves the size, in bytes, of the specified resource.<br /><br />The following code utilizes the aforementioned WinAPIs to access the <code>.rsrc</code> section.</p>
+<p>As we can see from the names of the above WinAPIs, it's obvious what they are doing, but let's find out more details about them.<br /><br />The <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-findresourcew">FindResourceW</a> attempts to locate the location of a resource identified by a specified type and name within the given module. The identification of the resource is typically done using an ID defined in the <b>resource.h</b> header file.<br ><br />The <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadresource">LoadResource</a> retrieves a handle (<b>HGLOBAL</b>) that can be used to obtain the base address of the specified resource in memory.<br /><br />The <a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-lockresource">LockResource</a> retrieves a pointer to the specified data in the resource section from its handle (<b>HGLOBAL</b>).<br /><br /><a href="https://learn.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-sizeofresource">SizeofResource</a>retrieves the size, in bytes, of the specified resource.<br /><br />The following code utilizes the aforementioned WinAPIs to access the <code>.rsrc</code> section:</p>
+
+```
+#include <Windows.h>
+#include <stdio.h>
+#include "resource.h"
+
+int main() {
+    // Declaring variables
+    HRSRC hRsrc = NULL;
+    HGLOBAL hGlobal = NULL;
+    PVOID pPayloadAddress = NULL;
+    SIZE_T sPayloadSize = 0;
+
+    // Find the resource with the specified ID and type in the .rsrc section
+    hRsrc = FindResourceW(NULL, MAKEINTRESOURCEW(IDR_RCDATA1), RT_RCDATA);
+    if (hRsrc == NULL) {
+        // If the resource is not found, display an error message and exit
+        printf("[!] FindResourceW Failed With Error : %d \n", GetLastError());
+        return -1;
+    }
+
+    // Load the specified resource into memory
+    hGlobal = LoadResource(NULL, hRsrc);
+    if (hGlobal == NULL) {
+        // If the resource cannot be loaded, display an error message and exit
+        printf("[!] LoadResource Failed With Error : %d \n", GetLastError());
+        return -1;
+    }
+
+    // Lock the resource and retrieve a pointer to its data
+    pPayloadAddress = LockResource(hGlobal);
+    if (pPayloadAddress == NULL) {
+        // If locking the resource fails, display an error message and exit
+        printf("[!] LockResource Failed With Error : %d \n", GetLastError());
+        return -1;
+    }
+
+    // Get the size of the resource
+    sPayloadSize = SizeofResource(NULL, hRsrc);
+    if (sPayloadSize == 0) {
+        // If getting the resource size fails, display an error message and exit
+        printf("[!] SizeofResource Failed With Error : %d \n", GetLastError());
+        return -1;
+    }
+
+    // Print the address and size of the payload
+    printf("[+] Payload Address : 0x%p \n", pPayloadAddress);
+    printf("[+] Payload Size : %ld \n", sPayloadSize);
+    printf("[+] Press <Enter> To Quit ...");
+    getchar();
+
+    return 0;
+}
+```
 
 <br /><br />
 
