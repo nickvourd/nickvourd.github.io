@@ -469,21 +469,21 @@ int main() {
     // Print the address and size of the payload
     printf("[+] Payload Address : 0x%p \n", pPayloadAddress);
     printf("[+] Payload Size : %ld \n", sPayloadSize);
-	
+
 	// Allocating memory using a HeapAlloc call
 	PVOID pTmpBuffer = HeapAlloc(GetProcessHeap(), 0, sPayloadSize);
-	
+
 	if (pTmpBuffer != NULL){
-		// copying the payload from rsrc section to the new temp buffer 
+		// copying the payload from rsrc section to the new temp buffer
 		memcpy(pTmpBuffer, pPayloadAddress, sPayloadSize);
 	}
-	
+
 	// Printing the base address of temp buffer
 	printf("[i] Temp buffer address : 0x%p \n", pTmpBuffer);
-	
+
 	// Freeing the allocated memory
 	HeapFree(GetProcessHeap(), 0, pTmpBuffer);
-	
+
 	return 0;
 }
 ```
