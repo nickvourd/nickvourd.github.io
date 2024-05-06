@@ -440,6 +440,8 @@ int main() {
 
 <img src="/assets/img/post-img/21-04-2024/cmd-base-address-rsrc.png" class="post-images" alt="cmd-base-address-rsrc">
 
+<p>As we already know, this section is not writable, so we cannot write to it directly. For this reason, if we need to edit the payload located in the <b>.rsrc</b> section, we need to move it to a temporary buffer.</p>
+
 <br /><br />
 
 <!-- add the button!-->
