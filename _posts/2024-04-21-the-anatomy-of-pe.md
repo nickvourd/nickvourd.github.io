@@ -496,6 +496,11 @@ int main() {
 
 <img src="/assets/img/post-img/21-04-2024/debugging-the-code-2.png" class="post-images" alt="debugging-the-code-2">
 
+<p>Let's press the <b>Continue</b> button to proceed and observe what happens at the next breakpoint.</p>
+
+<img src="/assets/img/post-img/21-04-2024/debugging-the-code-3.png" class="post-images" alt="debugging-the-code-3">
+
+<p>As we can see the payload is saved in the <code>pTmpBuffer</code> (base address: <code>0x00000234B75F1050</code>).</p>
 
 <br /><br />
 
