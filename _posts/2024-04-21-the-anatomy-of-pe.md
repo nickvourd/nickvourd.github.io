@@ -500,9 +500,11 @@ int main() {
 
 <img src="/assets/img/post-img/21-04-2024/debugging-the-code-3.png" class="post-images" alt="debugging-the-code-3">
 
-<p>As we can see the payload is saved in the <code>pTmpBuffer</code> (base address: <code>0x00000234B75F1050</code>).</p>
+<p>As we can see the payload is saved in the <code>pTmpBuffer</code> (base address: <code>0x00000234B75F1050</code>).<br /><br /></p>
 
 <h3>Conclusion</h3>
+
+<p>In this blog post, we explored different PE sections capable of storing a payload. The <b>.data</b> section is used for global variables, the <b>.rdata</b> section is for constants, and the <b>.text</b> section contains compiler instructions for global/local variables or constants. Lastly, we discussed the <b>.rsrc</b> section, which serves as storage for resource files.</p>
 
 <br /><br />
 
