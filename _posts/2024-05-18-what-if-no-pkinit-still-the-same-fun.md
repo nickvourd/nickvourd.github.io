@@ -312,7 +312,7 @@ python3 passthecert.py -dc-ip 192.168.242.179 -crt admin.crt -key admin.key -dom
 
 <h3>Conclusion</h3>
 
-<p>Dear reader, I hope you enjoyed my first article. If you've gained new knowledge or found it helpful for your engagement, I would be delighted. Until next time, NCV, your friendly Red Power Ranger! 😊</p>
+<p>Dear reader, I hope you enjoyed my first article. If you've gained new knowledge or found it helpful for your engagement, I would be delighted. Until next time, NCV, your friendly neighborhood Red Power Ranger! 😊</p>
 
 <br /><br />
 
