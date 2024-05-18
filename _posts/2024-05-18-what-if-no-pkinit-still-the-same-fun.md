@@ -142,7 +142,7 @@ function topFunction() {
 
 <p>To be honest, there are few people who inspired me to start this journey of writing only about what I like, without worrying about whether it's popular or not! Well, this Orthodox Easter, I met up with <a href="https://twitter.com/LAripping">@LAripping</a> at our secret spot (🤫) after a long time. A technical conversation with him, especially about my favorite topic, Active Directory (AD), always inspires me with new ideas! Thanks, Leo, you have put your little stone for this blog post, even if you don't know it. Additionally, many Discord calls these days with <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a>, discussing various concerns and topics related to offensive security and other subjects, have helped me understand a lot and clarify my goals for my penetration testing career. Nick, I can't express my appreciation for all the years of your help and support. One day, I promise I will repay all the good that you've done for me!</p><br />
 
-<p>PS: Thanks to <a href="https://twitter.com/Papadope9">@Papadope9</a> who introduced me to this <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">plugin</a> for VS Code and saved my time!</p><br /><br />
+<p>PS: Thanks to <a href="https://twitter.com/Papadope9">@Papadope9</a> who introduced me to this <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">plugin</a> for VS Code and saved my time!</p><br />
 
 <p>Several days ago, I was building a home lab for private research on Active Directory Certificate Services (ADCS) attacks. I was dealing with ESC1 misconfiguration when I found something very unusual. For those who aren't familiar with ESC1 or generally ADCS attacks, I totally recommend the <a href="https://specterops.io/wp-content/uploads/sites/3/2022/06/Certified_Pre-Owned.pdf">140-slides whitepaper</a> by <a href="https://twitter.com/harmj0y">Will Schroeder</a> and <a href="https://twitter.com/tifkin_">Lee Chagolla-Christensen</a>.<br/><br/>Returning to our topic, while enumerating the Enterprise CA with <a href="https://github.com/ly4k/Certipy">Certipy</a> tool (by <a href="https://twitter.com/ly4k_">Oliver Lyak</a>), I found that the "candidate" certificate template contained all the prerequisites to be vulnerable to ESC1:</p>
 
@@ -175,7 +175,7 @@ certipy auth -pfx administrator.pfx -dc-ip 192.168.242.179
 
 <h3>PKINIT</h3>
 
-<p>Searching the error on Google, I found different approaches and solutions, but it is important to analyze the error step by step. What is PKINIT? The first time I read the term PKINIT was in <a href="https://twitter.com/elad_shamir">Elad Shamir</a>'s <a href="https://eladshamir.com/2021/06/21/Shadow-Credentials.html">blog</a>. PKINIT stands for Public Key Cryptography for Initial Authentication in Kerberos. PKINIT is an extension of the Kerberos protocol that enables clients to authenticate to the Key Distribution Center (KDC) using public key cryptography, specifically X.509 digital certificates, as a pre-authentication method instead of passwords.</p><br /><br />
+<p>Searching the error on Google, I found different approaches and solutions, but it is important to analyze the error step by step. What is PKINIT? The first time I read the term PKINIT was in <a href="https://twitter.com/elad_shamir">Elad Shamir</a>'s <a href="https://eladshamir.com/2021/06/21/Shadow-Credentials.html">blog</a>. PKINIT stands for Public Key Cryptography for Initial Authentication in Kerberos. PKINIT is an extension of the Kerberos protocol that enables clients to authenticate to the Key Distribution Center (KDC) using public key cryptography, specifically X.509 digital certificates, as a pre-authentication method instead of passwords.</p><br />
 
 <h3>Kerberos pre-authentication</h3>
 
@@ -187,7 +187,7 @@ certipy auth -pfx administrator.pfx -dc-ip 192.168.242.179
 
 <img src="/assets/img/post-img/18-05-2024/KRB_AS_REQ_KRB_AS_REP.drawio.png" class="post-images" alt="KRB_AS_REQ_KRB_AS_REP">
 
-<p>As depicted in the above image, the <code>KRB_AS_REP</code> message returns to the user a TGT and a session key encrypted with the user key. The session key is mainly used for later actions like requesting Ticket Granting Service (TGS) tickets instead of using the user's long-term key directly. The big advantage of the session key is that it's only valid for the current session and not for future ones. This keeps the user's long-term key safer. However, I will explain all of this stuff in more detail in a future blog post, as I promised to my partner in crime S1ckB0y1337. All you need to know for now is that the pre-authentication can be validated symmetrically (with secret key) or asymmetrically (with certificates).</p><br /><br />
+<p>As depicted in the above image, the <code>KRB_AS_REP</code> message returns to the user a TGT and a session key encrypted with the user key. The session key is mainly used for later actions like requesting Ticket Granting Service (TGS) tickets instead of using the user's long-term key directly. The big advantage of the session key is that it's only valid for the current session and not for future ones. This keeps the user's long-term key safer. However, I will explain all of this stuff in more detail in a future blog post, as I promised to my partner in crime S1ckB0y1337. All you need to know for now is that the pre-authentication can be validated symmetrically (with secret key) or asymmetrically (with certificates).</p><br />
 
 <h3>Back to our error</h3>
 
@@ -201,11 +201,11 @@ CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=hom
 
 <img src="/assets/img/post-img/18-05-2024/LDAP_ADSI_EDIT.png" class="post-images" alt="LDAP_ADSI_EDIT">
 
-<p>Closing the parenthesis and back to our topic. Moreover, Will's blog post mentions that this error could occur due to a denied policy module, such as when an authenticated user lacks enrollment rights (not in our example) or has auto-enrollment rights. According to their research, the CA doesn’t actually perform an authorization check to validate that a user has auto-enrollment rights; they simply check if the user has enrollment rights.</p><br /><br />
+<p>Closing the parenthesis and back to our topic. Moreover, Will's blog post mentions that this error could occur due to a denied policy module, such as when an authenticated user lacks enrollment rights (not in our example) or has auto-enrollment rights. According to their research, the CA doesn’t actually perform an authorization check to validate that a user has auto-enrollment rights; they simply check if the user has enrollment rights.</p><br />
 
-<p>Another <a href="https://offsec.almond.consulting/authenticating-with-certificates-when-pkinit-is-not-supported.html">useful post</a> that helped me to understand this error technically by presenting and analyzing a similar PKINIT error like <code>KDC_ERR_PADATA_TYPE_NOSUPP</code> was by Yannick Méheut. In his article, he introduced his awesome tool named <a href="https://github.com/AlmondOffSec/PassTheCert">PassTheCert</a>. I highly recommend checking out his article and his tool (I will come back to this later).</p><br /><br />
+<p>Another <a href="https://offsec.almond.consulting/authenticating-with-certificates-when-pkinit-is-not-supported.html">useful post</a> that helped me to understand this error technically by presenting and analyzing a similar PKINIT error like <code>KDC_ERR_PADATA_TYPE_NOSUPP</code> was by Yannick Méheut. In his article, he introduced his awesome tool named <a href="https://github.com/AlmondOffSec/PassTheCert">PassTheCert</a>. I highly recommend checking out his article and his tool (I will come back to this later).</p><br />
 
-<p>Finally, <a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4768">Microsoft's documentation</a> confirmed what I had discovered in the third blog post about this error.</p><br /><br />
+<p>Finally, <a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4768">Microsoft's documentation</a> confirmed what I had discovered in the third blog post about this error.</p><br />
 
 <h3>Behind the scenes</h3>
 
@@ -213,13 +213,13 @@ CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=hom
 
 <img src="/assets/img/post-img/18-05-2024/Error-in-Wireshark.png" class="post-images" alt="Error-in-Wireshark">
 
-<p>As you can see, Wireshark displays the <code>error-code: eRROR-CLIENT-NOT-TRUSTED (62)</code>, indicating that the server does not trust the client and cannot authenticate the client's identity properly.</p><br /><br />
+<p>As you can see, Wireshark displays the <code>error-code: eRROR-CLIENT-NOT-TRUSTED (62)</code>, indicating that the server does not trust the client and cannot authenticate the client's identity properly.</p><br />
 
 <h3>Back to basics</h3>
 
-<p>Searching for alternative ways to utilize my encrypted PFX certificate without relying on any Kerberos authentication extensions, I came across the blog post titled "<a href="https://posts.specterops.io/certified-pre-owned-d95910965cd2">Certified Pre-Owned</a>" by Will Schroeder and Lee Chagolla-Christensen. This article was the first one released after the publication of their 140-slide whitepaper. In this article, Will and Lee, or Lee and Will, provide a summary of the misconfigurations and interesting TTPs detailed in their whitepaper. Also, the most interesting part in this article is where they explain the research about the protocols that can use Schannel (the security package backing SSL/TLS) to authenticate domain users, such as LDAPS (a.k.a. LDAP-SSL).</p><br /><br />
+<p>Searching for alternative ways to utilize my encrypted PFX certificate without relying on any Kerberos authentication extensions, I came across the blog post titled "<a href="https://posts.specterops.io/certified-pre-owned-d95910965cd2">Certified Pre-Owned</a>" by Will Schroeder and Lee Chagolla-Christensen. This article was the first one released after the publication of their 140-slide whitepaper. In this article, Will and Lee, or Lee and Will, provide a summary of the misconfigurations and interesting TTPs detailed in their whitepaper. Also, the most interesting part in this article is where they explain the research about the protocols that can use Schannel (the security package backing SSL/TLS) to authenticate domain users, such as LDAPS (a.k.a. LDAP-SSL).</p><br />
 
-<p>Yannick's blog post, like mine, uses pfx certificates for LDAP authentication. He faced a different error, but we both share the issue of preventing Kerberos authentication through PKINIT. Now, we need to invastigate if his certificate authentication method via LDAP can help with my error. Thus, let's utilize <a href="https://github.com/AlmondOffSec/PassTheCert/tree/main/Python">python PassTheCert tool</a> by <a href="https://twitter.com/lowercase_drm">@lowercase_drm</a>.</p><br /><br />
+<p>Yannick's blog post, like mine, uses pfx certificates for LDAP authentication. He faced a different error, but we both share the issue of preventing Kerberos authentication through PKINIT. Now, we need to invastigate if his certificate authentication method via LDAP can help with my error. Thus, let's utilize <a href="https://github.com/AlmondOffSec/PassTheCert/tree/main/Python">python PassTheCert tool</a> by <a href="https://twitter.com/lowercase_drm">@lowercase_drm</a>.</p><br />
 
 <p>First of all, before utilizing the python PassTheCert tool, we should use the Certipy tool to extract the public cert from the PFX file:</p>
 
@@ -255,7 +255,7 @@ python3 passthecert.py -dc-ip 192.168.242.179 -crt admin.crt -key admin.key -dom
   <li>Performing an Resource-Based Constrained Delegation (RBCD) attack.</li>
   <li>Resetting the password of a user account.</li>
 </ul>
-</p><br /><br />
+</p><br />
 
 <h3>Hacking time</h3>
 
