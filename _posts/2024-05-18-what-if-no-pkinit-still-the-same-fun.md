@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What if no PKINIT? Still the same fun!"
-image: ""
+image: "/assets/img/index-logo/fox-ncv.png"
 date: 2024-05-18 10:10:10
 tags:
   - ADCS
