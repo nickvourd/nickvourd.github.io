@@ -134,7 +134,7 @@ function topFunction() {
 }
 </script>
 
-<p>Hello, world! Hello, world! <a href="https://twitter.com/nickvourd">@nickvourd</a> is calling! Just your friendly neighborhood Red <delete>Teamer</delete> Power Ranger😝! Welcome back to another blog post...</p>
+<p>Hello, world! Hello, world! <a href="https://twitter.com/nickvourd">@nickvourd</a> is calling! Just your friendly neighborhood Red Power Ranger😝! Welcome back to another blog post...</p>
 
 <div style="display: flex; justify-content: center;">
     <iframe src="https://giphy.com/embed/SKqyoM5mvEZAA" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
