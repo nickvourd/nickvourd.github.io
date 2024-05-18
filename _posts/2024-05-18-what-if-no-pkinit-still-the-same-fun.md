@@ -140,7 +140,7 @@ function topFunction() {
     <iframe src="https://giphy.com/embed/SKqyoM5mvEZAA" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>To be honest, there are few people who inspired me to start this journey of writing only about what I like, without worrying about whether it's popular or not! Well, this Orthodox Easter, I met up with <a href="https://twitter.com/LAripping">@LAripping</a> at our secret spot (🤫) after a long time. A technical conversation with him, especially about my favorite topic, Active Directory (AD), always inspires me with new ideas! Thanks, Leo, you have put your little stone for this blog post, even if you don't know it. Additionally, many Discord calls these days with <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a>, discussing various concerns and topics related to offensive security and other subjects, have helped me understand a lot and clarify my goals for my penetration testing career. Nick, I can't express my appreciation for all the years of your help and support. One day, I promise I will repay all the good that you've done for me!</p><br /><br />
+<p>To be honest, there are few people who inspired me to start this journey of writing only about what I like, without worrying about whether it's popular or not! Well, this Orthodox Easter, I met up with <a href="https://twitter.com/LAripping">@LAripping</a> at our secret spot (🤫) after a long time. A technical conversation with him, especially about my favorite topic, Active Directory (AD), always inspires me with new ideas! Thanks, Leo, you have put your little stone for this blog post, even if you don't know it. Additionally, many Discord calls these days with <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a>, discussing various concerns and topics related to offensive security and other subjects, have helped me understand a lot and clarify my goals for my penetration testing career. Nick, I can't express my appreciation for all the years of your help and support. One day, I promise I will repay all the good that you've done for me!</p><br />
 
 <p>PS: Thanks to <a href="https://twitter.com/Papadope9">@Papadope9</a> who introduced me to this <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">plugin</a> for VS Code and saved my time!</p><br /><br />
 
@@ -302,7 +302,7 @@ python3 passthecert.py -dc-ip 192.168.242.179 -crt admin.crt -key admin.key -dom
 
 <p>Searching for a quick solution to fix this error and continue with my lab implementation, I found the following tweet by <a href="https://x.com/gentilkiwi">Benjamin Delpy</a>, indicating that he was years ahead of us (the global community).</p>
 
-<<a href="https://x.com/gentilkiwi/status/1419772619004448770" target="_blank">
+<a href="https://x.com/gentilkiwi/status/1419772619004448770" target="_blank">
   <img src="/assets/img/post-img/18-05-2024/Benjamin-post.png" class="post-images" alt="Benjamin-post">
 </a>
 
