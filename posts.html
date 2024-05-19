@@ -34,7 +34,7 @@ description: "Take a look at my posts..."
 {% for tag in site.categories %}
   <span class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</span>
   <ul class="post-list">
-    {% assign pages_list = tag[1] | capitalize%}
+    {% assign pages_list = tag[1] %}
     {% for post in pages_list reversed %}
       {% if post.title != null %}
       {% if group == null or group == post.group %}
