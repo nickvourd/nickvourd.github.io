@@ -140,7 +140,7 @@ function topFunction() {
     <iframe src="https://giphy.com/embed/SKqyoM5mvEZAA" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </div>
 
-<p>To be honest, there are few people who inspired me to start this journey of writing only about what I like, without worrying about whether it's popular or not! Well, this Orthodox Easter, I met up with <a href="https://twitter.com/LAripping">@LAripping</a> at our secret spot (🤫) after a long time. A technical conversation with him, especially about my favorite topic, Active Directory (AD), always inspires me with new ideas! Thanks, Leo, you have put your little stone for this blog post, even if you don't know it. Additionally, many Discord calls these days with <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a>, discussing various concerns and topics related to offensive security and other subjects, have helped me understand a lot and clarify my goals for my penetration testing career. Nick, I can't express my appreciation for all the years of your help and support. One day, I promise I will repay all the good that you've done for me!</p><br />
+<p>To be honest, there are few people who inspired me to start this journey of writing only about what I like, without worrying about whether it's popular or not! Well, during my Easter holidays, I met after a long time ago with <a href="https://twitter.com/LAripping">@LAripping</a> at our secret spot (🤫). Our technical conversation, especially about my favorite topic, Active Directory (AD), always inspires me with new ideas! Thanks, Leo, without being aware you have put your little stone for this blog post. Additionally, many Discord calls these days with <a href="https://twitter.com/S1ckB0y1337">@S1ckB0y1337</a>, discussing various concerns and topics related to offensive security and other subjects, have helped me understand a lot and clarify my goals for my penetration testing career. Nick, I would like to express my appreciation for all these years help and support. Hoping that I will pay back to you all the kindness and help.</p><br />
 
 <p>PS: Thanks to <a href="https://twitter.com/Papadope9">@Papadope9</a> who introduced me to this <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">plugin</a> for VS Code and saved my time!</p><br />
 
@@ -312,7 +312,7 @@ python3 passthecert.py -dc-ip 192.168.242.179 -crt admin.crt -key admin.key -dom
 
 <h3>Conclusion</h3>
 
-<p>Dear reader, I hope you enjoyed my first article. If you've gained new knowledge or found it helpful for your engagement, I would be delighted. Until next time, NCV, your friendly neighborhood Red Power Ranger! 😊</p>
+<p>Dear reader, hope you enjoyed my first article. I will be happy If gained new knowledge or found it helpful for your engagement. Until next time, NCV, your friendly neighborhood Red Power Ranger! 😊</p>
 
 <br /><br />
 
