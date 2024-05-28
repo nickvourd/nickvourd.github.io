@@ -6,6 +6,7 @@ date: 2024-05-18 10:10:10
 tags:
   - ADCS
   - Kerberos
+  - PKINIT
 
 description: ""
 categories:
