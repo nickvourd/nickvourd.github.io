@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What if no PKINIT? Still the same fun!"
+title: "What If No PKINIT? Still The Same Fun!"
 image: "/assets/img/index-logo/fox-ncv.png"
 date: 2024-05-18 10:10:10
 tags:
