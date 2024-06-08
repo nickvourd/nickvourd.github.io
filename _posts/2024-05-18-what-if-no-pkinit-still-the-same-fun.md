@@ -299,7 +299,7 @@ python3 passthecert.py -dc-ip 192.168.242.179 -crt admin.crt -key admin.key -dom
 
 <img src="/assets/img/post-img/18-05-2024/Attack2.png" class="post-images" alt="Attack2">
 
-<p>It is worth noting that this TTP is very useful against Golden Ticket attacks.</p><br />
+<p>It is worth noting that this TTP is very useful against Golden Certificate attacks.</p><br />
 
 <h3>Mitigations/Detections</h3>
 
