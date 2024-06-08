@@ -299,6 +299,8 @@ python3 passthecert.py -dc-ip 192.168.242.179 -crt admin.crt -key admin.key -dom
 
 <img src="/assets/img/post-img/18-05-2024/Attack2.png" class="post-images" alt="Attack2">
 
+<p>It is worth noting that this TTP is very useful against Golden Ticket attacks.</p>
+
 <h3>Mitigations/Detections</h3>
 
 <p>Searching for a quick solution to fix this error and continue with my lab implementation, I found the following tweet by <a href="https://x.com/gentilkiwi">Benjamin Delpy</a>, indicating that he was years ahead of us (the global community).</p>
