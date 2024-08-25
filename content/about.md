@@ -7,7 +7,7 @@ draft = false
 
 {{< figure src="/images/nickvourd-logo-200x200.png" alt="logo-profile" >}}
 
-Hello! I’m Nikos, also known as nickvourd or NCV. I’m a Senior Offensive Security Consultant based in the US, with expertise in Microsoft Active Directory, Azure Cloud Security, and Threat-Led Penetration Testing Frameworks like Tiber-EU and iCAST. Feel free to connect with me on [Twitter](https://x.com/nickvourd) or [LinkedIn](https://www.linkedin.com/in/nickvourd/) if you’d like to discuss anything related to Offensive Security.
+Hello 👋! I’m Nikos, also known as nickvourd or NCV. I’m a Senior Offensive Security Consultant based in the US, with expertise in Microsoft Active Directory, Azure Cloud Security, and Threat-Led Penetration Testing Frameworks like Tiber-EU and iCAST. Feel free to connect with me on [Twitter](https://x.com/nickvourd) or [LinkedIn](https://www.linkedin.com/in/nickvourd/) if you’d like to discuss anything related to Offensive Security.
 
 ## My Hall of Fame
 
