@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nickvourd</title>
-    <link>http://localhost:1313/</link>
+    <link>https://nickvourd.github.io/</link>
     <description>Recent content on nickvourd</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Aug 2024 12:44:58 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Aug 2024 16:33:32 +0300</lastBuildDate>
+    <atom:link href="https://nickvourd.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This is a test</title>
+      <link>https://nickvourd.github.io/posts/post1/</link>
+      <pubDate>Sun, 25 Aug 2024 16:33:32 +0300</pubDate>
+      <guid>https://nickvourd.github.io/posts/post1/</guid>
+      <description>This is a test #inlude stdio.h ajfdaj kjdaskjas ajsdlkjasd jkladsjksda </description>
+    </item>
     <item>
       <title>Initial Post</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
+      <link>https://nickvourd.github.io/posts/hello-world/</link>
       <pubDate>Sun, 25 Aug 2024 12:45:26 +0300</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <guid>https://nickvourd.github.io/posts/hello-world/</guid>
       <description>SGVsbG8sIHdvcmxkISBJJ20gcmVhZHkgdG8gc3RhcnQgYSBuZXcgYWR2ZW50dXJlIGluIHRoZSBVLlMuIQ==</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://nickvourd.github.io/about/</link>
       <pubDate>Sun, 25 Aug 2024 11:26:06 +0300</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://nickvourd.github.io/about/</guid>
       <description> WHOAMI Hello! I&amp;rsquo;m Nikos (a.k.a. nickvourd or NCV), a Senior Offensive Security Consultant based in the US. I&amp;rsquo;m passionate about exploring ethical hacking, with a particular focus on Active Directory and Azure Cloud Security. If you’re interested in discussing anything related to offensive security, feel free to connect with me on Twitter or LinkedIn!&#xA;My Hall of Fame </description>
     </item>
   </channel>

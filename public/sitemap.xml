@@ -2,30 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/base64/</loc>
-    <lastmod>2024-08-25T12:44:58+03:00</lastmod>
+    <loc>https://nickvourd.github.io/categories/active-directory/</loc>
+    <lastmod>2024-08-25T16:33:32+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-08-25T12:44:58+03:00</lastmod>
+    <loc>https://nickvourd.github.io/tags/amsi-bypass/</loc>
+    <lastmod>2024-08-25T16:33:32+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hello-world/</loc>
-    <lastmod>2024-08-25T12:44:58+03:00</lastmod>
+    <loc>https://nickvourd.github.io/categories/</loc>
+    <lastmod>2024-08-25T16:33:32+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-08-25T12:44:58+03:00</lastmod>
+    <loc>https://nickvourd.github.io/</loc>
+    <lastmod>2024-08-25T16:33:32+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/personal/</loc>
-    <lastmod>2024-08-25T12:44:58+03:00</lastmod>
+    <loc>https://nickvourd.github.io/posts/</loc>
+    <lastmod>2024-08-25T16:33:32+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-08-25T12:44:58+03:00</lastmod>
+    <loc>https://nickvourd.github.io/tags/</loc>
+    <lastmod>2024-08-25T16:33:32+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-08-25T12:44:58+03:00</lastmod>
+    <loc>https://nickvourd.github.io/posts/post1/</loc>
+    <lastmod>2024-08-25T16:33:32+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://nickvourd.github.io/tags/base64/</loc>
+    <lastmod>2024-08-25T12:47:50+03:00</lastmod>
+  </url><url>
+    <loc>https://nickvourd.github.io/posts/hello-world/</loc>
+    <lastmod>2024-08-25T12:47:50+03:00</lastmod>
+  </url><url>
+    <loc>https://nickvourd.github.io/categories/personal/</loc>
+    <lastmod>2024-08-25T12:47:50+03:00</lastmod>
+  </url><url>
+    <loc>https://nickvourd.github.io/about/</loc>
     <lastmod>2024-08-25T12:27:26+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://nickvourd.github.io/series/</loc>
   </url>
 </urlset>
