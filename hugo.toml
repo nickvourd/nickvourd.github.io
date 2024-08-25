@@ -1,4 +1,4 @@
 baseURL = 'https://nickvourd.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'nickvourd'
 theme = 'hugo-coder'
