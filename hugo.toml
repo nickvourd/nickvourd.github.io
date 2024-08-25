@@ -27,7 +27,7 @@ images = ["images/fox-ncv.png"]
 keywords = "blog,personal,cyber,security,offensive,active,directory,azure,cloud,entra"
 info = "Offensive Security Blog"
 
-dateFormat = "2006-01-02"
+dateFormat = "January 2, 2006"
 
 colorScheme = "dark"
 hideColorSchemeToggle = true
