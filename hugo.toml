@@ -73,6 +73,7 @@ name = "Buy me a coffee"
 icon = "fa-solid fa-beer fa-2x"
 weight = 6
 url = "https://buymeacoffee.com/nickvourd"
+target = "_blank"
 
 [[params.social]]
 name = "RSS"
