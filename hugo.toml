@@ -22,7 +22,8 @@ tabWidth = 4
 [params]
 author = "Nikos Vourdas"
 description = "nickvourd InfoSec blog"
-keywords = "blog,developer,personal,software,python,c++,go,rust"
+avatarURL = "images/fox-logo-200x200.png"
+keywords = "blog,personal,active,directory,azure,cloud,cyber,security,penetration,test"
 info = "Offensive Security Blog"
 
 dateFormat = "2006-01-02"
