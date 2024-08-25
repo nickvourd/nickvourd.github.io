@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on nickvourd</title>
-    <link>https://nickvourd.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on nickvourd</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Aug 2024 21:38:05 +0300</lastBuildDate>
-    <atom:link href="https://nickvourd.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Aug 2024 21:45:39 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personal</title>
-      <link>https://nickvourd.github.io/categories/personal/</link>
+      <link>http://localhost:1313/categories/personal/</link>
       <pubDate>Sun, 25 Aug 2024 12:45:26 +0300</pubDate>
-      <guid>https://nickvourd.github.io/categories/personal/</guid>
+      <guid>http://localhost:1313/categories/personal/</guid>
       <description></description>
     </item>
   </channel>

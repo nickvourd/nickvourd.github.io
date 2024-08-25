@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nickvourd</title>
-    <link>https://nickvourd.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on nickvourd</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Aug 2024 21:38:05 +0300</lastBuildDate>
-    <atom:link href="https://nickvourd.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Aug 2024 21:45:39 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Initial Post</title>
-      <link>https://nickvourd.github.io/posts/hello-world/</link>
+      <link>http://localhost:1313/posts/hello-world/</link>
       <pubDate>Sun, 25 Aug 2024 12:45:26 +0300</pubDate>
-      <guid>https://nickvourd.github.io/posts/hello-world/</guid>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
       <description>SGVsbG8sIHdvcmxkISBJJ20gcmVhZHkgdG8gc3RhcnQgYSBuZXcgYWR2ZW50dXJlIGluIHRoZSBVLlMuIQ==</description>
     </item>
     <item>
       <title>$whoami</title>
-      <link>https://nickvourd.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 25 Aug 2024 11:26:06 +0300</pubDate>
-      <guid>https://nickvourd.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>Hello 👋! I’m Nikos, also known as nickvourd or NCV. I’m a Senior Offensive Security Consultant based in the US, with expertise in Microsoft Active Directory, Azure Cloud Security, and Threat-Led Penetration Testing Frameworks like Tiber-EU and iCAST. In my free time, I like to build open-source Offensive Security Tools (OST) in different programming languages. Feel free to connect with me on Twitter or LinkedIn if you’d like to discuss anything related to Offensive Security.</description>
     </item>
   </channel>
