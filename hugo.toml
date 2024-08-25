@@ -25,7 +25,7 @@ description = "nickvourd InfoSec blog"
 avatarURL = "images/fox-logo-200x200.png"
 images = ["images/fox-ncv.png"]
 keywords = "blog,personal,cyber,security,offensive,active,directory,azure,cloud,entra"
-info = "Offensive Security Blog"
+info = "Offensive Security Legacy"
 
 dateFormat = "January 2, 2006"
 
