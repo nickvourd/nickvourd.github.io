@@ -22,6 +22,7 @@ tabWidth = 4
 [params]
 author = "Nikos Vourdas"
 description = "nickvourd InfoSec blog"
+faviconSVG = "images/favicon.ico"
 avatarURL = "images/fox-logo-200x200.png"
 images = ["images/fox-ncv.png"]
 keywords = "blog,personal,cyber,security,offensive,active,directory,azure,cloud,entra"
