@@ -64,7 +64,6 @@ name = "Email"
 icon = "fa-solid fa-envelope fa-2x"
 weight = 4
 url = "mailto:nickvourd97@gmail.com"
-target = "_blank"
 
 [[params.social]]
 name = "Certifications"
