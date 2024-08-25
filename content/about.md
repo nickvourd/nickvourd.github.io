@@ -7,6 +7,8 @@ draft = false
 
 ## WHOAMI
 
+![Profile Logo](/static/images/fox-logo-200x200.png)
+
 Hello! I'm Nikos (a.k.a. nickvourd or NCV), a Senior Offensive Security Consultant based in the US. I'm passionate about exploring ethical hacking, with a particular focus on Active Directory and Azure Cloud Security. If you’re interested in discussing anything related to offensive security, feel free to connect with me on [Twitter](https://x.com/nickvourd) or [LinkedIn](https://www.linkedin.com/in/nickvourd/)!
 
 ## My Hall of Fame
