@@ -5,7 +5,7 @@ date = 2024-08-25T11:26:06+03:00
 draft = false
 +++
 
-{{< figure src="/images/fox-logo-200x200.png" alt="logo-profile" >}}
+{{< figure src="/images/nickvourd-logo-200x200.png" alt="logo-profile" >}}
 
 ## WHOAMI
 
