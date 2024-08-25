@@ -75,7 +75,7 @@ weight = 6
 url = "/posts/index.xml"
 
 [[menu.main]]
-name = "Blog"
+name = "Posts"
 weight = 1
 url = "posts/"
 
