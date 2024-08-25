@@ -23,10 +23,62 @@ tabWidth = 4
 author = "Nikos Vourdas"
 description = "nickvourd InfoSec blog"
 avatarURL = "images/fox-logo-200x200.png"
-keywords = "blog,personal,active,directory,azure,cloud,cyber,security,penetration,test"
+images = ["images/fox-ncv.png"]
+keywords = "blog,personal,cyber,security,offensive,active,directory,azure,cloud,entra"
 info = "Offensive Security Blog"
 
 dateFormat = "2006-01-02"
 
 colorScheme = "dark"
 hideColorSchemeToggle = true
+
+customSCSS = ["scss/custom.scss"]
+
+[params.goatCounter]
+code = "nickvourd"
+
+[[params.social]]
+name = "Github"
+icon = "fa-brands fa-github fa-2x"
+weight = 1
+url = "https://github.com/nickvourd/"
+
+[[params.social]]
+name = "Twitter"
+icon = "fa-brands fa-x-twitter fa-2x"
+weight = 2
+url = "https://twitter.com/nickvourd/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa-brands fa-linkedin fa-2x"
+weight = 2
+url = "https://linkedin.com/in/nickvourd/"
+
+[[params.social]]
+name = "Email"
+icon = "fa-solid fa-envelope fa-2x"
+weight = 2
+url = "mailto:nickvourd97@gmail.com"
+
+[[params.social]]
+name = "Buy me a coffee"
+icon = "fa-solid fa-beer fa-2x"
+weight = 2
+url = "https://buymeacoffee.com/nickvourd"
+
+[[params.social]]
+name = "RSS"
+icon = "fa fa-rss fa-2x"
+weight = 5
+url = "/posts/index.xml"
+
+[[menu.main]]
+name = "Blog"
+weight = 2
+url = "posts/"
+
+[[menu.main]]
+name = "About"
+weight = 3
+url = "about/"
