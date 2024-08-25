@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://nickvourd.github.io/</loc>
+    <lastmod>2024-08-25T10:16:18+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://nickvourd.github.io/post/</loc>
+    <lastmod>2024-08-25T10:16:18+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://nickvourd.github.io/categories/</loc>
+  </url><url>
+    <loc>https://nickvourd.github.io/tags/</loc>
   </url>
 </urlset>
