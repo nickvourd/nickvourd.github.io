@@ -43,30 +43,35 @@ name = "Github"
 icon = "fa-brands fa-github fa-2x"
 weight = 1
 url = "https://github.com/nickvourd/"
+target = "_blank"
 
 [[params.social]]
 name = "Twitter"
 icon = "fa-brands fa-x-twitter fa-2x"
 weight = 2
 url = "https://twitter.com/nickvourd/"
+target = "_blank"
 
 [[params.social]]
 name = "LinkedIn"
 icon = "fa-brands fa-linkedin fa-2x"
 weight = 3
 url = "https://linkedin.com/in/nickvourd/"
+target = "_blank"
 
 [[params.social]]
 name = "Email"
 icon = "fa-solid fa-envelope fa-2x"
 weight = 4
 url = "mailto:nickvourd97@gmail.com"
+target = "_blank"
 
 [[params.social]]
 name = "Certifications"
 icon = "fa-solid fa-wallet fa-2x"
 weight = 5
 url = "https://www.credential.net/profile/nickvourd/wallet"
+target = "_blank"
 
 [[params.social]]
 name = "Buy me a coffee"
@@ -80,6 +85,7 @@ name = "RSS"
 icon = "fa fa-rss fa-2x"
 weight = 7
 url = "/posts/index.xml"
+target = "_blank"
 
 [[menu.main]]
 name = "Posts"
