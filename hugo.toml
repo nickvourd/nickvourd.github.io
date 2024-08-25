@@ -64,7 +64,7 @@ url = "mailto:nickvourd97@gmail.com"
 
 [[params.social]]
 name = "Certifications"
-icon = "fa-solid fa-wallet"
+icon = "fa-solid fa-wallet fa-2x"
 weight = 5
 url = "https://www.credential.net/profile/nickvourd/wallet"
 
