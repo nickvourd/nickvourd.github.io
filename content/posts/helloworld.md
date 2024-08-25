@@ -6,7 +6,7 @@ author = ["nickvourd"]
 tags = ["base64", "introduction"]
 categories = ["personal"]
 draft = false
-featuredImage = ""
+featuredImage = "https://github.com/nickvourd/nickvourd.github.io/blob/main/static/posts/hello-world-august-25-2024/hello-world-image.jpg"
 +++
 
 SGVsbG8sIHdvcmxkISBJJ20gcmVhZHkgdG8gc3RhcnQgYSBuZXcgYWR2ZW50dXJlIGluIHRoZSBVLlMuIQ==
