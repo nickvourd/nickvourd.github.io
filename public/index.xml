@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://nickvourd.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>nickvourd</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on nickvourd</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://nickvourd.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Aug 2024 11:30:30 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 25 Aug 2024 11:26:06 +0300</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>.item img { width: 100px; height: 100px; } .wrap{ width:100px; text-align: center; } .my-heading { color: #5D4D7A; } &amp;lt;/style&amp;gt; &amp;lt;center&amp;gt;&amp;lt;h3 class=&amp;quot;my-heading&amp;quot;&amp;gt;My Hall of Fame&amp;lt;/h3&amp;gt;&amp;lt;/center&amp;gt; &amp;lt;figure class=&amp;quot;item&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://www.credential.net/adf51ca4-2660-4230-ad7d-727980aa961b#gs.5jqgv2&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;&amp;lt;img htb-logo=&amp;quot;image&amp;quot; src=&amp;quot;#&amp;quot; alt=&amp;quot;OSWE&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://www.credential.net/5dbab8fe-2bb5-442b-a994-0e09a4727e9e#gs.3kxl9y&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;&amp;lt;img htb-logo=&amp;quot;image&amp;quot; src=&amp;quot;#&amp;quot; alt=&amp;quot;OSEP&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://www.credential.net/e8ccd338-5710-43dc-a5ad-1d6de3495a39#gs.3kx8qu&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;&amp;lt;img htb-logo=&amp;quot;image&amp;quot; src=&amp;quot;#&amp;quot; alt=&amp;quot;OSCP&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://www.credential.net/e45840b9-5607-41e2-838c-b26461229dbe#gs.3kxb1y&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;&amp;lt;img htb-logo=&amp;quot;image&amp;quot; src=&amp;quot;#&amp;quot; alt=&amp;quot;OSWP&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://eu.</description>
+    </item>
+    <item>
+      <title>Hello</title>
+      <link>http://localhost:1313/posts/hello/</link>
+      <pubDate>Sun, 25 Aug 2024 11:14:58 +0300</pubDate>
+      <guid>http://localhost:1313/posts/hello/</guid>
+      <description>Hello World </description>
+    </item>
   </channel>
 </rss>
