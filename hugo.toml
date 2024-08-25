@@ -63,15 +63,21 @@ weight = 4
 url = "mailto:nickvourd97@gmail.com"
 
 [[params.social]]
+name = "Certifications"
+icon = "fa-solid fa-wallet"
+weight = 5
+url = "https://www.credential.net/profile/nickvourd/wallet"
+
+[[params.social]]
 name = "Buy me a coffee"
 icon = "fa-solid fa-beer fa-2x"
-weight = 5
+weight = 6
 url = "https://buymeacoffee.com/nickvourd"
 
 [[params.social]]
 name = "RSS"
 icon = "fa fa-rss fa-2x"
-weight = 6
+weight = 7
 url = "/posts/index.xml"
 
 [[menu.main]]
