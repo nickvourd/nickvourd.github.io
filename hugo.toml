@@ -81,11 +81,11 @@ weight = 7
 url = "/posts/index.xml"
 
 [[menu.main]]
-name = "Posts"
+name = "posts"
 weight = 1
 url = "posts/"
 
 [[menu.main]]
-name = "About"
+name = "whoami"
 weight = 2
 url = "about/"
