@@ -8,7 +8,7 @@ draft = false
 
 # This is a test
 
-```
+```c
 #inlude stdio.h
 ```
 
