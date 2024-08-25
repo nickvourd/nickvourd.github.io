@@ -6,20 +6,20 @@
     <description>Recent content in Tags on nickvourd</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Aug 2024 16:33:32 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 25 Aug 2024 17:51:33 +0300</lastBuildDate>
     <atom:link href="https://nickvourd.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Amsi-Bypass</title>
-      <link>https://nickvourd.github.io/tags/amsi-bypass/</link>
-      <pubDate>Sun, 25 Aug 2024 16:33:32 +0300</pubDate>
-      <guid>https://nickvourd.github.io/tags/amsi-bypass/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Base64</title>
       <link>https://nickvourd.github.io/tags/base64/</link>
       <pubDate>Sun, 25 Aug 2024 12:45:26 +0300</pubDate>
       <guid>https://nickvourd.github.io/tags/base64/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Introduction</title>
+      <link>https://nickvourd.github.io/tags/introduction/</link>
+      <pubDate>Sun, 25 Aug 2024 12:45:26 +0300</pubDate>
+      <guid>https://nickvourd.github.io/tags/introduction/</guid>
       <description></description>
     </item>
   </channel>

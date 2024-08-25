@@ -6,15 +6,8 @@
     <description>Recent content on nickvourd</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Aug 2024 16:33:32 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 25 Aug 2024 17:51:33 +0300</lastBuildDate>
     <atom:link href="https://nickvourd.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>This is a test</title>
-      <link>https://nickvourd.github.io/posts/post1/</link>
-      <pubDate>Sun, 25 Aug 2024 16:33:32 +0300</pubDate>
-      <guid>https://nickvourd.github.io/posts/post1/</guid>
-      <description>This is a test #inlude stdio.h ajfdaj kjdaskjas ajsdlkjasd jkladsjksda </description>
-    </item>
     <item>
       <title>Initial Post</title>
       <link>https://nickvourd.github.io/posts/hello-world/</link>
@@ -23,11 +16,11 @@
       <description>SGVsbG8sIHdvcmxkISBJJ20gcmVhZHkgdG8gc3RhcnQgYSBuZXcgYWR2ZW50dXJlIGluIHRoZSBVLlMuIQ==</description>
     </item>
     <item>
-      <title></title>
+      <title>$whoami</title>
       <link>https://nickvourd.github.io/about/</link>
       <pubDate>Sun, 25 Aug 2024 11:26:06 +0300</pubDate>
       <guid>https://nickvourd.github.io/about/</guid>
-      <description> WHOAMI Hello! I&amp;rsquo;m Nikos (a.k.a. nickvourd or NCV), a Senior Offensive Security Consultant based in the US. I&amp;rsquo;m passionate about exploring ethical hacking, with a particular focus on Active Directory and Azure Cloud Security. If you’re interested in discussing anything related to offensive security, feel free to connect with me on Twitter or LinkedIn!&#xA;My Hall of Fame </description>
+      <description>Hello 👋! I’m Nikos, also known as nickvourd or NCV. I’m a Senior Offensive Security Consultant based in the US, with expertise in Microsoft Active Directory, Azure Cloud Security, and Threat-Led Penetration Testing Frameworks like Tiber-EU and iCAST. In my free time, I like to build open source Offensive Security Tools (OST) in different programming languages. Feel free to connect with me on Twitter or LinkedIn if you’d like to discuss anything related to Offensive Security.</description>
     </item>
   </channel>
 </rss>

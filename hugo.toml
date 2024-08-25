@@ -53,33 +53,33 @@ url = "https://twitter.com/nickvourd/"
 [[params.social]]
 name = "LinkedIn"
 icon = "fa-brands fa-linkedin fa-2x"
-weight = 2
+weight = 3
 url = "https://linkedin.com/in/nickvourd/"
 
 [[params.social]]
 name = "Email"
 icon = "fa-solid fa-envelope fa-2x"
-weight = 2
+weight = 4
 url = "mailto:nickvourd97@gmail.com"
 
 [[params.social]]
 name = "Buy me a coffee"
 icon = "fa-solid fa-beer fa-2x"
-weight = 2
+weight = 5
 url = "https://buymeacoffee.com/nickvourd"
 
 [[params.social]]
 name = "RSS"
 icon = "fa fa-rss fa-2x"
-weight = 5
+weight = 6
 url = "/posts/index.xml"
 
 [[menu.main]]
 name = "Blog"
-weight = 2
+weight = 1
 url = "posts/"
 
 [[menu.main]]
 name = "About"
-weight = 3
+weight = 2
 url = "about/"
