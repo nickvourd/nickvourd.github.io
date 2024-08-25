@@ -21,7 +21,7 @@ tabWidth = 4
 
 [params]
 author = "Nikos Vourdas"
-description = "nickvourd InfoSec blog"
+description = "nickvourd's InfoSec blog"
 faviconSVG = "images/favicon.ico"
 avatarURL = "images/fox-logo-200x200.png"
 images = ["images/fox-ncv.png"]
